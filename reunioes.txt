@@ -1,0 +1,76 @@
+ATA REUNIÃO PROJETO INTEGRADOR – GRUPO 1
+15.abril.2021 (quinta) 19h52min; aplicativo Google Meet
+
+Presentes: 
+Alexandre Pedro (Scrum Master 1), Caio Neves, Camila Ruth, Eduardo Assimo, Fillipe Freitas, Martín Embon
+
+A)	ASSUNTOS DISCUTIDOS
+
+1)	Projeto
+
+a)	Projeto de um site de uma instituição educacional, no conceito de landing page
+b)	Um único site que contenha:
+●	Portal dos alunos
+●	Oferta educativa
+●	Contatos
+●	Login/cadastro
+●	Newsletter
+c)	Acessibilidade
+●	Recurso de áudio (API que leia o texto)
+●	Handtalk – especialização em linguagem de sinais
+●	Paleta de cores para melhor visualização de deficientes visuais
+
+2)	Calendário de atividades daily sprint para próximo daily (16/abril)
+
+a)	Definir se faremos site de escola para kids (infantil), instituição educacional voltada para sommelier (vinhos), ou site para universidade/faculdade
+●	Ranking entre opções
+b)	Falar com Hendy os recursos que precisaremos
+●	Site voltado para cursos
+●	Escola (se houver algo específico)
+●	Possibilidade de acessibilidade e auxílio, mentoria dela
+---------------------------------------------
+
+ATA REUNIÃO PROJETO INTEGRADOR – GRUPO 1
+16.abril.2021 (sexta) 20h22min; aplicativo Google Meet
+
+Presentes: 
+Alexandre Pedro (Scrum Master 1), Camila Ruth, Eduardo Assimo, Fillipe Freitas, Martín Embon
+
+Ausentes:
+Caio Neves 
+
+A)	ASSUNTOS DISCUTIDOS
+
+1)	Projeto - definições
+
+a)	Projeto de um site de uma instituição educacional voltada para sommelier (vinhos), no conceito de landing page
+b)	Wireframe (6 páginas):
+(b.1)	Principal + sobre nós (1 página)
+(b.2)	Oferta educativa (1 página)
+        >>> Compra de webinars
+        >>> Display de vídeos inseridos
+(b.3)	Artigos (1 página)
+        >>> Criação e edição de artigos (upload)
+        >>> Usuário busca (filtra) artigos de seu interesse
+(b.4)	Associados (1 página)
+        >>> Compra de acesso permanente
+            *** Tipo de cards: passe dourado, ouro e diamante
+        >>> Benefícios
+(b.5)	Descubra seu vinho ideal (integrada a alguma página existente) (1 página)
+        >>> Algoritmo
+(b.6)	Contatos
+        >>> Formulário de contato 
+        >>> Newsletter - formulário
+c)	Acessibilidade
+(c.1)	Tipo pode variar conforme mentoria/auxílio externo (p. ex. Hendy)
+
+2)	Calendário de atividades daily sprint para próximo daily (19/abril)
+
+a)	Familiarizar e atualizar o Trello
+b)	Montar o wireframes 
+(b.1)	Ranking entre opções
+c)	Sites de vinhos
+(c.1) Banco de dados
+        >>> Imagens
+        >>> Movimentações - ex. vinho caindo na taça, extensões
+(c.2) Checar códigos
