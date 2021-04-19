@@ -68,7 +68,50 @@ c)	Acessibilidade
 
 a)	Familiarizar e atualizar o Trello
 b)	Montar o wireframes 
-(b.1)	Ranking entre opções
+c)	Sites de vinhos
+(c.1) Banco de dados
+        >>> Imagens
+        >>> Movimentações - ex. vinho caindo na taça, extensões
+(c.2) Checar códigos
+---------------------------------------------
+
+ATA REUNIÃO PROJETO INTEGRADOR – GRUPO 1
+19.abril.2021 (segunda) 19h10min; aplicativo Google Meet
+
+Presentes: 
+Alexandre Pedro (Scrum Master 1), Caio Neves, Camila Ruth, Eduardo Assimo, Martín Embon
+
+Ausentes: 
+Fillipe Freitas
+
+
+A)	ASSUNTOS DISCUTIDOS
+
+1)	Projeto - definições
+
+a)	Projeto de um site de uma instituição educacional voltada para sommelier (vinhos), no conceito de landing page
+b)	Wireframe (5 páginas):
+(b.1)	Principal + sobre nós (1 página)
+(b.2)	Oferta educativa (1 página)
+        >>> Compra de webinars
+        >>> Display de vídeos inseridos
+(b.3)	Associados (1 página)
+        >>> Compra de acesso permanente ou limitado a produtos
+            *** Tipo de cards: passe dourado, ouro e diamante
+        >>> Benefícios
+(b.5)	Login de usuário
+(b.6)	Contatos
+        >>> Formulário de contato 
+        >>> Newsletter - formulário
+c)	Acessibilidade
+(c.1)	Tipo pode variar conforme mentoria/auxílio externo (p. ex. Hendy)
+
+2)	Calendário de atividades daily sprint para próximo daily (21/abril)
+
+a)      Instituição
+(a.1)   Nome
+(a.2)   Logo
+b)	Montar o wireframes 
 c)	Sites de vinhos
 (c.1) Banco de dados
         >>> Imagens
