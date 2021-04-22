@@ -106,7 +106,7 @@ b)	Wireframe (5 páginas):
 c)	Acessibilidade
 (c.1)	Tipo pode variar conforme mentoria/auxílio externo (p. ex. Hendy)
 
-2)	Calendário de atividades daily sprint para próximo daily (21/abril)
+2)	Calendário de atividades daily sprint para próximo daily (22/abril)
 
 a)      Instituição
 (a.1)   Nome
@@ -117,3 +117,30 @@ c)	Sites de vinhos
         >>> Imagens
         >>> Movimentações - ex. vinho caindo na taça, extensões
 (c.2) Checar códigos
+---------------------------------------------
+
+ATA REUNIÃO PROJETO INTEGRADOR – GRUPO 1
+22.abril.2021 (quinta) 19h10min; aplicativo Google Meet
+
+Presentes: 
+Alexandre Pedro (Scrum Master 1), Caio Neves, Camila Ruth, Fillipe Freitas, Eduardo Assimo, Martín Embon
+
+
+A)	ASSUNTOS DISCUTIDOS
+
+1)	Projeto - definições Instituição
+
+a)	Projeto de um site de uma instituição educacional voltada para sommelier (vinhos), no conceito de landing page
+b)	Wireframe (5 páginas) - layouts
+c)	Acessibilidade
+(c.1)	Tipo pode variar conforme mentoria/auxílio externo (p. ex. Hendy)
+
+2)      Instituição - definições
+
+a)      Nome: W3 Academia do Vinho
+b)      Descrição: Instituição educacional para ensino e divulgação da cultura do vinho
+
+3)	Calendário de atividades daily sprint para próximo daily (23/abril)
+
+a)      Apresentação dos wireframes
+b)	Verificar logo (pode ser tipografia) e imagens
