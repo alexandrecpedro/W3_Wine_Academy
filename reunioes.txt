@@ -144,3 +144,35 @@ b)      Descrição: Instituição educacional para ensino e divulgação da cul
 
 a)      Apresentação dos wireframes
 b)	Verificar logo (pode ser tipografia) e imagens
+---------------------------------------------
+
+ATA REUNIÃO PROJETO INTEGRADOR – GRUPO 1
+23.abril.2021 (sexta) 20h10min; aplicativo Google Meet
+
+Presentes: 
+Alexandre Pedro (Scrum Master 1), Caio Neves, Camila Ruth, Fillipe Freitas, Eduardo Assimo, Martín Embon
+
+
+A)	ASSUNTOS DISCUTIDOS
+
+1)	Projeto - definições Instituição
+
+a)	Projeto de um site de uma instituição educacional voltada para sommelier (vinhos), no conceito de landing page
+b)	Wireframe (5 páginas) - layouts
+(b.1)   Apresentação de como se encontra
+(b.2)   O que fazer
+(b.3)   Onde cada membro da equipe vai modificar
+c)	Acessibilidade
+(c.1)	Tipo pode variar conforme mentoria/auxílio externo (p. ex. Hendy)
+d)      Imagens e vídeos
+(d.1)   Compartilhar e checar imagens e vídeos para o projeto
+
+2)      Instituição - definições
+
+a)      Nome: W3 Academia dos Vinhos
+b)      Descrição: Instituição educacional para ensino e divulgação da cultura do vinho
+
+3)	Calendário de atividades daily sprint para próximo daily (27/abril)
+
+a)      Dividir o trabalho nos wireframes
+b)	Verificar logo (pode ser tipografia) e imagens
