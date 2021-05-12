@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*, :focus {
+    outline: 0;
+}
+
+body {
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a {
+    background-color: transparent;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption,  figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    box-shadow: 0 0 2px #343434;
+    position: fixed;
+    left: 0;
+    transition: .6s ease-in-out;
+    width: 100%;
+    z-index: 60;
+    background-color: #fff;    
+}
+
+.nav nav {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nav-menu {
+    background-color: #fff;
+    display: grid;
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    grid-template-areas: "logo menu ...";
+    grid-template-columns: 3fr 1fr 1fr;
+    height: 60px;
+    padding: 0 10px;
+    z-index: 10;
+}
+
+.nav-menu .gridLogo {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    grid-area: logo;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.nav-menu .gridLogo img {
+    max-height: 46px;
+}
+
+.zmdi-hc-lg {
+    font-size: 1.3em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+
+.zmdi {
+    display: inline-block;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.icon-burger {
+    color: #343434;
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+    padding-top: 9px;
+    margin-bottom: 6px;
+}
+
+.navmenu-horizontal.active {
+    -ms-transform: translate(0,0);
+    transition: translate(0,0);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.navmenu-horizontal {
+    padding: 24px;
+    background-color: #98042D;
+    width: 95%;
+    max-width: 450px;
+    height: 100%;
+    z-index: 200;
+    position: fixed;
+    left: 40px;
+    overflow: auto;
+    -ms-transform-translate(101%,0);
+    transition: translate(101%,0);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.title-navmenu-horizontal {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.title-menu {
+    width: 55px;
+    height: 24px;
+    margin-left: 162px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.icone-fechar-menu {
+    width: 30px;
+    font-size: 28px;
+    padding-right: 50px;
+}
+
+.navmenu-horizontal li {
+    position: static;
+    margin-left: 0;
+}
+
+.li-opcaoNav {
+    border-bottom: 1px solid #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: static;
+    margin-left: 0;
+}
+
+.first-button:last-of-type {
+    border-bottom: none;
+}
+
+.font-w3 {
+    font-family: Manrope, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.first-button {
+    width: 100%;
+    min-height: 46px;
+    color: #fff;
+    transition: .6s;
+    border-bottom: 1px sold #fff;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-right: 4px;
+    -ms-flex-align: center;
+    align-items: center;
+}
