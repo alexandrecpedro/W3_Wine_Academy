@@ -1,0 +1,496 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container-site {
+    max-width:1100px;
+    width:90%;
+    margin:0 auto;
+    background-color: rgba(238, 238, 238, 0.37);
+
+}
+
+header .caco,
+footer .caco {
+    width:100%;
+    height:4.5rem;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.xd {
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+/* Inicio Encabezado de pagina*/
+
+.encabezado {
+    margin-top:.1rem;
+    margin-bottom: .5rem;
+    display:grid;
+    grid-row-gap:1rem;
+    grid-template-rows: repeat(3,auto);
+    background-color:rgba(241, 238, 238, 0.932);
+}
+
+.fas {
+    color:rgb(49, 41, 172);
+    font-size:2rem;
+    position:relative;
+    top:5px;  
+}
+
+.main-header {
+    text-align:left;
+    font-family:sans-serif;
+    font-size:2rem;
+    color:rgb(49, 41, 172);
+    margin-top:.2rem;
+    padding:0;
+}
+
+.subt-main-header {
+    text-align:left;
+    font-family:sans-serif;
+    font-size: 1rem;    
+    position:relative;  
+    margin-bottom:2rem;
+}
+
+.subt-main-header::after {
+    position:absolute;
+    content:"";
+    bottom:-20px;
+    left:2px;
+    width:45px;
+    height:3px;
+    background: rgb(49, 41, 172);
+}
+
+
+.asinatura {
+    color: rgb(49, 41, 172);
+}
+
+@media screen and (min-width:1101px){
+    .encabezado {
+        margin-top:.1rem;
+        display:grid;
+        grid-template-rows: repeat(2,auto);
+        grid-gap:1rem;
+    }
+}
+
+/* Fin ENCABEZADO*/
+
+/* Inicio CURSO DESTACADO*/
+
+.curso-destacado {
+    text-align: center;
+    font-family:sans-serif;
+    
+    
+}
+
+.imagen-destacada img{
+    max-width:80%;
+    margin-bottom:1rem; 
+}
+
+
+@media screen and (min-width:1101px){
+    
+    .curso-destacado {    
+        display:grid;
+        justify-content: center;
+        grid-template-columns:repeat(2,1fr);
+        grid-column-gap:2rem;
+        text-align:left;
+    }
+    .imagen-destacada img{
+        max-width:100%;
+        margin-bottom:1rem;
+    }
+}
+
+.contenido-nosotros h1 {
+    font-size:1.7rem;
+}
+
+.contenido-nosotros {
+    display: grid;
+    align-content:center;
+    line-height:35px;
+    margin-bottom:1rem;
+}
+
+.contenido-nosotros .btn1 {
+    background-color:rgb(133, 4, 4);
+    color:white;
+    display:block;
+    width:20%;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    border-radius:10px;
+    font-family: sans-serif;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    margin:auto;
+}
+
+/* fin CURSO DESTACADO*/
+
+/*Cards*/
+
+.card-container {
+    
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    width:100%;
+    margin-bottom: 1rem;    
+}
+
+.card {
+    width:350px;    
+    margin:5px;
+    background-color:white;
+    position:relative;
+    
+}
+
+
+.card h2 {
+    text-align:center;
+    font-family:sans-serif;
+    font-weight:700;
+    margin-bottom: 1rem;
+    position:relative;
+}
+
+.card p {
+    font-family: sans-serif;
+    font-size:.8rem;
+    margin-bottom: 2rem;
+    min-height:150px;
+}
+
+
+.card .btn,
+.contenido-nosotros .btn,
+.modal-body a {
+    background-color:rgb(49, 41, 172);
+    color:white;
+    display:block;
+    width:30%;
+    height:30px;
+    line-height:20px;
+    text-align:center;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left:auto;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    font-size:.9rem;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    font-weight: bold;
+}
+
+.contenido-nosotros .btn {
+    margin-top:.5rem;
+    margin:auto;
+}
+
+
+.card .imagen-card {
+    height:18rem;
+    width:100%;
+    margin-bottom:19px;
+    background-size:cover;
+}
+
+.foto-1 {
+    background-image: url("./Fotos/cursos/sommelier-shutterstock-1.jpg");
+    position: relative;
+}
+
+.fondo-1 {
+    background-color: rgba(3, 160, 74, 0.7);
+    border-bottom: 1px solid white;
+}
+
+.fondo-2 {
+    background-color: rgba(187, 8, 8, 0.7);
+    border-bottom: 1px solid white;
+}
+
+.fondo-3 {
+    background-color: rgba(199, 129, 24, 0.7);
+    border-bottom: 1px solid white;
+}
+
+.fondo-4 {
+    background-color: rgba(65, 64, 64, 0.7);
+    border-bottom: 1px solid white;
+}
+
+.fondo-5 {
+    background-color: rgba(199, 196, 18, 0.7);
+    border-bottom: 1px solid white;
+}   
+
+.fondo-6 {
+    background-color: rgba(192, 65, 6, 0.7);
+    border-bottom: 1px solid white;
+}
+
+.foto-2 {
+    background-image: url("./Fotos/cursos/fresco-egipcio.jpg");    
+    position: relative;
+}
+
+.foto-3 {
+    background-image: url("./Fotos/cursos/toscana.jpg");    
+    position: relative;
+}
+
+.foto-4 {
+    background-image: url("./Fotos/cursos/mendoza.jpg");   
+    position: relative; 
+}
+
+.foto-5 {
+    background-image: url("./Fotos/cursos/vinosbrasil.jpg");    
+    position: relative;
+}
+
+.foto-6 {
+    background-image: url("./Fotos/cursos/champagne.jpg");    
+    position: relative;
+}
+
+.titulo-curso {
+    position:absolute;
+    width:100%;
+    height:9rem;
+    top:0;
+    left:0;
+    text-align:center;
+    font-family:sans-serif;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom: 1rem;
+    color:white;
+}
+
+.titulo-curso h2 {
+    margin-top:.5rem;
+}
+
+.icono-curso {
+    text-align: left;
+    margin:.7rem;    
+}
+
+.ico-curso{
+    color:white;
+    font-size:1.5rem;
+}
+
+/* INICIO MODALS */
+
+.modal {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    border:1px solid black;
+    border-radius:10px;
+    transition:200ms ease-in-out;
+    z-index:10;
+    background-color:white;
+    width:500px;
+    max-width:80%;
+}
+
+.modal-body a {
+    margin-top:.5rem;
+    margin:auto;
+    width:50%;
+    line-height: 30px;
+}
+
+.modal.active {
+    transform:translate(-50%,-50%) scale(01);
+}
+
+
+.modal-header {
+    padding:10px 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size:1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor:pointer;
+    border:none;
+    outline:none;
+    background:none;
+    font-size:1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding:10px 15px;
+   
+}
+
+.modal-body h5 {
+    color:black;
+    font-family: sans-serif;
+    font-size:.9rem;   
+    padding:10px 15px;
+    font-weight: 300;    
+}
+
+.modal-body ol{
+    color:black;
+    font-family: sans-serif;
+    font-size:.8rem;   
+    padding:10px 15px;
+    padding-left:30px;
+
+}
+
+#overlay {
+    position:fixed;
+    opacity:0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0, 0, 0, 0.5);
+    pointer-events:none;
+    transition:200ms ease-in-out;
+}
+
+#overlay.active {
+    opacity:1;
+    pointer-events:all;
+}
+
+/* FIN MODALS */
+
+
+.logos {
+    display: grid;
+    justify-items: center;
+    margin:auto;
+    margin-bottom: 1rem;
+    margin-top:1rem;
+}
+
+.logos img {
+    max-width: 40%;
+}
+
+.partners {
+    background-color: white;
+    align-items: center;
+}
+
+
+@media screen and (min-width:1101px) {
+    .patrons {
+        display:grid;
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+        justify-content: center;
+        align-items: center;
+        margin-bottom:1rem;
+        margin-top:1rem;      
+        background-color: white;
+        align-content: center;
+    }
+    .logos img {
+        max-width:70%;
+    }
+    .logos {
+        display: grid;
+        justify-items: center;
+        margin:auto;
+        align-self: center;        
+    }
+    .patrons a {
+        margin:auto;
+        text-align: center;
+        
+    }
+
+}
+
+.patrons a {
+    margin:auto;
+    text-align: center;
+}
+
+.partner-title {
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    justify-content: center;
+    grid-row-gap:1.8rem;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+
+.partner-title h2{
+    margin-top:2rem;
+    text-align:center;
+    font-family: sans-serif;
+}
+
+.partner-title p {
+
+    text-align:center;
+    font-family: sans-serif;
+}
+
+
+.partner-title h2 {
+    color:rgb(49, 41, 172);
+    font-weight: 300;
+    position:relative;
+}
+
+.partner-title h2::after {
+    position:absolute;
+    content:"";
+    bottom:-10px;
+    left:47%;
+    width:45px;
+    height:3px;
+    background: rgb(49, 41, 172);
+}
+
