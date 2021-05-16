@@ -51,6 +51,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,body,canvas,caption,cent
     width: 100%;
     z-index: 60;
     background-color: #fff;
+    background-color: red;
+    
 }
 
 .nav nav {
@@ -66,11 +68,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,body,canvas,caption,cent
     font-family: 'Manrope';
     font-size: 18px;
     font-weight: 400;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(100px,4fr));
     grid-template-areas: "logo menu recursos";
     grid-template-rows: 90px;
     width: 100%;
     z-index: 10;
+    
 }
 
 .navlogo {
@@ -137,10 +140,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,body,canvas,caption,cent
     align-items: center;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    width: 80%;
     grid-area: recursos;
     -ms-flex-pack: center;
-    justify-content: space-around; 
+    justify-content: space-evenly;        
 }
 
 .checkbox {
@@ -276,6 +279,7 @@ button a {
     font-size: 1rem;    
     position:relative;  
     margin-bottom:2rem;
+    line-height: 1.4rem;
 }
 
 .subt-main-header::after {
@@ -309,8 +313,6 @@ button a {
 .curso-destacado {
     text-align: center;
     font-family:sans-serif;
-    
-    
 }
 
 .imagen-destacada img{
@@ -707,3 +709,72 @@ button a {
     background: rgb(49, 41, 172);
 }
 
+/* SOBRE NOS */
+
+.read-more-container{
+    display:grid;    
+    text-align:center;
+    justify-items: center;
+}
+
+.imagen-participante {
+    width:30%;
+    margin-bottom:.1rem;
+}
+
+.imagen-participante img {
+    max-width:80%;
+}
+
+.participante {
+    font-weight: bold;
+}
+
+.cv-participantes{
+    font-family:sans-serif;
+    font-size:1rem;
+    padding: 10px;
+    line-height: 1.4rem;
+}
+ 
+.read-more-btn{
+    color: #95062E;
+    font-weight: bold;
+    cursor:pointer;
+}
+  
+.read-more-text{
+    display: none;
+}
+  
+.read-more-text--show{
+    display: inline;
+    
+}
+
+@media screen and (min-width:1101px){
+    
+    .read-more-container {    
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: left;
+        line-height: 1rem;
+    }
+
+    .cv-participantes {
+        width:75%;
+        align-items: flex-start;
+    }
+    
+    .imagen-participante {
+        width:20%;
+        align-items: flex-start;
+    }
+
+    .imagen-participante img{
+        max-width:100%;
+        margin-bottom:1rem;   
+    }
+
+}
