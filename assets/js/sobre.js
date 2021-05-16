@@ -12,6 +12,6 @@ participantes.addEventListener('click', e =>{
 
     currentText.classList.toggle('read-more-text--show');
 
-    current.textContent = current.textContent.includes('Read More') ? "Saiba menos..." : "Saiba mas...";
+    current.textContent = current.textContent.includes('Read More') ? "Saiba mas..." : "Saiba menos...";
 
 })
