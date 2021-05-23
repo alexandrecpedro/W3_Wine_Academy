@@ -1,20 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
-
-
 .container-site {
     max-width:1100px;
     width:90%;
     margin:0 auto;
     background-color: rgba(238, 238, 238, 0.37);
-
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -711,70 +710,74 @@ button a {
 
 /* SOBRE NOS */
 
-.read-more-container{
-    display:grid;    
-    text-align:center;
-    justify-items: center;
+.aluno {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
 }
 
 .imagen-participante {
-    width:30%;
-    margin-bottom:.1rem;
+    width:20%;
+    align-items: center;
+    margin-bottom: 5px;   
+    background-position: center center;
+    background-size: cover;
+    border:1px solid #eee;
+    border-radius:5px;
 }
 
 .imagen-participante img {
-    max-width:80%;
+    max-width:100%;
+    border-radius:5px;   
 }
 
-.participante {
+.contenido-aluno {
+    width:78%;
+    align-items: flex-start;
+    padding-top:3px;
+    margin-bottom: 15px;
+}
+
+.contenido-aluno h3 {
+    font-size:24px;
     font-weight: bold;
 }
 
-.cv-participantes{
-    font-family:sans-serif;
-    font-size:1rem;
-    padding: 10px;
-    line-height: 1.4rem;
+.content {
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-size:15px;
+    width:90%;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
- 
-.read-more-btn{
-    color: #95062E;
+
+.mostrar-mas{
+    display:none;
+}
+
+.mostrar-mas--show{
+    display: inline;   
+}
+
+.mostrar{
+    font-family: sans-serif;
+    font-size:15px;
+    color:rgb(133, 4, 4);
     font-weight: bold;
     cursor:pointer;
 }
-  
-.read-more-text{
-    display: none;
-}
-  
-.read-more-text--show{
-    display: inline;
-    
-}
 
-@media screen and (min-width:1101px){
-    
-    .read-more-container {    
+@media screen and (max-width:953px) {
+    .aluno {
         display:flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        text-align: left;
-        line-height: 1rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-
-    .cv-participantes {
-        width:75%;
-        align-items: flex-start;
+    .imagen-participante {
+        width:40%;
     }
     
-    .imagen-participante {
-        width:20%;
-        align-items: flex-start;
-    }
-
-    .imagen-participante img{
-        max-width:100%;
-        margin-bottom:1rem;   
-    }
-
 }
+
