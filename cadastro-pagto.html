@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style-pgto.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <title>Pagamento</title>
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <div class="full-box">
+            <div class="box-left">
+
+                <div class="logo">
+                    <div class="logowhite" style="background-image: url('img/w3\ brand\ white.png');"></div>
+                </div>
+
+                <div class="steps">
+
+                    <ul>
+                        <li>
+                            <svg style="width:30px;height:30px;margin-bottom:-7px" viewBox="0 0 24 24">
+                                    <path fill="#D84D75" d="M10,7H14V17H12V9H10V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg> Criação de Usuário
+                        </li>
+
+                        <li>
+                            <svg style="width:30px;height:30px;margin-bottom:-7px" viewBox="0 0 24 24">
+                                    <path fill="#D84D75" d="M9,7H13A2,2 0 0,1 15,9V11A2,2 0 0,1 13,13H11V15H15V17H11L9,17V13A2,2 0 0,1 11,11H13V9H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg> Informações pessoais
+                        </li>
+
+                        <li>
+                            <svg style="width:30px;height:30px;margin-bottom:-7px" viewBox="0 0 24 24">
+                                    <path fill="#D84D75" d="M15,15A2,2 0 0,1 13,17H9V15H13V13H11V11H13V9H9V7H13A2,2 0 0,1 15,9V10.5A1.5,1.5 0 0,1 13.5,12A1.5,1.5 0 0,1 15,13.5V15M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg> Autenticação do e-mail
+                        </li>
+
+                        <li id="pgto">
+                            <svg style="width:30px;height:30px;margin-bottom:-7px" viewBox="0 0 24 24">
+                                    <path fill="white" d="M9,7H11V11H13V7H15V17H13V13H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg> Pagamento
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="box-right">
+
+                <div class="plan">
+                    <div class="container-plan">
+                        <div class="description">
+                            <p>Tipo de Plano: PREMIUM<br> Validade: 1 ano<br> Expira em 29/04/2022
+                            </p>
+                        </div>
+                        <div class="valor">
+                            <h3>R$ 1.299,90</h3>
+                            <h5>12x R$ 180,25</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Finalize o seu pagamento: </p>
+
+                <div class="payment">
+                    <div class="credit">
+                        <h6>Cartão de crédito</h6>
+                        <i class="zmdi zmdi-card"></i>
+                    </div>
+                    <div class="boleto">
+                        <h6>Boleto</h6>
+                        <div class="barcode" style="background-image: url('img/barcode.svg')"></div>
+                    </div>
+                </div>
+
+                <div class="dados">
+                    <label for="input_card"></label>
+                    <input type="number" name="card" id="input_card" alt="Numero do cartão" placeholder="Numero do cartão" required>
+                    <label for="input_titular"></label>
+                    <input type="text" name="nome" id="input_titular" alt="Nome do titular" placeholder="Nome do titular" required>
+                    <div class="campos">
+                        <div class="validade">
+                            <label for="input_validade"></label>
+                            <input type="number" name="validade" id="input_validade" alt="Validade do cartão" placeholder="Validade do cartão" required>
+                        </div>
+                        <div class="cvv">
+                            <label for="input_cvv"></label>
+                            <input type="password" name="cvv" id="input_cvv" alt="Código cvv" placeholder="CVV" required>
+                        </div>
+                    </div>
+                    <label for="input_cpf"></label>
+                    <input type="number" name="cpf" id="input_cpf" alt="cpf" placeholder="CPF" required>
+                </div>
+                <button type="submit">Confirme</button>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>

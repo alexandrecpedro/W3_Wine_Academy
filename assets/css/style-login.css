@@ -1,0 +1,220 @@
+    /* @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap'); */
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    /* main {
+        background-image: linear-gradient(to right, #69575cbd, #87324aaa), url("../img/foto-login/paisagem.jpg");
+        background-repeat: no-repeat;
+        background-size: 1980px 1280px;
+        background-clip: border-box;
+        background-position: center;
+        height: 100%;
+    } */
+    
+    main .box-login {
+        width: 400px;
+        height: 650px;
+        border: 1px solid black;
+        border-radius: 25px;
+        border: 1px solid rgb(238, 238, 238);
+        background-color: white;
+        margin: auto;
+        text-align: justify;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Manrope', sans-serif;
+        box-shadow: 1px 1px 9px grey;
+        padding: 1px;
+        margin-bottom: 2rem;
+    }
+    
+    @media screen and (max-width:460px) {
+        main .box-login {
+            width: 350px;
+            height: 650px;
+        }
+    }
+    
+    @media screen and (max-width:385px) {
+        main .box-login {
+            width: 325px;
+            height: 650px;
+        }
+    }
+    /* ====== LOGO DA BOX LOGIN FULL ====== */
+    
+    main .box-login .box-logo {
+        margin-top: 0px;
+        width: 320px;
+    }
+    
+    main .box-login .box-logo .img-logo {
+        width: 400px;
+        max-width: 100%;
+        height: 100px;
+        margin: 30px 40px;
+        background-repeat: no-repeat;
+    }
+    /* ====== BOX IN - INFORMARÇÕES PARA LOGIN ====== */
+    
+    main .box-login .box-in {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin: 1px auto;
+        margin-top: 1px;
+        border-radius: 25px;
+        margin-bottom: 30px;
+    }
+    
+    main .box-login .box-in h3 {
+        text-transform: uppercase;
+        font-family: 'Manrope', sans-serif;
+        color: #343434;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    
+    main .box-login .box-in p {
+        margin: 10px auto;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    
+    main .box-login .box-in input {
+        border-radius: 20px;
+        height: 35px;
+        width: 280px;
+        margin: 8px auto;
+        border: 1px solid rgba(128, 128, 128, 0.802);
+        box-shadow: 1px 1px 9px grey;
+    }
+    
+    main .box-login .box-in input:hover {
+        width: 290px;
+        transition: .4s ease-in-out;
+    }
+    
+    #input_email::placeholder,
+    #input_password::placeholder {
+        text-align: center;
+        font-size: 11px;
+        font-style: italic;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.433);
+        font-family: 'Manrope', sans-serif;
+    }
+    /* ====== BOTAO LOGIN ====== */
+    
+    main .box-login .box-in button {
+        border-radius: 20px;
+        height: 35px;
+        width: 135px;
+        background-color: #8F1631;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 1px;
+        border: 1px solid rgba(128, 128, 128, 0.213);
+        text-transform: uppercase;
+        font-family: 'Manrope', sans-serif;
+        box-shadow: 1px 1px 9px grey;
+    }
+    
+    main .box-login .box-in button:hover {
+        background-color: #8f1630bf;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+    }
+    /* ====== MIDIAS SOCIAIS PARA LOGIN ====== */
+    
+    main .box-login .box-in .box-social {
+        /* border: 1px solid black; */
+        width: 200px;
+        height: 40px;
+        margin: 8px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5rem;
+    }
+    
+    .img-logo img {
+        margin: auto;
+        width: 80%;
+        max-width: 100%;
+    }
+    
+    .img-logo {
+        width: 100%;
+    }
+    
+    main .box-login .box-in .box-social .logo-gmail {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    
+    main .box-login .box-in .box-social .logo-apple {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    
+    main .box-login .box-in .box-social .logo-outlook {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    /* ====== TESTE FONT AWESOME SOCIAL MEDIAS ====== */
+    
+    main .box-login .box-in .test {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 200px;
+        height: 70px;
+        background-color: green;
+    }
+    
+    main .box-login .box-in .test li {
+        list-style: none;
+    }
+    
+    main .box-login .box-in li a {
+        font-size: 50px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    main .box-login .box-in a:hover i {
+        color: #8F1631;
+    }
+    /* ====== NAO TEM CONTA, CADASTRE-SE ====== */
+    
+    main .box-login h4 {
+        font-size: 13px;
+        align-items: left;
+        color: #343434;
+    }
+    
+    main .box-login h4 a {
+        text-decoration: underline;
+        color: #343434;
+    }
+    
+    main .box-login h4 a:hover {
+        color: #8F1631;
+    }
