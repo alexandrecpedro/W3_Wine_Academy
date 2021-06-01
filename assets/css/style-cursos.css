@@ -125,6 +125,325 @@ video {
     width: 100%;
     z-index: 60;
     background-color: #fff;
+    
+}
+
+/* 
+.navbar {
+    background-color: white;
+    
+    font-family: 'Manrope';
+    font-size: 18px;
+    font-weight: 400;
+   
+    width: 100%;
+    z-index: 10;
+} */
+
+
+/* .zmdi-hc-2x {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+} */
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    
+    margin:0 auto;
+}
+.navmenu {
+    display: flex;
+    width: 90%;
+    margin:auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+     
+    min-height: 50px;
+    
+}
+.btn-em-linha {
+    display: none;
+  
+}
+
+.navmenu ul {
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap:nowrap;
+    align-items: center;
+    width: 100%;    
+    
+}
+
+.logo {
+    width: 40%;
+    min-width: 15%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo img {
+    max-width: 100%;
+    
+    
+}
+
+.navmenu li {
+    font-family: 'Manrope';
+    font-size: 15px;
+    font-weight: 600;
+    list-style: none;
+}
+
+.navmenu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #343434;
+}
+
+.navmenu a:hover {
+    color: #95062E;
+}
+
+button {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #8f072E, #95062E);
+    align-self: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+
+
+.btn-em-linha-2 a{
+    color: white;
+}
+
+.btn-em-linha-2 a:hover,
+.btn-em-linha a:hover{
+    color: white;
+}
+
+
+.navrecursos {
+    align-items: center;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+ 
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background: linear-gradient(to right, #95062E, #8f072E);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    height: 18px;
+    width: 45px;
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.navfontsize li {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#aumentar-fonte {
+    font-family: 'Manrope';
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+#diminuir-fonte {
+    font-family: 'Manrope';
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+.navfontsize button {
+    border-radius: 30px;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to right, #95062E, #8f072E);
+    cursor: pointer;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(28px);
+}
+
+.navmenu-burger {
+    display: none;
+}
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-site {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body.dark {
+    background: #343434;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.nav {
+    box-shadow: 0px 3px 3px #00000029;
+    position: fixed;
+    left: 0;
+    transition: .6s ease-in-out;
+    width: 100%;
+    z-index: 60;
+    background-color: #fff;
     background-color: red;
 }
 
@@ -303,13 +622,13 @@ button a {
     font-weight: 700;
     color: white;
 }
-
+*/
 
 /* Inicio Encabezado de pagina*/
 
 .caco {
     width: 100%;
-    height: 100px;
+    height: 110px;
     background-color: none;
 }
 
@@ -814,7 +1133,7 @@ div.botones {
     margin-bottom: 5px;
     background-position: center center;
     background-size: cover;
-    margin-left: 10px;
+    margin-left: 15px;
     border-radius: 50%;
 }
 
@@ -844,6 +1163,7 @@ div.botones {
 .contenido-aluno h3 {
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Manrope';
 }
 
 .content {
@@ -871,6 +1191,12 @@ div.botones {
     cursor: pointer;
 }
 
+.salto {
+    margin-bottom: 3rem;
+    height: 2px;
+    
+}
+
 @media screen and (max-width:900px) {
     .aluno {
         display: flex;
@@ -881,6 +1207,9 @@ div.botones {
     }
     .imagen-participante {
         width: 40%;
+    }
+    .salto {
+        margin-bottom:0;
     }
 }
 
@@ -1658,3 +1987,42 @@ footer {
         width: 50%;
     }
 }
+
+@media screen and (max-width:700px){
+    .navmenu {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin: auto;
+        margin-bottom: .5rem;
+        width: 40%;
+        
+    
+    }
+    .navmenu ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap:wrap;
+        gap:.5rem;
+        
+    }
+    .navcontrast, .navfontsize {
+        display: none;
+    }
+       .btn-em-linha {
+        display: inline;        
+    }
+    .btn-em-linha a{
+        color: white;
+    }
+    .btn-em-linha-2 {
+        display: none;
+    }
+    .caco {
+        margin-top:40px;
+    }
+}
+
