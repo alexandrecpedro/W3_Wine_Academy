@@ -39,6 +39,9 @@
                     height: 150px;
                     margin-bottom: 40px;
                     margin-top: 30px;
+                    display:none;
+                    
+                    background-color: yellow;
                 }
                 
                 main .full-box .box-left .logo .logowhite {
