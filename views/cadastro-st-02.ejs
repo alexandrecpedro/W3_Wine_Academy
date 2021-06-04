@@ -1,0 +1,103 @@
+<%- include('./partials/header'); %>
+
+    <!--comeco pagina INDEX-->
+    <div class="container-site">
+        <div class="caco"></div>
+        <!--espacamento header-->
+
+        <section class="encabezado">
+            <i class="fas fa-user"></i>
+            <h2 class="main-header">INFORMAÇÕES PESSOAIS</h2>
+            <h4 class="subt-main-header">Nosso sistema é baseado em Adobe Connect, a plataforma mais robusta e com tecnologia de ponta que nos permite realizar videoconferências, visualizar apresentações, vídeos, imagens, chat, compartilhar arquivos e muito mais, tudo em uma única
+                tela...
+            </h4>
+        </section>
+        <!--encabezado-->
+
+        <main>
+            <section class="cadastro">
+                <div class="container1">
+                    <div class="box-logo">
+                        <a href="/index.ejs"><img src="/img/w3 brand white.png" alt="W3 | Academia dos Vinhos"></a>
+                    </div>
+                    <article class="lista">
+                        <div class="info">
+                            <!-- <div class="numbers">1</div> -->
+                            <picture class="pic1">
+                                <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M10,7H14V17H12V9H10V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg>
+                                <span class="letras">CRIAÇÃO DE USUÁRIO</span>
+                            </picture>
+                        </div>
+                        <div class="info">
+                            <picture class="pic2">
+                                <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                    <path fill="#fff" d="M9,7H13A2,2 0 0,1 15,9V11A2,2 0 0,1 13,13H11V15H15V17H11L9,17V13A2,2 0 0,1 11,11H13V9H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg>
+                                <span class="letras" style="color: #fff">INFORMAÇÕES PESSOAIS</span>
+                            </picture>
+                        </div>
+                        <div class="info">
+                            <picture class="pic3">
+                                <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M15,15A2,2 0 0,1 13,17H9V15H13V13H11V11H13V9H9V7H13A2,2 0 0,1 15,9V10.5A1.5,1.5 0 0,1 13.5,12A1.5,1.5 0 0,1 15,13.5V15M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg>
+                                <span class="letras">AUTENTICAÇÃO DO E-MAIL</span>
+                            </picture>
+                        </div>
+                        <div class="info">
+                            <picture class="pic4">
+                                <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M9,7H11V11H13V7H15V17H13V13H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                                </svg>
+                                <span class="letras">PAGAMENTO</span>
+                            </picture>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+            <section class="formulario">
+                <div class="container2">
+                    <div class="member_logo">
+                        <picture>
+                            <svg class="member-icon" style=" color:#96042D; height: 120px; width: 120px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M11 9C11 10.66 9.66 12 8 12C6.34 12 5 10.66 5 9C5 7.34 6.34 6 8 6C9.66 6 11 7.34 11 9M14 20H2V18C2 15.79 4.69 14 8 14C11.31 14 14 15.79 14 18M7 9C7 9.55 7.45 10 8 10C8.55 10 9 9.55 9 9C9 8.45 8.55 8 8 8C7.45 8 7 8.45 7 9M4 18H12C12 16.9 10.21 16 8 16C5.79 16 4 16.9 4 18M22 12V14H13V12M22 8V10H13V8M22 4V6H13V4Z" />
+                            </svg>
+                        </picture>
+                    </div>
+                    <div class="form">
+                        <form class="dados" action="/users/cadastro-st-3" method="POST">
+                            <label for="nome"></label>
+                            <input class="step2-1" type="text" name="login" id="nome" placeholder="Nome" required>
+                            <label for="sobrenome"></label>
+                            <input class="step2-1" type="text" name="login" id="sobrenome" placeholder="Sobrenome" required>
+                            <label for="data-nasc"></label>
+                            <input type="text" class="step2-2" name="login" id="data-nasc" placeholder="Data de Nascimento" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                            <label for="identidade"></label>
+                            <input class="step2-2" type="text" name="login" id="identidade" placeholder="Doc. Identidade" required>
+                            <label for="orgao-emissor"></label>
+                            <input class="step2-3" type="text" name="login" id="orgao-emissor" placeholder="Org. Emissor" required>
+                            <label for="uf"></label>
+                            <input class="step2-4" type="text" name="login" id="uf" placeholder="UF" required>
+                            <label for="est-civil"></label>
+                            <input class="step2-3" type="text" name="login" id="est-civil" placeholder="Estado Civil" required>
+                            <label for="cep"></label>
+                            <input class="step2-5" name="login" id="cep" pattern="\d{5}-\d{3}" placeholder="CEP" required>
+                            <label for="uf"></label>
+                            <input class="step2-4" type="text" name="login" id="uf" placeholder="UF" required>
+                            <label for="endereco"></label>
+                            <input class="step2-1" type="text" name="login" id="endereco" placeholder="Endereço" required>
+                            <label for="local-de-ref"></label>
+                            <input class="step2-1" type="text" name="login" id="local-de-ref" placeholder="Ponto de Referência" required>
+                        </form>
+                    </div>
+                    <div class="botao" id="botao2">
+                        <a class="btnproximo" href="/cadastro-st-3.ejs"><button class="btn-step-1 letras" type="submit " id="submit " onclick="nextStep ">Próximo</button></a>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+<%- include('./partials/footer'); %>
