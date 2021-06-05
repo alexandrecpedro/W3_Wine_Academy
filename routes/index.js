@@ -17,9 +17,4 @@ router.get('/contato', institucionalController.contato)
 // (4) Rota para '/servicos' que retorna o método servicos da institucionalController
 router.get('/servicos', institucionalController.servicos)
 
-// Rota para '/pets' que retorna o método index da petsController
-router.get('/pets', petsController.index)
-// Rota para '/pets/:nome' que retorna o método show da petsController
-router.get('/pets/:nome', petsController.show)
-
 module.exports = router;
