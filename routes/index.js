@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const petsController = require('../controllers/petsController')
-const servicosController = require('../controllers/servicosController')
 const institucionalController = require('../controllers/institucionalController')
 
 /* GET home page. */
