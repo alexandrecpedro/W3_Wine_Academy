@@ -51,16 +51,19 @@ const adminController = {
         fs.writeFileSync(cursosPath,dadosJson)
         return res.redirect("/admin/servicos")
     },
-    deletar:(req,res)=>{
+    excluir: (req, res) => {
         let {id} = req.params;
-        let cursoIndex = cursos.findIndex(curso => curso.id == id)
-        cursos.splice(cursoIndex, 1)
-        /*convrtir array para json */
-        let dadosJson = JSON.stringify(cursos)
-        /*salva json atualizado no arquivo */
-        fs.writeFileSync(cursosPath,dadosJson)
-        return res.redirect("/admin/servicos")
+        let cursoEncontrado = cursos.find(curso => curso.id == id)
+        return res.render('cadastroExcluir', { title: 'Excluir Serviço', curso: cursoEncontrado });
     },
+    remover: (req, res) => {
+        let {id} = req.params;
+        let cursoIndex = cursos.findIndex((curso) => curso.id == id);
+        cursos.splice(cursoIndex, 1);        
+        let dadosJson = JSON.stringify(cursos);        
+        fs.writeFileSync(cursosPath, dadosJson);    
+        return res.redirect('/admin/servicos/');
+    }
 }
 
 module.exports = adminController

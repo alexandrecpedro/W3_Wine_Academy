@@ -6,16 +6,15 @@
 
         <div class="caco"></div>
 
-
         <section class="encabezado">
             <i class="fas fa-book"></i>
             <h2 class="main-header">CADASTRO DE CURSOS</h2>
-            <h4 class="subt-main-header videos">Editar curso</h4>
+            <h4 class="subt-main-header videos">Excluir curso</h4>
         </section>
         <!--encabezado-->
         <a class="link-cadastro" href="/admin/servicos">Voltar a Servicos</a>
         
-        <form class="form-cadastro" action="/admin/servicos/editar/<%= curso.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="form-cadastro" action="/admin/servicos/excluir/<%= curso.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
             <fieldset>
               
                 <label for="nome">Nome</label>
@@ -43,7 +42,7 @@
 
                 <input type="file" name="ilustracao" id="ilustracao">
 
-                <button type="submit" class="enviar btn btn-primary">Actualizar</button>
+                <button type="submit" class="enviar btn btn-primary">Deletar</button>
             </fieldset>
         </form>
 

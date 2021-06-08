@@ -1920,6 +1920,19 @@ footer {
     position: relative;
 }
 
+.thumb {
+    width: 300px;
+    height: 200px;
+    background-color:khaki;
+    background-size:cover;
+    border-radius:5px;
+    /* background-image: url("/uploads/<%curso.ilustracao%>"); */
+}
+
+.thumb img {
+    max-width:100%;
+    border-radius:5px;
+}
 
 /* 
 .curso-video::after {
@@ -1982,13 +1995,14 @@ footer {
     font-weight: lighter;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1079px) {
     .video {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
     }
-    .curso-video {
+    .curso-video,
+    .thumb {
         margin: auto;
     }
     .nombre-curso {
