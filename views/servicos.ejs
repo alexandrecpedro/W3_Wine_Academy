@@ -9,7 +9,7 @@
 
         <section class="encabezado">
             <i class="fas fa-book"></i>
-            <h2 class="main-header">SERVICOS!</h2>
+            <h2 class="main-header">SERVIÇOS!</h2>
             <h4 class="subt-main-header videos">Lista de cursos</h4>
         </section>
         <!--encabezado-->
@@ -25,7 +25,7 @@
                     <tr>
                         <th>Nome</th>
                         <th>Professor</th>
-                        <th>Puesto</th>
+                        <th>Cargo</th>
                         <!-- <th>Preço</th> -->
                         <th>Link curso</th>
                         <th>Descrição</th>
@@ -46,7 +46,7 @@
                         <td class="text-center">
                             <div class="botones-centrado">
                             <a href="/admin/servicos/editar/<%= curso.id %>" class="btn btn-gray"><i class="fas fa-edit pen-edit"></i></a>
-                            <a href="/admin/excluirServico/<%= curso.id %>" class="btn btn-red"><i class="fas fa-trash-alt trash"></i></a>
+                            <a href="/admin/servicos/excluir/<%= curso.id %>" class="btn btn-red"><i class="fas fa-trash-alt trash"></i></a>
                         </div>
                         </td>
                     </tr>

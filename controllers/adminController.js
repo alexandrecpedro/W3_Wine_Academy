@@ -50,8 +50,17 @@ const adminController = {
         /*salva json atualizado no arquivo */
         fs.writeFileSync(cursosPath,dadosJson)
         return res.redirect("/admin/servicos")
-    }
-
+    },
+    deletar:(req,res)=>{
+        let {id} = req.params;
+        let cursoIndex = cursos.findIndex(curso => curso.id == id)
+        cursos.splice(cursoIndex, 1)
+        /*convrtir array para json */
+        let dadosJson = JSON.stringify(cursos)
+        /*salva json atualizado no arquivo */
+        fs.writeFileSync(cursosPath,dadosJson)
+        return res.redirect("/admin/servicos")
+    },
 }
 
 module.exports = adminController

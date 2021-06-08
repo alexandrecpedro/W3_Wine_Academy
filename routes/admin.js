@@ -26,6 +26,7 @@ router.get("/servicos/cadastro",adminController.cadastro)
 router.post("/servicos/cadastro", upload.single("ilustracao"), adminController.salvar)
 router.get("/servicos/editar/:id",adminController.editar)
 router.put("/servicos/editar/:id", upload.single("ilustracao"), adminController.atualizar)
+router.delete("/servicos/excluir/:id", adminController.deletar)
 
 
 
