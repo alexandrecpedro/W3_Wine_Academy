@@ -1,0 +1,60 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">SERVICOS!</h2>
+            <h4 class="subt-main-header videos">Lista de cursos</h4>
+        </section>
+        <!--encabezado-->
+
+        <a class="novo-curso" href="/admin/servicos/cadastro">Adicionar novo curso</a><span> ||  </span>
+        <a class="novo-curso" href="/login/usuario-cadastrado/curso-videos">Ir a lista de cursos</a>
+
+        <section>
+            
+            <% if (cursos) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Professor</th>
+                        <th>Puesto</th>
+                        <!-- <th>Preço</th> -->
+                        <th>Link curso</th>
+                        <th>Descrição</th>
+                        <th>Ilustracao</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let curso of cursos) { %>
+                    <tr>
+                        <td><%= curso.nome %></td>
+                        <td><%= curso.professor %></td>
+                        <td><%= curso.puesto %></td>
+                        <!-- <td>R$ <%= curso.preco %></td> -->
+                        <td><%= curso.link %></td>
+                        <td><%= curso.descricao %></td>
+                        <td><%= curso.ilustracao %></td>
+                        <td class="text-center">
+                            <div class="botones-centrado">
+                            <a href="/admin/servicos/editar/<%= curso.id %>" class="btn btn-gray"><i class="fas fa-edit pen-edit"></i></a>
+                            <a href="/admin/excluirServico/<%= curso.id %>" class="btn btn-red"><i class="fas fa-trash-alt trash"></i></a>
+                        </div>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <%}%>
+        </section>
+
+        
+        <%- include("./partials/footer")%>

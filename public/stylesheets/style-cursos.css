@@ -869,7 +869,7 @@ div.botones {
 }
 
 .foto-1 {
-    background-image: url("../img/fotos-cursos/cursos/sommelier-shutterstock-1.jpg");
+    background-image: url("/images/fotos-cursos/cursos/sommelier-shutterstock-1.jpg");
     position: relative;
 }
 
@@ -904,27 +904,27 @@ div.botones {
 }
 
 .foto-2 {
-    background-image: url("../img/fotos-cursos/cursos/fresco-egipcio.jpg");
+    background-image: url("/images/fotos-cursos/cursos/fresco-egipcio.jpg");
     position: relative;
 }
 
 .foto-3 {
-    background-image: url("../img/fotos-cursos/cursos/toscana.jpg");
+    background-image: url("/images/fotos-cursos/cursos/toscana.jpg");
     position: relative;
 }
 
 .foto-4 {
-    background-image: url("../img/fotos-cursos/cursos/mendoza.jpg");
+    background-image: url("/images/fotos-cursos/cursos/mendoza.jpg");
     position: relative;
 }
 
 .foto-5 {
-    background-image: url("../img/fotos-cursos/cursos/vinosbrasil.jpg");
+    background-image: url("/images/fotos-cursos/cursos/vinosbrasil.jpg");
     position: relative;
 }
 
 .foto-6 {
-    background-image: url("../img/fotos-cursos/cursos/champagne.jpg");
+    background-image: url("/images/fotos-cursos/cursos/champagne.jpg");
     position: relative;
 }
 
@@ -1328,7 +1328,6 @@ div.botones {
 
 
 /* Formulario */
-
 .contenedor-form {
     margin-top: 1.1rem;
     width: 100%;
@@ -1351,12 +1350,13 @@ div.botones {
 
 .formulario {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
+    width:100%;
 }
 
 .coluna-izq,
 .coluna-der {
-    width: 100%;
+    width: 50%;
 }
 
 .coluna-izq .w50,
@@ -1375,6 +1375,12 @@ textarea {
 .coluna-izq .w50 {
     width: 45%;
     margin-bottom: 2rem;
+    display:inline;
+}
+
+input[type="radio"]{
+    display:inline;
+    margin-bottom: 1rem;
 }
 
 .coluna-izq .w100 {
@@ -1440,6 +1446,7 @@ select:focus {
     .formulario {
         display: flex;
         flex-direction: column;
+        margin:0 auto;                
     }
     .segundos {
         margin-left: 2.5rem;
@@ -1447,8 +1454,12 @@ select:focus {
     .campos-obligatorios {
         margin-top: 1rem;
     }
+    .coluna-der,
+    .coluna-izq {
+        margin:auto;
+        width:100%;
+    }
 }
-
 
 /* HOMEPAGE */
 
@@ -1870,6 +1881,22 @@ footer {
         margin: auto;
     }
 }
+
+/* 
+.form-cadastro {
+    width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.form-cadastro input {
+    width:100%;
+    display:block;
+    
+} */
+
 
 
 /* CURSO VIDEO */

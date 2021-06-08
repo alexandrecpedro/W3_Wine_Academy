@@ -1,0 +1,142 @@
+body {
+    font-family:sans-serif;
+}
+tbody {
+    font-size:12px;
+}
+.form-cadastro {
+    width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+}
+
+.form-cadastro input,
+.form-cadastro label,
+.form-cadastro textarea {
+    width:100%;
+    display:block;
+}
+
+.form-cadastro label {
+    margin-top:12px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.form-cadastro input {
+    height:50px;
+    border-radius:10px;
+}
+
+.form-cadastro textarea {
+    height:250px;
+    border-radius:10px;
+}
+
+.form-cadastro button {
+    margin-top:20px;
+}
+
+table {
+    margin-top:16px;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+.btn.btn-primary,
+a.btn.btn-primary {
+    background-color: #FFBE51;
+    border-color: #FFBE51;
+    color: #fff;
+}
+
+/* .btn.btn-gray,
+a.btn.btn-gray {
+    background-color: #959593;
+    border-color: #959593;
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: 500;
+
+} */
+
+.btn {
+    text-align:center;
+}
+
+/* .btn.btn-red,
+a.btn.btn-red {
+    font-weight: 500;
+    /* background-color: #ff5751;
+    border-color: #ff5751; */
+    /* padding: 5px 15px;
+    color: #fff;
+} */
+
+/* .btn.btn-green,
+a.btn.btn-green {
+    font-weight: 500; */
+    /* background-color: #4c9762;
+    border-color: #4c9762; */
+    /* padding: 3px 15px;
+    color: #fff;
+} */ 
+
+.novo-cadastro {
+    display:flex;    
+    align-items: center;
+}
+
+.imagen-cadastro {
+    width:20%;
+    align-items: center;   
+}
+
+.pen-edit,
+.trash {
+    font-size:15px;
+    color: #95062E;
+    display:inline;
+    text-align: center;
+}
+
+.imagen-cadastro img {
+    max-width:100%;
+}
+
+.servico {
+    text-align:left;
+    margin-left:20px;
+}
+
+.servico a,
+.novo-curso,
+.link-cadastro {
+    
+    letter-spacing: 1px;
+    font-weight:600;
+    color: #95062E;
+    font-family:sans-serif;
+}
+
+.thumb {
+    width: 300px;
+    height: 200px;
+    background-color:khaki;
+    background-size:cover;
+    /* background-image: url("/uploads/<%curso.ilustracao%>"); */
+}
+
+.enviar {
+    margin:auto;
+    display:block;
+    width:50%;
+    margin-bottom: 1rem;
+}

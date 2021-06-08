@@ -1,79 +1,36 @@
-<%- include('./partials/header'); %>
-<!--comeco pagina cursos-->
-<div class="container-site">
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
 
-    <div class="caco"></div>
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
 
 
-    <section class="encabezado">
-        <i class="fas fa-book"></i>
-        <h2 class="main-header">BEM-VINDO, DIGITAL!</h2>
-        <h4 class="subt-main-header videos">Lista de cursos disponíveis</h4>
-    </section>
-    <!--encabezado-->
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">BIENVENIDO, DIGITAL!</h2>
+            <h4 class="subt-main-header videos">Lista de cursos disponíveis</h4>
+        </section>
+        <!--encabezado-->
 
-    <section class="videos">
-        <div class="video">
-
-            <div class="curso-video">
-                <a target="_blank" href="https://vimeo.com/300398329"> <img src="/img/fotos-cursos/cursos/sommelier-shutterstock-1.jpg" alt=""></a>
-
+        <section class="videos">
+            <% for (let curso of cursos) { %> 
+            <div class="video">
+                <div class="curso-video">
+                    <div class="thumb" style="background-image: url('/uploads/<%=curso.ilustracao%>')"></div>
+                    
+                </div> <!--curso-video-->
+                
+                <div class="nombre-curso">
+                    <a target="_blank" class="link-video" href="<%= curso.link  %>">
+                        <h3><%= curso.nome  %> </h3>
+                    </a>
+                    <p class="professor"><%= curso.professor  %>. <span class="cargo"> <%= curso.puesto %>.</span></p>
+                    <p class="vista"><%= curso.descricao %>.</p>                                 
+                </div> <!--nombre-curso-->
             </div>
+            <% } %> 
+        </section>
 
-            <div class="nombre-curso">
-                <a target="_blank" class="link-video" href="https://vimeo.com/300398329">
-                    <h3>Degustação e apreciação de vinhos</h3>
-                </a>
-                <p class="professor">Javier Ponce <span class="cargo">Sommelier ABV</span></p>
-                <p class="vista">1050 views</p>
-            </div>
-
-        </div>
-        <!--video-->
-        <div class="video">
-            <div class="curso-video">
-                <a target="_blank" href="https://vimeo.com/451888765"><img src="/img/fotos-cursos/cursos/w3-decante.jpg" alt=""></a>
-            </div>
-            <div class="nombre-curso">
-                <a target="_blank" class="link-video" href="https://vimeo.com/451888765">
-                    <h3>Vinhos do novo mundo: Austrália</h3>
-                </a>
-                <p class="professor">Richard Agostini <span class="cargo">Sommelier Bodegas Lagarde</span></p>
-                <p class="vista">950 views</p>
-            </div>
-
-        </div>
-        <!--video-->
-        <div class="video">
-            <div class="curso-video">
-                <a target="_blank" href="https://vimeo.com/169603067"><img src="./img/fotos-cursos/cursos/toscana.jpg" alt=""></a>
-            </div>
-            <div class="nombre-curso">
-                <a target="_blank" class="link-video" href="https://vimeo.com/169603067">
-
-                    <h3>Vinhos da Alemanha</h3>
-                </a>
-                <p class="professor">Wolf Fellari <span class="cargo">Agrônomo Instituto Alemão dos Vinhos</span></p>
-                <p class="vista">275 views</p>
-            </div>
-
-        </div>
-        <!--video-->
-        <div class="video">
-            <div class="curso-video">
-                <a target="_blank" href="https://vimeo.com/374263468"><img src="./img/fotos-cursos/cursos/Mercado-del-vino.jpg" alt=""></a>
-            </div>
-            <div class="nombre-curso">
-                <a target="_blank" class="link-video" href="https://vimeo.com/374263468">
-                    <h3>Champagne & Espumantes</h3>
-                </a>
-                <p class="professor">Francois Pinault <span class="cargo">Chef da Cave Dom Pérignon</span></p>
-                <p class="vista">2490 views</p>
-            </div>
-
-        </div>
-        <!--video-->
-
-    </section>
-
-<%- include('./partials/footer'); %>
+        <%- include("./partials/footer")%>

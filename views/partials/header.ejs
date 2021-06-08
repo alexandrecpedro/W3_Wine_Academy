@@ -1,53 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+    <link rel="stylesheet" href="/stylesheets/style-login.css"> 
+    <link rel="stylesheet" href="/stylesheets/style-steps.css">
+    <!-- <link rel="stylesheet" href="/stylesheets/style-cadastro-login.css"> -->
+    <!-- <link rel="stylesheet" href="/stylesheets/style-pgto.css"> -->
+    <link rel="stylesheet" href="/stylesheets/style-pto.css">
+    <link rel="stylesheet" href="/stylesheets/style-footer.css"> 
+    <link rel="stylesheet" href="/stylesheets/style-cursos.css">
+    <link rel="stylesheet" href="/stylesheets/style-cadastro.css">
 
-    <link rel="stylesheet" href="/css/style-cursos.css">
-    <link rel="stylesheet" href="/css/style-steps.css">
-    <link rel="stylesheet" href="/css/style-login.css">
-    <link rel="stylesheet" href="/css/style-cadastro">
-    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/fb10d770ed.js" crossorigin="anonymous"></script>
-    <title>W3 | ACADEMIA DOS VINHOS</title>
+    <title><%= title.toUpperCase()  %> </title>
 </head>
 
-<body>
-    <header>
-        <div class="nav">
-  
-                <section class="navmenu">
-                   <div class="logo">
-                    <a href="/index.ejs"><img src="/img/w3_red.png" alt="W3 Academia dos Vinhos"></a>
-                    </div>
-                    <ul class="menu">
-                        <li> <a href="/cursos.ejs">Cursos</a> </li>
-                        <li><a href="/nossosPlanos.ejs">Nossos Planos</a> </li>
-                        <li><a href="/sobre.ejs">Sobre Nós</a>  </li>
-                        <button class="btn-em-linha"><a href="/login.ejs">Login</a></button>
-                    </ul>
-                    <section class="navrecursos">
-                        <div class="navcontrast">
-                            <input aria-label="Ativar alto contraste" type="checkbox" class="checkbox" id="chk" />
-                            <label class="label" for="chk">
-                                 <div class="ball"></div>
-                             </label>
-                        </div> 
-                        <div class="navfontsize">
-                            <ul id="fonte-lista-dropdown" class="aria-expended">
-                                <li><button aria-label="Aumentar fonte" id="aumentar-fonte">A+</button></li>
-                                <li><button aria-label="diminuir fonte" id="diminuir-fonte">A-</button></li>
-                            </ul>
-                        </div>
-                       <button class="btn-em-linha-2"><a href="/login.ejs">Login</a></button>
-                    </section>
-                </section> <!--navmenu-->                                                   
-        </div>
-    </header>
 
 
-    <!--fin navbar-->
+
+    

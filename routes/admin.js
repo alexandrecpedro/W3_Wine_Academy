@@ -1,23 +1,32 @@
-// Chama módulo Express
-const express = require('express');
-// Chama módulo que gerencia rotas
-const router = express.Router();
-// Chama o controller servicosController
-const servicosController = require('../controllers/servicosController');
+const express = require("express")
+const multer = require('multer'); // chama modulo multer (upload)
+const path = require("path") //chama cuando pido upload de arquivo
+const router = express.Router()
+const adminController = require("../controllers/adminController")
 
-// Rotas para páginas administrativas
-// A) MÉTODO GET
-// (1) http://localhost:3000/admin
-router.get('/', (req, res, next) => {
-    res.render('admin', { titulo: 'Painel Administrativo' });
+const storage = multer.diskStorage({
+    /** destino do upload */
+    destination: (req, file, cb) => {
+        /** guarda arquivos na pasta /uploads */
+        cb(null, path.join('uploads'));
+    },
+    /** nome do upload */
+    filename: (req, file, cb) => {
+        /** salva arquivo com nome do campo + data e hora + extensão */
+        cb(null, file.fieldname + Date.now() + path.extname(file.originalname));
+    }
 });
-// (2) http://localhost:3000/admin/servicos
-router.get('/servicos', servicosController.index);
-// (3) http://localhost:3000/admin/servicos/cadastro
-router.get('/servicos/cadastro', servicosController.cadastro);
-// B) MÉTODO POST
-// (1) http://localhost:3000/admin/servicos/cadastro
-router.post('/servicos/cadastro', servicosController.salvar);
 
-// Exportando rotas a serem utilizadas
-module.exports = router;
+/** usando configuração como storage do multer */
+const upload = multer({ storage: storage });
+
+router.get("/",adminController.index)
+router.get("/servicos",adminController.servicos)
+router.get("/servicos/cadastro",adminController.cadastro)
+router.post("/servicos/cadastro", upload.single("ilustracao"), adminController.salvar)
+router.get("/servicos/editar/:id",adminController.editar)
+router.put("/servicos/editar/:id", upload.single("ilustracao"), adminController.atualizar)
+
+
+
+module.exports = router

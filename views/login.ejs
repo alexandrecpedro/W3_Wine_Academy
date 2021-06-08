@@ -1,54 +1,57 @@
-<%- include('./partials/header'); %>
-<!--comeco pagina SOBRE-->
-<div class="container-site">
-    <div class="caco"></div>
-    <!--espacamento header-->
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
 
-    <section class="encabezado">
-        <i class="fas fa-address-card"></i>
-        <h2 class="main-header">ENTRE COM A SUA CONTA</h2>
-        <h4 class="subt-main-header">Entre ou cadastre-se para desfrutar de todas as vantagens de nossos planos!
-        </h4>
-    </section>
-    <!--encabezado-->
+    <!--comeco pagina SOBRE-->
+    <div class="container-site">
+        <div class="caco"></div>
+        <!--espacamento header-->
 
-    <main>
-        <div class="box-login">
-            <div class="box-logo">
-                <div class="img-logo">
-                    <img src="/img/w3 brand red wine.png" alt="">
+        <section class="encabezado">
+            <i class="fas fa-address-card"></i>
+            <h2 class="main-header">INGRESE A SUA CONTA</h2>
+            <h4 class="subt-main-header">Ingrese ou cadastre-se para desfrutar de todas as ventagems de nossos planos!
+            </h4>
+        </section>
+        <!--encabezado-->
+
+        <main>
+            <div class="box-login">
+                <div class="box-logo">
+                    <div class="img-logo">
+                        <img src="/images/w3_red.png" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="box-in">
-                <h3>entre na sua conta</h3>
-                <label for="input_email"></label>
-                <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email" required>
-                <label for="input_password"></label>
-                <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>
-                <a href="/curso-videos.ejs"><button type="submit" id="enviar">Login</button></a>
-                <p>ou</p>
-                <div class="box-social">
-                    <div class="logo-gmail">
-                        <img src="/img/foto-login/logo-gmail.svg" alt="">
-                    </div>
-                    <div class="logo-apple">
-                        <img src="/img/foto-login/apple-logo.svg" alt="">
-                    </div>
-                    <div class="logo-outlook">
-                        <img src="/img/foto-login/outlook-logo.svg" alt="">
-                    </div>
+                <div class="box-in">
+                    <h3>entre na sua conta</h3>
+                    <label for="input_email"></label>
+                    <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email" required>
+                    <label for="input_password"></label>
+                    <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>
+                    <a href="/login/usuario-cadastrado/curso-videos"><button type="submit" id="enviar">Login</button></a>
+                    <p>ou</p>
+                    <div class="box-social">
+                        <div class="logo-gmail">
+                            <img src="/images/foto-login/logo-gmail.svg" alt="">
+                        </div>
+                        <div class="logo-apple">
+                            <img src="/images/foto-login/apple-logo.svg" alt="">
+                        </div>
+                        <div class="logo-outlook">
+                            <img src="/images/foto-login/outlook-logo.svg" alt="">
+                        </div>
 
+                    </div>
+                    <!-- TEST FONT AWESOME SOCIAL MEDIAS -->
+                    <!-- <div class="test">
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa fa-apple"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </div> -->
                 </div>
-                <!-- TEST FONT AWESOME SOCIAL MEDIAS -->
-                <!-- <div class="test">
-                    <li><a href="#"><i class="fa fa-google"></i></a></li>
-                    <li><a href="#"><i class="fa fa-apple"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </div> -->
+
+
+                <h4>Não tem conta? <a href="/login/cadastro-st-1">Cadastre-se</a></h4>
             </div>
+        </main>
 
-
-            <h4>Não tem conta? <a href="/cadastro-st-01.ejs">Cadastre-se</a></h4>
-        </div>
-    </main>
-<%- include('./partials/footer'); %>
+        <%- include("./partials/footer")%>

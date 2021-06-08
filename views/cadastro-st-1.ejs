@@ -1,4 +1,6 @@
-<%- include('./partials/header'); %>
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+    <!--fin navbar-->
 
     <!--comeco pagina INDEX-->
     <div class="container-site">
@@ -17,7 +19,7 @@
             <section class="cadastro">
                 <div class="container1">
                     <div class="box-logo">
-                        <a href="/index.ejs"><img src="/img/w3 brand white.png" alt="W3 | Academia dos Vinhos"></a>
+                        <a href="/"><img src="/images/foto-steps-ok/w3 brand white.png" alt="W3 | Academia dos Vinhos"></a>
                     </div>
                     <article class="lista">
                         <div class="info">
@@ -58,9 +60,9 @@
                 </div>
 
             </section>
-            <section class="formulario ">
-                <div class="container2 ">
-                    <div class="member_logo ">
+            <section class="formulario">
+                <div class="container2">
+                    <div class="member_logo">
                         <picture>
                             <svg class="member-icon " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " version="1.1 " x="0px " y="0px " viewBox="0 0 50 50 " style=" fill:#96042D; height: 156px; width: 156px;
                                     " xml:space="preserve ">
@@ -80,21 +82,22 @@
                                 </svg>
                         </picture>
                     </div>
-                    <div class="form ">
-                        <form class="st1" action="/cadastro-st-1.html" method="POST">
-                            <label for="email "></label>
-                            <input class="step1 " type="email " name="login " id="email " placeholder="Insira seu email " required>
-                            <label for="password "></label>
-                            <input class="step1 " type="password " name="login " id="password " placeholder="Crie a sua senha " required>
-                            <label for="confirm_password "></label>
-                            <input class="step1 " type="password " name="login " id="confirm_password " placeholder="Confirme a sua senha " required>
+                    <div class="form">
+                        <form class="st1" action="/pagina6/" method="POST ">
+                            <label for="email"></label>
+                            <input class="step1" type="email" name="login " id="email" placeholder="Insira seu email " required>
+                            <label for="password"></label>
+                            <input class="step1" type="password" name="login " id="password " placeholder="Crie a sua senha " required>
+                            <label for="confirm_password"></label>
+                            <input class="step1" type="password " name="login " id="confirm_password " placeholder="Confirme a sua senha " required>
                         </form>
                     </div>
-                    <div class="botao ">
-                        <a class="btnproximo" href="/cadastro-st-02.ejs"><button class="btn-step-1 letras" type="submit " id="submit " onclick="nextStep ">Próximo</button></a>
+                    <div class="botao">
+                        <a class="btnproximo" href="/login/cadastro-st-2"><button class="btn-step-1 letras" type="submit " id="submit " onclick="nextStep ">Próximo</button></a>
                     </div>
                 </div>
 
             </section>
         </main>
-<%- include('./partials/footer'); %>
+
+        <%- include("./partials/footer")%>

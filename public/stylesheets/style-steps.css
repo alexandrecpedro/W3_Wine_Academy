@@ -61,6 +61,7 @@ main {
     align-items: center;
     border-radius: 25px 0 0 25px;
     opacity: 1;
+    padding-bottom:200px;
 }
 
 img {
@@ -71,7 +72,9 @@ img {
 .box-logo {
     width: 300px;
     height: 150px;
-    margin-bottom: 80px;
+    padding-top:30px;
+    
+    
 }
 
 article {
@@ -129,6 +132,7 @@ span {
 .dados {
     position: relative;
     bottom: 20px;
+    margin:auto;
 }
 
 form {
@@ -184,6 +188,7 @@ input:focus {
 .st1 {
     position: relative;
     bottom: 30px;
+    margin:auto;
 }
 
 input.step1 {
@@ -237,16 +242,6 @@ input.step2-5 {
     margin: 5px 2% 5px 0;
 }
 
-input.step4-1 {
-    width: 60%;
-    margin: 5px 0 5px 0;
-}
-
-#val_cartao {
-    margin-right: 1%;
-    block-size: 2.8rem;
-}
-
 .botao {
     width: 140px;
     height: 55px;
@@ -285,6 +280,7 @@ h2 {
     top: 0.65rem;
 }
 
+
 /* .center {
     width: 100%;
     display: flex;
@@ -311,123 +307,10 @@ p {
     color: #9E0D36;
 } */
 
-.plan {
-    width: 100%;
-    background: #E3e3e3 0% 0% no-repeat padding-box;
-    opacity: 1;
-}
-
-.container-plan {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.description {
-    text-align: left;
-}
-
-.valor {
-    text-align: right;
-}
-
-h3,
-h4,
-h5 {
-    color: #9C0A33;
-}
-
-h3 {
-    font-weight: bold;
-}
-
-.payment {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    height: 120px;
-    font-family: 'Manrope', sans-serif;
-}
-
-.boleto {
-    width: 40%;
-    background-color: #E3E3E3;
-    border-radius: 25px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.credit {
-    width: 40%;
-    background-color: #E3E3E3;
-    border-radius: 25px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-    color: #9C0A33;
-}
-
-#finalize {
-    color: #343434;
-    font-size: 1.15rem;
-}
-
-.credit i {
-    color: rgba(26, 26, 26, 0.837);
-    font-size: 60px;
-}
-
-.boleto i {
-    color: rgba(26, 26, 26, 0.837);
-    font-size: 60px;
-}
-
-.boleto h6 {
-    color: #9C0A33;
-    margin: 0 auto;
-}
-
-.credit:hover {
-    background-color: #9C0A33;
-    cursor: pointer
-}
-
-.credit:hover h6 {
-    color: #E3E3E3;
-}
-
-.credit:hover i {
-    color: #E3E3E3;
-}
-
-.boleto:hover {
-    background-color: #9C0A33;
-    cursor: pointer;
-}
-
-.boleto:hover h6 {
-    color: white;
-}
-
-h3,
-h5 {
-    display: block;
-}
-
 @media screen and (max-width:1200px) {
     .container1 {
         width: 400px;
     }
-
     .container2 {
         width: 500px;
     }
@@ -437,17 +320,20 @@ h5 {
     .container1 {
         display: none;
     }
-
     .container2 {
         width: 500px;
+        margin:auto;
         border: 1px solid grey;
     }
-
+    .dados {
+        position: relative;
+        bottom: 20px;
+        margin:auto;
+    }
     form {
         display: flex;
         width: 90%;
     }
-
     input.step2-1,
     input.step2-2 {
         display: block;
@@ -456,40 +342,32 @@ h5 {
         color: #2E2E2E;
         border: 1px solid rgba(36, 36, 36, .4);
     }
-
     #botao2 {
         margin: 0;
     }
-
     .confirme-central {
         text-align: center;
     }
-
     .input-size {
         width: 100%;
     }
-
     .input-size input {
         width: 4rem;
         height: 5rem;
         margin: auto;
     }
-
     .letras2 {
         font-size: 20px;
         width: 90%;
         margin: auto;
     }
-
     input.step2-2 {
         width: 100%;
     }
-
     #data-nasc {
         margin-right: 0;
         block-size: 2.8rem;
     }
-
     #identidade {
         margin-left: 0;
     }

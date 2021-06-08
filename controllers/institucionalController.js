@@ -1,13 +1,19 @@
 const institucionalController = {
-    index: (request, response) => {
-        return response.render('index', { titulo: 'Home' });
+    index: (req,res) => {
+        return res.render("index", {title:"W3 - Home"})
     },
-    sobre: (request, response) => {
-        return response.render('sobre', { titulo: 'Sobre' });
+    cursos: (req,res) => {
+        return res.render("cursos", {title:"W3 - Cursos"})
     },
-    servicos: (request, response) => {
-        /** renderiza a view Serviços e passa titulo e lista de serviços cadastrados */
-        return response.render('servicos', { titulo: 'Serviços', servicos });
+    planos: (req,res) => {
+        return res.render("planos", {title:"W3 - Nossos Planos"})
     },
-    contato: (request, response) => {}
+    sobre: (req,res) => {
+        return res.render("sobre", {title:"W3 - Sobre nós"})
+    },
+    login: (req,res) => {
+        return res.render("login", {title:"W3 - Login"})
+    }
 }
+
+module.exports=institucionalController
