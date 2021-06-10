@@ -6,6 +6,8 @@ const fs = require('fs')
 const path = require('path')
 // Instalação de módulo 'uuidv4' para gerar ID
 const { uuid } = require('uuidv4')
+// Instalação de módulo 'express-session' para criar session
+const session = require('express-session');
 
 // Caminho do arquivo JSON
 const usuariosPath = path.join('usuarios.json')
@@ -39,6 +41,23 @@ const usuariosController = {
     login: (request, response) => {
         // Renderiza a view login
         return response.render('login', { titulo: 'Login' })
+    },
+        // método AUTENTICAÇÃO
+    autenticacao: (request, response) => {
+        const {email, senha} = request.body
+        // Busca usuário pelo email
+        const usuarioEncontrado = usuarios.find(usuario => usuario.email == email)
+        // Verificar se há usuário encontrado e se a senha está correta
+        if (usuarioEncontrado && bcrypt.compareSync(senha, usuarioEncontrado.senha)) {
+            // Usuário autenticado
+            request.session.usuarioLogado = usuarioEncontrado
+            // Redireciona para página inicial
+            response.redirect('/')
+        } else {
+            // Usuário não autenticado
+            response.redirect('/login')
+        }
+
     }
 }
 
