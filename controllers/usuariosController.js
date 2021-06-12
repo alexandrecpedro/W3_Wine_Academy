@@ -44,11 +44,11 @@ const usuariosController = {
     },
         // método AUTENTICAÇÃO
     autenticacao: (request, response) => {
-        const {email, senha} = request.body
+        const {email, password} = request.body
         // Busca usuário pelo email
         const usuarioEncontrado = usuarios.find(usuario => usuario.email == email)
         // Verificar se há usuário encontrado e se a senha está correta
-        if (usuarioEncontrado && bcrypt.compareSync(senha, usuarioEncontrado.senha)) {
+        if (usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.senha)) {
             // Usuário autenticado
             request.session.usuarioLogado = usuarioEncontrado
             // Redireciona para página inicial

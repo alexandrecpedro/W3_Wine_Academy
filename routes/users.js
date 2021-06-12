@@ -10,12 +10,12 @@ const validateLogin = require('../middlewares/auth')
 // (1) http://localhost:3000/cadastro
 router.get('/cadastro', usuariosController.cadastro)
 // (2) http://localhost:3000/login
-router.get('/login', validateLogin, usuariosController.login)
+router.get('/login', usuariosController.login)
 
 // (B) MÉTODO POST
 // (1) http://localhost:3000/cadastro
 router.post('/cadastro', usuariosController.salvar)
 // (2) http://localhost:3000/login
-router.post('/login', validateLogin, usuariosController.autenticacao)
+router.post('/login', usuariosController.autenticacao)
 
 module.exports = router;

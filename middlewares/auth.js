@@ -9,4 +9,4 @@ const auth = (request, response, next) => {
     }
 }
 
-module.exports = auth
+module.exports = auth;

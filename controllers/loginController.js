@@ -22,7 +22,7 @@ const loginController = {
     },
     step04: (req,res) =>{
         return res.render("cadastro-st-4", {title:"W3 - Bem-vindo, Usuário"})
-    },
+    }
 }
 
 module.exports=loginController
