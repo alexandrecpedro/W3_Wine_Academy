@@ -1,9 +1,21 @@
+const { Router } = require('express');
 var express = require('express');
+const usuariosController = require('../controllers/usuariosController');
 var router = express.Router();
+// Chama middleware - validação de usuário
+const validateLogin = require('../middlewares/auth')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// Rota para páginas de Cadastro e de Login
+//(A) MÉTODO GET
+// (1) http://localhost:3000/cadastro
+router.get('/cadastro', usuariosController.cadastro)
+// (2) http://localhost:3000/login
+router.get('/login', usuariosController.login)
+
+// (B) MÉTODO POST
+// (1) http://localhost:3000/cadastro
+router.post('/cadastro', usuariosController.salvar)
+// (2) http://localhost:3000/login
+router.post('/login', usuariosController.autenticacao)
 
 module.exports = router;

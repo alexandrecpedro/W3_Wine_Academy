@@ -1,5 +1,7 @@
+const bcrypt = require('bcrypt')
 const fs = require("fs")
 const path = require("path")
+const { uuid } = require('uuidv4')
 
 const cursosPath = path.join("cursos.json")
 let cursos = fs.readFileSync(cursosPath, { encoding:"utf-8" })
@@ -20,7 +22,7 @@ const loginController = {
     },
     step04: (req,res) =>{
         return res.render("cadastro-st-4", {title:"W3 - Bem-vindo, Usuário"})
-    },
+    }
 }
 
 module.exports=loginController

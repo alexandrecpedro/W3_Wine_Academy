@@ -23,10 +23,12 @@
                 </div>
                 <div class="box-in">
                     <h3>entre na sua conta</h3>
-                    <label for="input_email"></label>
-                    <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email" required>
-                    <label for="input_password"></label>
-                    <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>
+                    <form action="/login" method="post">
+                        <label for="input_email"></label>
+                        <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email" required>
+                        <label for="input_password"></label>
+                        <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>
+                    </form>
                     <a href="/login/usuario-cadastrado/curso-videos"><button type="submit" id="enviar">Login</button></a>
                     <p>ou</p>
                     <div class="box-social">
