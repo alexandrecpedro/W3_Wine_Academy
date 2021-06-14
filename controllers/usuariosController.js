@@ -1,64 +1,52 @@
-// Importar módulo 'bcrypt' para criptografar senhas
-const bcrypt = require('bcrypt');
-// Instalação de módulo 'fs' para manipulação de arquivos
-const fs = require('fs')
-// Módulo nativo para manipulação de arquivos
-const path = require('path')
-// Instalação de módulo 'uuidv4' para gerar ID
-const { uuid } = require('uuidv4')
-// Instalação de módulo 'express-session' para criar session
-const session = require('express-session');
+const bcrypt = require("bcrypt")
+const fs = require("fs")
+const path = require("path")
+const { uuid } = require("uuidv4")
 
-// Caminho do arquivo JSON
-const usuariosPath = path.join('usuarios.json')
-// Pegando conteúdo do arquivo JSON
-let usuarios = fs.readFileSync(usuariosPath, { encoding: 'utf-8'})
-// Convertendo arquivo JSON em um array - Método Parse
+
+const cursosPath = path.join("cursos.json")
+let cursos = fs.readFileSync(cursosPath, { encoding:"utf-8" })
+cursos = JSON.parse(cursos)
+
+const usuariosPath = path.join("usuarios.json")
+let usuarios = fs.readFileSync(usuariosPath, { encoding:"utf-8" })
 usuarios = JSON.parse(usuarios)
 
 const usuariosController = {
-    // métodos dentro do objeto
-    // método CADASTRO
-    cadastro: (request, response) => {
-        return response.render('cadastro', { titulo: 'Cadastre-se' })
+    login: (req,res) => {
+        return res.render("login", {title:"W3 - Login"})
     },
-    // método SALVAR - recebe informações enviadas e as salva
-    salvar: (request, response) => {
-        let { nome, email, senha } = request.body;
-        const senhaCrypt = bcrypt.hashSync(senha, 10);
-
-         // Adiciona o novo usuario na lista para o JSON
-         usuarios.push({ id: uuid(), nome, email, senha: senhaCrypt })
-         // Converter o array para json
-         let dadosJson = JSON.stringify(usuarios)
-         // Salva json atualizado no arquivo
-         fs.writeFileSync(usuariosPath, dadosJson)
-         
-         // Redireciona para a lista de serviços
-         return response.redirect('/login')
-    },
-    // método LOGIN
-    login: (request, response) => {
-        // Renderiza a view login
-        return response.render('login', { titulo: 'Login' })
-    },
-        // método AUTENTICAÇÃO
-    autenticacao: (request, response) => {
-        const {email, password} = request.body
-        // Busca usuário pelo email
-        const usuarioEncontrado = usuarios.find(usuario => usuario.email == email)
-        // Verificar se há usuário encontrado e se a senha está correta
-        if (usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.senha)) {
-            // Usuário autenticado
-            request.session.usuarioLogado = usuarioEncontrado
-            // Redireciona para página inicial
-            response.redirect('/')
+    autenticacao: (req,res) => {
+        const {email, password} = req.body
+        const usuarioEncontrado = usuarios.find((usuario => usuario.email == email))
+        if(usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.password)){
+            /**usuario atenticoado */
+            /**cria sessao e guarda info de usuario */
+            req.session.usuarioLogado = usuarioEncontrado            
+            console.log(usuarioEncontrado)            
+            res.redirect("/login/curso-videos")
+            
         } else {
-            // Usuário não autenticado
-            response.redirect('/login')
+            /**usuario nao atenticado */
+            console.log("no encontrado")
+            res.redirect("/login")
         }
+    },    
+    cadastro: (req,res) => {
+        return res.render("cadastro-st-1", {title:"W3 - Bemvindo Usuario"})
+    },
+    salvar: (req,res) => {
+        const {email, password} = req.body
+        const senhaCrypt = bcrypt.hashSync(password,10);
+        usuarios.push({id:uuid(), email, password: senhaCrypt})
+        let dadosJson = JSON.stringify(usuarios)        
+        fs.writeFileSync(usuariosPath, dadosJson)
+        return res.redirect("/login")
+    },
+    cursos: (req,res) => {
+         return res.render("curso-videos", {title:"W3 - Bemvindo Usuario", cursos})
+     }
 
-    }
 }
 
-module.exports = usuariosController
+module.exports = usuariosController;

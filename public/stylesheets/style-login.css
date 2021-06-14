@@ -6,14 +6,6 @@
         top: 0;
         left: 0;
     }
-    /* main {
-        background-image: linear-gradient(to right, #69575cbd, #87324aaa), url("../img/foto-login/paisagem.jpg");
-        background-repeat: no-repeat;
-        background-size: 1980px 1280px;
-        background-clip: border-box;
-        background-position: center;
-        height: 100%;
-    } */
     
     main .box-login {
         width: 400px;
@@ -85,7 +77,10 @@
     main .box-login .box-in p {
         margin: 10px auto;
         font-size: 15px;
-        text-transform: uppercase;
+        text-transform: uppercase;        
+        width:100%;
+        margin-top:1rem;
+        text-align:center;
     }
     
     main .box-login .box-in input {
@@ -119,12 +114,13 @@
         width: 135px;
         background-color: #8F1631;
         color: white;
-        margin-top: 5px;
+        margin-top: 1rem;
         margin-bottom: 1px;
         border: 1px solid rgba(128, 128, 128, 0.213);
         text-transform: uppercase;
         font-family: 'Manrope', sans-serif;
         box-shadow: 1px 1px 9px grey;
+        
     }
     
     main .box-login .box-in button:hover {

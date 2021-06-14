@@ -23,13 +23,15 @@
                 </div>
                 <div class="box-in">
                     <h3>entre na sua conta</h3>
-                    <form action="/login" method="post">
+
+                      <form id="loginAuth" action='/login' method="POST">
                         <label for="input_email"></label>
-                        <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email" required>
+                        <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email">
                         <label for="input_password"></label>
-                        <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>
-                    </form>
-                    <a href="/login/usuario-cadastrado/curso-videos"><button type="submit" id="enviar">Login</button></a>
+                        <input type="password" name="password" placeholder="Digite sua senha" id="input_password">
+                    
+                        <!-- <a href="/login/usuario-cadastrado/curso-videos"></a> -->
+                    <button type="submit" id="enviar">Login</button>
                     <p>ou</p>
                     <div class="box-social">
                         <div class="logo-gmail">
@@ -41,14 +43,8 @@
                         <div class="logo-outlook">
                             <img src="/images/foto-login/outlook-logo.svg" alt="">
                         </div>
-
-                    </div>
-                    <!-- TEST FONT AWESOME SOCIAL MEDIAS -->
-                    <!-- <div class="test">
-                        <li><a href="#"><i class="fa fa-google"></i></a></li>
-                        <li><a href="#"><i class="fa fa-apple"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </div> -->
+                        </div>
+                    </form>                   
                 </div>
 
 

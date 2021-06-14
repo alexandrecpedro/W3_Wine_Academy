@@ -1,3 +1,4 @@
+
 const auth = (request, response, next) => {
     // Verificar se existe a session usuarioLogado
     if (request.session.usuarioLogado && request.session.usuarioLogado !== undefined) {
@@ -5,7 +6,7 @@ const auth = (request, response, next) => {
         next()
     } else {
         // Se não estiver logado, redireciona para /login
-        return response.redirect('/login')
+        return response.redirect("/login")
     }
 }
 

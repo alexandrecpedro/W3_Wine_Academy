@@ -83,18 +83,23 @@
                         </picture>
                     </div>
                     <div class="form">
-                        <form class="st1" action="/login/cadastro-st-1" method="POST ">
+                        <form class="st1" action="/cadastro" method="POST">
                             <label for="email"></label>
                             <input class="step1" type="email" name="email" id="email" placeholder="Insira seu email " required>
+                            <div id="error"></div>
                             <label for="password"></label>
-                            <input class="step1" type="password" name="password" id="password " placeholder="Crie a sua senha " required>
-                            <label for="confirm_password"></label>
-                            <input class="step1" type="password " name="confirm_password" id="confirm_password " placeholder="Confirme a sua senha " required>
+                            <input class="step1" type="password" name="password" id="password" placeholder="Crie a sua senha " required>
+                            <!-- <label for="confirm_password"></label>
+                            <input class="step1" type="password " name="login " id="confirm_password" placeholder="Confirme a sua senha " required> -->
+                            <!-- <div class="botao"> -->
+                                <!-- <a class="btnproximo" href="/login/cadastro-st-2"></a> -->
+                                <button class="btn-step-1 letras" type="submit " id="submit">Enviar</button>
+                                <!-- </div> -->
+                                <h4 class="jaCadastrado"><a href="/login">Ja sou Cadastrado</a></h4>
                         </form>
+                        
                     </div>
-                    <div class="botao">
-                        <a class="btnproximo" href="/login/cadastro-st-2"><button class="btn-step-1 letras" type="submit " id="submit " onclick="nextStep ">Próximo</button></a>
-                    </div>
+                    
                 </div>
 
             </section>

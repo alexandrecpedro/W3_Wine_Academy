@@ -6,26 +6,13 @@
     padding: 0;
 }
 
-
-/* body {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    background-color: #B51E42;
-    font-family: 'Manrope', 'sans-serif';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-} */
-
 .btnproximo {
     text-decoration: none;
 }
 
 .letras {
     font-size: 20px;
+    
 }
 
 .letras2 {
@@ -269,11 +256,24 @@ input.step4-1 {
 .btn-step-1 {
     display: block;
     color: rgba(255, 255, 255, .74);
-    background-color: #92062E;
+    background-color: #c9a3ae;
     border-radius: 31px;
     max-width: 100%;
     width: 20rem;
-    height: 100%;
+    height: 50px;    
+}
+
+.jaCadastrado {
+    width:100%;
+    display:block;
+    text-align:center;
+    margin-top:1rem;    
+}
+
+.jaCadastrado a {
+    
+    color: #9C0A33;
+
 }
 
 h1 {
