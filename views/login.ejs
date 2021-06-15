@@ -26,12 +26,15 @@
 
                       <form id="loginAuth" action='/login' method="POST">
                         <label for="input_email"></label>
-                        <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email">
+                        <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email" required>
                         <label for="input_password"></label>
-                        <input type="password" name="password" placeholder="Digite sua senha" id="input_password">
+                        <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>
                     
                         <!-- <a href="/login/usuario-cadastrado/curso-videos"></a> -->
-                    <button type="submit" id="enviar">Login</button>
+                    <div class="boton-login">
+                        <button type="submit" id="enviar">Login</button>
+                    </div>
+                </form>       
                     <p>ou</p>
                     <div class="box-social">
                         <div class="logo-gmail">
@@ -44,11 +47,11 @@
                             <img src="/images/foto-login/outlook-logo.svg" alt="">
                         </div>
                         </div>
-                    </form>                   
+                                
                 </div>
 
 
-                <h4>Não tem conta? <a href="/login/cadastro-st-1">Cadastre-se</a></h4>
+                <h4>Não tem conta? <a href="/login/cadastro-st">Cadastre-se</a></h4>
             </div>
         </main>
 
