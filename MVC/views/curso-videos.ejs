@@ -1,0 +1,36 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">BEM-VINDO, DIGITAL!</h2>
+            <h4 class="subt-main-header videos">Lista de cursos disponíveis</h4>
+        </section>
+        <!--encabezado-->
+
+        <section class="videos">
+            <% for (let curso of cursos) { %> 
+            <div class="video">
+                <div class="curso-video">
+                    <div class="thumb" style="background-image: url('/uploads/<%=curso.ilustracao%>')"></div>
+                    
+                </div> <!--curso-video-->
+                
+                <div class="nombre-curso">
+                    <a target="_blank" class="link-video" href="<%= curso.link  %>">
+                        <h3><%= curso.nome  %> </h3>
+                    </a>
+                    <p class="professor"><%= curso.professor  %>. <span class="cargo"> <%= curso.puesto %>.</span></p>
+                    <p class="vista"><%= curso.descricao %>.</p>                                 
+                </div> <!--nombre-curso-->
+            </div>
+            <% } %> 
+        </section>
+
+        <%- include("./partials/footer")%>

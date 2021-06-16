@@ -1,0 +1,58 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina SOBRE-->
+    <div class="container-site">
+        <div class="caco"></div>
+        <!--espacamento header-->
+
+        <section class="encabezado">
+            <i class="fas fa-address-card"></i>
+            <h2 class="main-header">ENTRE COM SUA CONTA</h2>
+            <h4 class="subt-main-header">Entre ou cadastre-se para desfrutar de todas as vantagens de nossos planos!
+            </h4>
+        </section>
+        <!--encabezado-->
+
+        <main>
+            <div class="box-login">
+                <div class="box-logo">
+                    <div class="img-logo">
+                        <img src="/images/w3_red.png" alt="">
+                    </div>
+                </div>
+                <div class="box-in">
+                    <h3>entre na sua conta</h3>
+
+                      <form id="loginAuth" action='/login' method="POST">
+                        <label for="input_email"></label>
+                        <input type="email" name="email" placeholder="Digite seu e-mail" id="input_email" required>
+                        <label for="input_password"></label>
+                        <input type="password" name="password" placeholder="Digite sua senha" id="input_password" required>
+                    
+                        <!-- <a href="/login/usuario-cadastrado/curso-videos"></a> -->
+                    <div class="boton-login">
+                        <button type="submit" id="enviar">Login</button>
+                    </div>
+                </form>       
+                    <p>ou</p>
+                    <div class="box-social">
+                        <div class="logo-gmail">
+                            <img src="/images/foto-login/logo-gmail.svg" alt="">
+                        </div>
+                        <div class="logo-apple">
+                            <img src="/images/foto-login/apple-logo.svg" alt="">
+                        </div>
+                        <div class="logo-outlook">
+                            <img src="/images/foto-login/outlook-logo.svg" alt="">
+                        </div>
+                        </div>
+                                
+                </div>
+
+
+                <h4>Não tem conta? <a href="/login/cadastro-st">Cadastre-se</a></h4>
+            </div>
+        </main>
+
+        <%- include("./partials/footer")%>

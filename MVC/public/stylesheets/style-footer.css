@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+
+footer {
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: rgb(253, 253, 245);
+    margin:auto;
+}
+
+.contato-direto {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 3rem;    
+    width: 95%;
+    margin:auto;
+}
+
+.contato-direto .dados h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: gray;
+    letter-spacing: 1px;
+    text-align: left;
+    position: relative;
+    font-family: 'Manrope', sans-serif;    
+    
+}
+
+.contato-direto .dados h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: gray;
+    text-align: left;
+    position: relative;
+    font-family: 'Manrope', sans-serif;
+    
+}
+
+.contato-direto .dados h3::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #95062E;
+    width: 100%;
+    left: 0;
+    bottom: -8px;
+    visibility: hidden;
+}
+
+.contato-direto .dados .icone-1:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f879";
+    color: #95062E;
+    position: absolute;
+    left: -70px;
+    top: -7px;
+    font-size: 60px;
+}
+
+.contato-direto .dados .icone-2:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f1fa";
+    color: #95062E;
+    position: absolute;
+    left: -70px;
+    top: -7px;
+    font-size: 60px;
+    vertical-align: middle;
+}
+
+.contato-direto .dados .icone-3:before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+    content: "\f232";
+    color: #95062E;
+    position: absolute;
+    left: -70px;
+    top: -7px;
+    font-size: 60px;
+    vertical-align: middle;
+}
+
+
+
+.redes {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Manrope', sans-serif;
+    color: grey;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+}
+
+.redes .icones-redes {
+    margin: auto;
+    border-radius: 50%;
+}
+
+.redes .icones-redes i {
+    margin-top: 1rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+    font-size: 36px;
+}
+
+.redes .icones-redes i:hover {
+    color: #95062E;
+}
+
+.footer-amplo {
+    margin-bottom: 3rem;
+    display: flex;
+}
+
+.coluna-dados {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.coluna-um {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex: 1;
+}
+
+.coluna-dados i {
+    font-size: 17px;
+    color: #95062E;
+    align-self: center;
+}
+
+.coluna-dados a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    width: 70%;
+    margin-left: 12px;
+    align-self: center;
+    text-align: justify;
+}
+
+.coluna-dois {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex: 1;
+}
+
+.coluna-dois a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    display: block;
+    width: 75%;
+    align-items: center;
+}
+
+.coluna-dois a:hover {
+    color: #95062E;
+    font-weight: bold;
+}
+
+.coluna-tres {
+    flex: 1;
+    height: 12rem;
+}
+
+.coluna-tres .mapa {
+    margin-right: 1rem;
+    border-radius: 10%;
+
+}
+
+.coluna-tres .mapa iframe {
+    width: 100%;
+    height: 12rem;
+    max-height: 100%;
+}
+
+.final {
+    text-align: center;
+    background-color: #95062E;
+    height: 70px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+@media screen and (max-width:1200px) {
+    
+    .contato-direto {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        margin-top:0;
+    
+    }
+
+    .contato-direto .dados {
+        margin-bottom: 1rem;
+        padding-top: 0;
+        margin-top:0;
+    }
+
+    .contato-direto .dados h2,
+    .contato-direto .dados h3 {
+        text-align: center;
+    }
+
+    .contato-direto .dados .icone-1:before,
+    .contato-direto .dados .icone-2:before,
+    .contato-direto .dados .icone-3:before {
+        display: none;
+    }
+
+    .contato-direto .dados h3::after {
+        visibility: visible;
+    }
+
+    .sombra {
+        margin: 0;
+        
+    }
+    .contato-direto .dados h3::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        background-color: #95062E;
+        width: 100%;
+        margin:auto;
+        left: 0;
+        bottom: -8px;
+        
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .coluna-um {
+        display: none;
+    }
+
+    .coluna-dois {
+        display: none;
+    }
+
+    .coluna-tres .mapa {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/*
+
+footer a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+footer a:hover {
+    color: gray;
+
+}
+
+.colunaum {
+
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+
+}
+
+.colunaum i {
+    font-size: 20px;
+    color: white;
+    padding-left: 20px;
+}
+
+.colunaum p {
+    font-size: 20px;
+    color: white;
+    padding-left: 20px;
+
+}
+
+.redessocias {
+
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.mapa {
+
+    width: 100%;
+}
+
+.imagem {
+    width: 100%;
+}
+
+.imagem img {
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+
+}
+*/

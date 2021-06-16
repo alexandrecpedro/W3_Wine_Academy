@@ -1,0 +1,114 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+    <!--fin navbar-->
+
+    <!--comeco pagina INDEX-->
+    <div class="container-site">
+        <div class="caco"></div>
+        <!--espacamento header-->
+
+        <section class="encabezado">
+            <i class="fas fa-credit-card"></i>
+            <h2 class="main-header">PAGAMENTO</h2>
+            <h4 class="subt-main-header">Conectividade ilimitada para que possa desfrutar de sua aula onde quer que esteja!
+            </h4>
+        </section>
+        <!--encabezado-->
+
+    <main>
+        <section class="cadastro">
+            <div class="container1">
+                <div class="box-logo">
+                    <a href="/"><img src="/images/foto-steps-ok/w3 brand white.png" alt="W3 | Academia dos Vinhos"></a>
+                </div>
+                <article class="lista">
+                    <div class="info">
+                        <!-- <div class="numbers">1</div> -->
+                        <picture class="pic1">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M10,7H14V17H12V9H10V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                            </svg>
+                            <span>CRIAÇÃO DE USUÁRIO</span>
+                        </picture>
+                    </div>
+                    <div class="info">
+                        <picture class="pic2">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M9,7H13A2,2 0 0,1 15,9V11A2,2 0 0,1 13,13H11V15H15V17H11L9,17V13A2,2 0 0,1 11,11H13V9H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                            </svg>
+                            <span>INFORMAÇÕES PESSOAIS</span>
+                        </picture>
+                    </div>
+                    <div class="info">
+                        <picture class="pic3">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M15,15A2,2 0 0,1 13,17H9V15H13V13H11V11H13V9H9V7H13A2,2 0 0,1 15,9V10.5A1.5,1.5 0 0,1 13.5,12A1.5,1.5 0 0,1 15,13.5V15M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                            </svg>
+                            <span>AUTENTICAÇÃO DO E-MAIL</span>
+                        </picture>
+                    </div>
+                    <div class="info">
+                        <picture class="pic4">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="#fff" d="M9,7H11V11H13V7H15V17H13V13H9V7M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" />
+                            </svg>
+                            <span style="color: #fff">PAGAMENTO</span>
+                        </picture>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+        <section class="formulario">
+            <div class="container2">
+                <div class="plan">
+                    <div class="container-plan">
+                        <div class="description">
+                            <h3>Tipo de Plano: PREMIUM<br>
+                                Validade: 1 ano<br>
+                                Expira em 29/04/2022
+                            </h3>
+                        </div>
+                        <div class="valor">
+                            <h4>R$ 1.299,90</h4>
+                            <h5>12x R$ 180,25</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <span id="finalize">Finalize o seu pagamento: </span>
+                
+                <div class="payment">
+                    <div class="credit">
+                        <h6>Cartão de crédito</h6>
+                        <i class="zmdi zmdi-card"></i>
+                    </div>
+                    <div class="boleto">
+                        <h6>Boleto</h6>
+                        <i class="fas fa-barcode"></i>
+                    </div>
+                </div>
+                
+                <div class="form">
+                    <form class="dados" action="/login/cadastro-st-4" method="POST">
+                        <label for="input_card"></label>
+                        <input class="step2-1" type="text" name="login" id="input_card" placeholder="Número do cartão" required>
+                        <label for="nome"></label>
+                        <input class="step2-1" type="text" name="login" id="nome" placeholder="Nome do titular" required>
+                        <label for="val_cartao"></label>
+                        <input type="text" class="step4-1" name="login" id="val_cartao" placeholder="Data de validade do cartão" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                        <label for="cvv"></label>
+                        <input class="step2-3" type="text" name="login" id="cvv" placeholder="CVV" required>
+                        <label for="cpf"></label>
+                        <input class="step2-1" type="text" name="login" id="cpf" placeholder="CPF" required> 
+                    </form>
+                </div>
+                
+                <div class="botao">
+                    <a class="btnproximo" href="/login"><button class="btn-step-1 letras" type="submit" id="step3" onclick="nextStep">Confirme</button></a>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+<%- include('./partials/footer'); %>

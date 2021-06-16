@@ -1,0 +1,46 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">CADASTRO DE CURSOS</h2>
+            <h4 class="subt-main-header videos">Detalhes novo curso</h4>
+        </section>
+        <!--encabezado-->
+        <a class="link-cadastro" href="/admin/servicos">Voltar a Serviços</a>
+        
+        <form class="form-cadastro" action="/admin/servicos/cadastro" method="POST" enctype="multipart/form-data">
+            <fieldset>
+              
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+
+                <label for="professor">Professor</label>
+                <input type="text" name="professor" id="professor" required>
+
+                <label for="puesto">Cargo</label>
+                <input type="text" name="puesto" id="puesto" required>
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao"></textarea>
+
+                <!-- <label for="preco">Preço</label>
+                <input type="number" name="preco" id="preco"> -->
+
+                <label for="link">Link a curso</label>
+                <input type="url" name="link" id="link" required>
+
+                <label for="ilustracao">Ilustração</label>
+                <input type="file" name="ilustracao" id="ilustracao">
+
+                <button type="submit" class="btn btn-primary enviar">Enviar</button>
+            </fieldset>
+        </form>
+
+        <%- include("./partials/footer")%>
