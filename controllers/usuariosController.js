@@ -31,7 +31,7 @@ const usuariosController = {
         }
     },    
     cadastro: (req,res) => {
-        return res.render("cadastro-st", {title:"W3 - Bemvindo Usuario"})
+        return res.render("cadastro-st", {title:"W3 - Bem-vindo, Usuário"})
     },
     salvar: (req,res) => {
         const {nome, data_nasc, identidade, orgao,edocivil, genero,telefone,cep,endereco,bairro,numero,complemento,logradouro,email, password} = req.body
@@ -42,7 +42,7 @@ const usuariosController = {
         return res.redirect("/login")
     },
     cursos: (req,res) => {
-         return res.render("curso-videos", {title:"W3 - Bemvindo Usuario", cursos})
+         return res.render("curso-videos", {title:"W3 - Bem-vindo, Usuário", cursos})
      }
 
 }
