@@ -183,5 +183,39 @@
         "id": "828c4658-73e5-4585-a84a-7157a592c257",
         "email": "martin@elcaprogielioo.com",
         "password": "$2b$10$gWwNVFp6vIGc4KWT5N3FlenTx9/Kd/lodyiqYTNf0WGydyzirWw06"
+    },
+    {
+        "id": "cf1404f2-42d6-4cae-8f94-226fbeeb074b",
+        "email": "vamo@vamo.com",
+        "password": "$2b$10$.4cxNNi10KsV/5iE7qZknu1UP4KUPAO/Zy7FZMCfE1l7pSJpum33K"
+    },
+    {
+        "id": "243aab3c-5980-40da-b067-6c2f267bc42a",
+        "email": "vamo@vamo.com.br",
+        "password": "$2b$10$MLVKDEJGEdg6xUiFxfSgye7wxyrrCg7Sg1RgGEiHkZbaqXxDKnQ.W"
+    },
+    {
+        "id": "e499a654-f0c1-4cea-b90b-9ffbdd22effb",
+        "no": "meu nome",
+        "email": "ale23x@alex.com.ar",
+        "password": "$2b$10$9nG.YfZi9aynsWSbtPj5H.2H.DFHaS96bKETBhC/N0uyuaWLBkU3O"
+    },
+    {
+        "id": "f7c7efc1-50bc-4f5c-842e-c345170db92a",
+        "nome": "martincho",
+        "data_nasc": "04/03/00",
+        "identidade": "30141499",
+        "orgao": "Arge",
+        "edocivil": "Casado",
+        "genero": "M",
+        "telefone": "12345-678",
+        "cep": "054200",
+        "endereco": "potiguar m",
+        "bairro": "Pinh",
+        "numero": "89",
+        "complemento": "4",
+        "logradouro": "Pinh",
+        "email": "ale23x@alex.com.aus",
+        "password": "$2b$10$fuVSEd/PFQOeuwLKzn.WO.X1y0N5Vqn3yfJLoKICXzvzMYoj4C1re"
     }
 ]

@@ -2,8 +2,6 @@ const bcrypt = require("bcrypt")
 const fs = require("fs")
 const path = require("path")
 const { uuid } = require("uuidv4")
-
-
 const cursosPath = path.join("cursos.json")
 let cursos = fs.readFileSync(cursosPath, { encoding:"utf-8" })
 cursos = JSON.parse(cursos)
@@ -33,12 +31,12 @@ const usuariosController = {
         }
     },    
     cadastro: (req,res) => {
-        return res.render("cadastro-st-1", {title:"W3 - Bemvindo Usuario"})
+        return res.render("cadastro-st", {title:"W3 - Bemvindo Usuario"})
     },
     salvar: (req,res) => {
-        const {email, password} = req.body
+        const {nome, data_nasc, identidade, orgao,edocivil, genero,telefone,cep,endereco,bairro,numero,complemento,logradouro,email, password} = req.body
         const senhaCrypt = bcrypt.hashSync(password,10);
-        usuarios.push({id:uuid(), email, password: senhaCrypt})
+        usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,telefone,cep,endereco,bairro,numero,complemento,logradouro, email, password: senhaCrypt})
         let dadosJson = JSON.stringify(usuarios)        
         fs.writeFileSync(usuariosPath, dadosJson)
         return res.redirect("/login")

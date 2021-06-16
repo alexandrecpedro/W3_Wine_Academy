@@ -36,7 +36,7 @@
                 </div>
 
             </section>
-            <section class="formulario">
+            <form class="formulario" action="/cadastro" method="POST">
                 <div class="container2">
                     <div class="member_logo">
                         <picture>
@@ -58,7 +58,7 @@
                                 </svg>
                         </picture>
                     </div> <!--member logo-->
-                    <form class="st1 tab" id="Form1" action="/cadastro" method="POST">
+                    <div class="st1 tab" id="Form1" action="/cadastro" method="POST">
                         <label for="email"></label>
                         <input class="step1" type="email" name="email" id="email" placeholder="Insira seu email" required>                            
                         <label for="password"></label>
@@ -68,10 +68,10 @@
                         <div class="btn-box">                                
                             <button class="btn-step-1 letras" type="button" id="Next1">Proximo</button>
                         </div> <!--btn-box-->
-                    </form>
+                    </div>
                     <!-- <h4><a href="/login">Ja sou Cadastrado</a></h4>                         -->
 
-                    <form class="st2 tab dados" id="Form2" action="/cadastro" method="POST">                            
+                    <div class="st2 tab dados" id="Form2" action="/cadastro" method="POST">                            
                         <!-- <input class="step2-1" type="text" name="login" id="nome" placeholder="Nome" required>                            
                         <input class="step2-1" type="text" name="login" id="sobrenome" placeholder="Sobrenome" required>                            
                         <input type="text" class="step2-2" name="login" id="data-nasc" placeholder="Data de Nascimento" onfocus="(this.type='date')" onblur="(this.type='text')" required>                            
@@ -83,26 +83,30 @@
                         <input class="step2-4" type="text" name="login" id="uf" placeholder="UF" required>                            
                         <input class="step2-1" type="text" name="login" id="endereco" placeholder="Endereço" required>                            
                         <input class="step2-1" type="text" name="login" id="local-de-ref" placeholder="Ponto de Referência" required> -->
-                        <input class="w-100" type="text" name="login" id="nome" placeholder="Nome">                            
-                        <input class="w-100" type="text" name="login" id="sobrenome" placeholder="Sobrenome">                            
-                        <input class="w-50" type="text" name="login" id="data-nasc" placeholder="Data de Nascimento">                            
-                        <input class="w-50" type="text" name="login" id="identidade" placeholder="Doc. Identidade">                            
-                        <input class="w-50" type="text" name="login" id="orgao-emissor" placeholder="Org. Emissor">                                                        
-                        <input class="w-50" type="text" name="login" id="est-civil" placeholder="Estado Civil">                            
-                        <input class="w-50" name="login" id="cep" pattern="\d{5}-\d{3}" placeholder="CEP">                            
-                        <input class="w-50" type="text" name="login" id="uf" placeholder="UF">                            
-                        <input class="w-100" type="text" name="login" id="endereco" placeholder="Endereço">                            
-                        <input class="w-100" type="text" name="login" id="local-de-ref" placeholder="Ponto de Referência">
+                        <input class="w-100" type="text" name="nome" id="nome" placeholder="Nome completo">                            
+                        <!-- <input class="w-100" type="text" name="login" id="sobrenome" placeholder="Sobrenome">                             -->
+                        <input class="w-50" type="text" name="data_nasc" id="data-nasc" placeholder="Data de Nascimento">                            
+                        <input class="w-50" type="text" name="identidade" id="identidade" placeholder="Doc. Identidade">                            
+                        <input class="w-30" type="text" name="orgao" id="orgao-emissor" placeholder="Nacionalidade">                                                        
+                        <input class="w-30" type="text" name="edocivil" id="est-civil" placeholder="Estado Civil">                            
+                        <input class="w-30" type="text" name="genero" id="genero" placeholder="Género">                            
+                        <input class="w-50" type="tel"  name="telefone" id="telefone" pattern="\d{5}-\d{3}" placeholder="12345-678">                            
+                        <input class="w-50" type="text" name="cep" id="cep" placeholder="CEP">                            
+                        <input class="w-70" type="text" name="endereco" id="endereco" placeholder="Endereço">                            
+                        <input class="w-30" type="text" name="bairro" id="bairro" placeholder="Bairro">                            
+                        <input class="w-30" type="text" name="numero" id="numero" placeholder="Número">
+                        <input class="w-30" type="text" name="complemento" id="complemento" placeholder="Complemento">
+                        <input class="w-30" type="text" name="logradouro" id="logradouro" placeholder="Logradouro">
 
                         <div class="btn-box">                                
                             <button class="btn-step-1 letras" type="button" id="Back1">Anterior</button>
                             <button class="btn-step-1 letras" type="button" id="Next2">Proximo</button>
                         </div> <!--btn-box-->
 
-                    </form> <!--form2-->
+                    </div> <!--form2-->
 
                     
-                    <form class="st3 tab" id="Form3" action="/cadastro" method="POST">
+                    <div class="st3 tab" id="Form3" action="/cadastro" method="POST">
                         <h1 class="confirme-central">Por favor, confirme o seu e-mail!</h1>
                         <h2 class="confirme-central-subt">Enviaremos o código. Verifique-o.</h2>    
                        
@@ -118,9 +122,9 @@
                             <button class="btn-step-1 letras" type="button" id="Back2">Anterior</button>
                             <button class="btn-step-1 letras" type="button" id="Next3">Proximo</button>
                         </div> <!--btn-box-->
-                    </form>
+                    </div>
 
-                    <form class="st4 tab" id="Form4" action="/cadastro" method="POST">
+                    <div class="st4 tab" id="Form4">
                         
                         <div class="plan">
                             <div class="container-plan">

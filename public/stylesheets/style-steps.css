@@ -298,6 +298,11 @@ input::placeholder {
     display:inline;
     margin-bottom: .5rem;
 }
+.w-70 {
+    width:60%;
+    display:inline;
+    margin-bottom: .5rem;
+}
 
 .w-30 {
     width:30%;
