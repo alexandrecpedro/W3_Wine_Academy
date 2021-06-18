@@ -4,13 +4,13 @@
         "nome": "Vinhos do Brasil",
         "professor": "Pedro Perrone",
         "puesto": "Consultor Bodega Sossego",
-        "descricao": "N/A   ",
+        "descricao": "N/A",
         "link": "https://vimeo.com/451888765",
         "ilustracao": "ilustracao1623195852447.jpg"
     },
     {
         "id": "17f5a53c-b07f-4116-a5a8-221ea44b710d",
-        "nome": "Introducao ao Mundo dos Vinhos",
+        "nome": "Introdução ao Mundo dos Vinhos",
         "professor": "Dr. Erick Garcia",
         "puesto": "Sommelier Bodegas Lagarde",
         "descricao": "N/A",
@@ -21,8 +21,8 @@
         "id": "a5a8a851-74c0-4f3d-a35c-90d2ebb9ab9c",
         "nome": "Vinhos de Argentina",
         "professor": "Carlos Agostini",
-        "puesto": "Presidente Asociacao Argentina de Sommeliers",
-        "descricao": "N/A  ",
+        "puesto": "Presidente da Associação Argentina de Sommeliers",
+        "descricao": "N/A",
         "link": "https://vimeo.com/169603067",
         "ilustracao": "ilustracao1623195920500.jpg"
     },
@@ -31,7 +31,7 @@
         "nome": "Vinhos de Sobremesa",
         "professor": "Juan Carlos Pedrozo",
         "puesto": "Gerente de Adega Sossego",
-        "descricao": "N/A ",
+        "descricao": "N/A",
         "link": "https://vimeo.com/300398329",
         "ilustracao": "ilustracao1623199250071.jpg"
     }
