@@ -35,9 +35,9 @@ const usuariosController = {
         return res.render("cadastro-st", {title:"W3 - Bem-vindo, Usuário"})
     },
     salvar: (req,res) => {
-        const {nome, data_nasc, identidade, orgao,edocivil, genero,telefone,cep,endereco,bairro,numero,complemento,logradouro,email, password} = req.body
+        const {nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password} = req.body
         const senhaCrypt = bcrypt.hashSync(password,10);
-        usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,telefone,cep,endereco,bairro,numero,complemento,logradouro, email, password: senhaCrypt})
+        usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
         let dadosJson = JSON.stringify(usuarios)        
         fs.writeFileSync(usuariosPath, dadosJson)
         return res.redirect("/login")
