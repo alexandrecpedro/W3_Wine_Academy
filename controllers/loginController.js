@@ -10,7 +10,7 @@ const loginController = {
     //     return res.render("curso-videos", {title:"W3 - Bemvindo Usuario", cursos})
     // },
     step01: (req,res) =>{
-        return res.render("cadastro-st", {title:"W3 - Bemvindo Usuario"})
+        return res.render("cadastro-st", {title:"W3 - Bem-vindo, Usuário"})
     }
     // step02: (req,res) =>{
     //     return res.render("cadastro-st-2", {title:"W3 - Bemvindo Usuario"})
