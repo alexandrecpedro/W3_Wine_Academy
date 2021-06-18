@@ -1,3 +1,9 @@
+document.onkeydown = function (t) {
+  if(t.which == 9 || t.which == 13){
+   return false;
+  }
+ }
+
 var Form1 = document.getElementById("Form1")
 var Form2 = document.getElementById("Form2")
 var Form3 = document.getElementById("Form3")
@@ -15,6 +21,57 @@ var menu1 = document.getElementById("menu1")
 var menu2 = document.getElementById("menu2")
 var menu3 = document.getElementById("menu3")
 var menu4 = document.getElementById("menu4")
+
+const pagoCartao = document.getElementById("dadosCartao")
+const pagoBoleto = document.getElementById("dadosBoleto")
+
+const botaoCartao = document.getElementById("botaocartao")
+const botaoBoleto = document.getElementById("botaoboleto")
+
+botaoCartao.addEventListener("click",(e)=>{
+  pagoCartao.style.display="block"
+  pagoBoleto.style.display="none"
+})
+
+botaoBoleto.addEventListener("click",(e)=>{
+  pagoCartao.style.display="none"
+  pagoBoleto.style.display="block"
+})
+
+
+
+Next1.disabled=true;
+const Pass = document.getElementById("password");
+const ConfPass = document.getElementById("confirm_password");
+const errmsg = document.getElementById("errmsg");
+const emailCadastro = document.getElementById("emailCadastro")
+
+
+ConfPass.addEventListener("keyup",(e)=>{
+  if(Pass.value!==ConfPass.value || emailCadastro.value==""){
+    Next1.disabled=true;
+    errmsg.innerHTML="As senhas debem coincidir"
+  } else {
+    errmsg.innerHTML=""
+    Next1.disabled=false;
+  }
+})
+
+Pass.addEventListener("keyup",(e)=>{
+  if(Pass.value!==ConfPass.value || emailCadastro.value==""){
+    Next1.disabled=true;
+    errmsg.innerHTML="As senhas debem coincidir"
+  } else {
+    errmsg.innerHTML=""
+    Next1.disabled=false;
+  }
+})
+
+
+
+
+
+
 
 Next1.onclick = function() {
   Form1.style.left= "-750px"
@@ -57,4 +114,6 @@ Back3.onclick = function() {
   Form4.style.left= "750px"
   menu3.classList.add("active")
   menu4.classList.remove("active")
+  pagoCartao.style.display="none"
+  pagoBoleto.style.display="none"
 }

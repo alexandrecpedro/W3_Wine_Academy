@@ -298,6 +298,7 @@ input::placeholder {
     display:inline;
     margin-bottom: .5rem;
 }
+
 .w-70 {
     width:60%;
     display:inline;
@@ -306,6 +307,12 @@ input::placeholder {
 
 .w-30 {
     width:30%;
+    display:inline;
+    margin-bottom: .5rem;
+}
+
+.w-10 {
+    width:15%;
     display:inline;
     margin-bottom: .5rem;
 }
@@ -426,6 +433,16 @@ h2 {
     padding:5px;
 }
 
+#dadosCartao {
+    display:none;
+}
+#dadosBoleto {
+    display:none;
+}
+.boletoteste {
+    margin-top:1rem;
+    text-align:center;
+}
 .payment {
     width: 90%;    
     display: flex;
@@ -433,6 +450,10 @@ h2 {
     align-items: center;
     font-family: 'Manrope', sans-serif;
     margin-bottom: .5rem;
+}
+
+.opcaoactiva{
+    background-color:white;
 }
 
 .credit,
@@ -476,6 +497,11 @@ h2 {
 .credit:hover i,
 .boleto:hover i {
     color: #E3E3E3;
+}
+
+#errmsg {
+    font-size: 13px;
+    margin-top: .5rem;
 }
 
 
