@@ -116,48 +116,61 @@
                         
                         <div class="plan">
                             <div class="container-plan">
-                                <div class="description">
-                                    <p>Tipo de Plano: COMBO FULL</p>                            
+                                <!-- <div class="description">                             -->
+                                    <!-- <p>Tipo de Plano: COMBO FULL</p>                            
                                     <p>Validade: 1 ano</p>                              
-                                    <p>Expira em 29/04/2022</p> 
-                                </div>
+                                    <p>Expira em 29/04/2022</p>  -->
+                                <!-- </div> -->
 
-                                <div class="valor">
-                                    <h3>R$ 1.250,00</h3>
-                                    <h5>À vista R$ 1.050,00</h5>
-                                </div>                                    
+                                 <div class="valor">
+                                    <label for="cursointeres" class="cursoInteres">Curso de interés:</label>
+                                    <select name="cursointeres" id="cursointeres" onchange="run()">
+                                        <option selected disabled>Selecione</option>
+                                        <option value="159,00">Curso Individual - R159 a vista</option>
+                                        <option value="859,00">COMBO Novo e Velho Mundo - 859 a vista</option>
+                                        <option value="1.250,00">COMBO FULL - R1,250 a vista</option>                                                                
+                                    </select>
+
+                                    <p>Validade: 1 ano</p>                              
+                                    <p>Expira em 29/04/2022</p>
+                                    <!-- <h3>R$ 1.250,00</h3> -->
+                                    <h5>À vista R$ <input type="number" disabled="disabled" id="srt"></h5>
+                                </div>   <!--valor-->                                  
                             </div> <!--container plan-->
                         </div> <!--plan-->
+
                         <div class="fin-pago">
                             <p>Selecione a forma de pagamento</p>
-                        </div>                                        
-                        <div class="payment">
-                            
+                        </div>               
+
+                        <div class="payment">                            
                             <div id="botaocartao" class="credit opcaoactiva">
                                 <h6>Cartão de crédito</h6><i class="zmdi zmdi-card"></i>                                    
                             </div> <!--credit-->
+
                             <div id="botaoboleto" class="boleto">
                                 <h6>Boleto</h6><i  class="fas fa-barcode"></i>                                    
                             </div> <!--boleto-->
                         </div> <!--payment-->
                     
-                        <div id="dadosCartao">
-                        <input class="w-100" type="text" name="login" id="input_card" placeholder="Número do cartão">                        
-                        <input class="w-100" type="text" name="login" id="nome" placeholder="Nome do titular">                        
-                        <input class="w-50" type="text" name="login" id="val_cartao" placeholder="Data de validade do cartão">                        
-                        <input class="w-50" type="text" name="login" id="cvv" placeholder="CVV">                        
-                        <input class="w-100" type="text" name="login" id="cpf" placeholder="CPF"> 
+                        <div class="dadosC" id="dadosCartao">
+                            <input class="w-100 dadosC" type="text" name="login" id="nome" placeholder="Nome do titular">                        
+                            <input class="w-100 dadosC" type="text" name="login" id="input_card" placeholder="Número do cartão">                                                    
+                            <input class="w-30 dadosC" type="text" name="login" id="val_cartao" placeholder="Data de validade do cartão">                        
+                            <input class="w-30 dadosC" type="text" name="login" id="cvv" placeholder="CVV">                        
+                            <input class="w-30 dadosC" type="text" name="login" id="cpf" placeholder="CPF"> 
                         </div>
 
-                        <div id="dadosBoleto">
-                        <h2 class="boletoteste">AQUI VA BOLETO</h2>
+                        <div class="dadosB" id="dadosBoleto">                                                                                              
+                            <input type="radio" name="radios" id="pagounico"><label for="pagounico"> Pagamento à vista: R$ 966,00 no ato da matrícula</label><br>
+                            <input type="radio" name="radios" id="pagounico"><label for="pagounico"> Pagamento à vista: R$ 966,00 no ato da matrícula</label>
+                            <!-- <input type="radio" name="radios" id="parcelado"><label for="parcelado"> Pagamento parcelado: 2 parcelas de R$ 323,61 com vencimento(s) em 30 e 60 dias após a data término das inscrições</label>                             -->
                         </div>
-
 
 
                         <div class="btn-box">                                
-                            <button class="btn-step-1 letras" type="button" id="Back3">Anterior</button>
-                            <button class="btn-step-1 letras" type="submit" id="btn1">Enviar</button>  
+                            <button class="btn-step-10 letras" type="button" id="Back3">Anterior</button>
+                            <button class="btn-step-10 letras" type="submit" id="btn1">PAGAR</button>  
                             <!-- <button class="btn-step-1 letras" type="submit " id="btn1">Enviar</button>                               -->
                         </div> <!--btn-box-->
                     </form>

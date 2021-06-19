@@ -360,6 +360,8 @@ input::placeholder {
 .btn-box {
     margin:30px auto;
     text-align:center;
+    width:100%;
+    
 }
 
 #botao2 {
@@ -377,7 +379,17 @@ input::placeholder {
     outline:none;
     cursor:pointer;
 }
-
+.btn-step-10 {
+    width:130px;
+    height:35px;
+    margin:0 10px;
+    color: rgba(255, 255, 255, .74);
+    background-color: #92062E;
+    border-radius: 30px;
+    border:0;
+    outline:none;
+    cursor:pointer;
+}
 
 h1 {
     font-size: 30px;
@@ -401,50 +413,106 @@ h2 {
 
 .container-plan {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    margin-bottom: 7px;
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: left;    
+    margin-bottom: .3rem;
 }
 
 .fin-pago p {
     margin: auto;
-    margin-bottom: .5rem;
+    margin-top:1rem;
+    margin-bottom: 1rem;
     text-align: center;    
     font-weight: bold;
 }
 
 .plan {
-    width:90%;
-    height:100px;
+    width:100%;
+    text-align: left;
     background-color: #E3E3E3;
-    margin-bottom: .5rem;
+    
 }
+
+
 
 .plan .valor {
     font-size: 15px;
-    text-align: center;
+    text-align: left;
     padding:5px;
+    margin:.3rem;
+    line-height: 25px;
 }
 
 
-.description p {
+.description  {
     font-size: 15px;     
-    padding:5px;
+    
 }
+
+#srt {
+    border:none;
+    outline:none;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    display:inline;
+    padding:0;
+    margin:0;
+}
+
+/*FORMULARIO LOGIN ADMIN*/
+#adminLogin,
+#adminPwd {
+    border-radius:5px;
+    outline:none;
+    line-height: 10px;
+    font-size: 13px;
+    margin:auto;
+    margin-bottom: .5rem;    
+    padding:10px;
+    
+}
+.servico {
+    width:15%;
+    
+}
+
+#adminBtn {
+    width:100%;
+    margin:auto;
+    border-radius:5px;
+}
+
 
 #dadosCartao {
-    display:none;
+    display:none;    
 }
+
+.dadosC{
+    margin:auto;
+    margin-bottom: .5rem;
+    text-align:center;
+    
+}
+
 #dadosBoleto {
     display:none;
+    width:100%;
+   
 }
-.boletoteste {
+
+.dadosB{
+    font-size:13px;
+    margin:auto;
+    width:90%;
+    text-align: left;
     margin-top:1rem;
-    text-align:center;
 }
+
+
 .payment {
-    width: 90%;    
+    width: 100%;    
     display: flex;
     justify-content: space-around;
     align-items: center;

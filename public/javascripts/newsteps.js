@@ -22,6 +22,11 @@ var menu2 = document.getElementById("menu2")
 var menu3 = document.getElementById("menu3")
 var menu4 = document.getElementById("menu4")
 
+
+
+
+/* APARECE - DESAPARECE METODO DE PAGO CARTAO O BOLETO */
+
 const pagoCartao = document.getElementById("dadosCartao")
 const pagoBoleto = document.getElementById("dadosBoleto")
 
@@ -38,7 +43,11 @@ botaoBoleto.addEventListener("click",(e)=>{
   pagoBoleto.style.display="block"
 })
 
+/* ADICIONA VALOR DE CADA CURSO A TELA */
 
+function run() {
+  document.getElementById("srt").value = document.getElementById("cursointeres").value;
+}
 
 Next1.disabled=true;
 const Pass = document.getElementById("password");

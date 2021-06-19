@@ -19,7 +19,12 @@
                 <img src="/images/foto-admin/painel.jpg" alt="">
             </div>
             <div class="servico">
-                <a href="/admin/servicos">Ver Serviços</a>
+                <form action="/admin/servicos" method="GET">
+                    <input type="text" name="adminLogin" id="adminLogin" placeholder="Usuario">            
+                    <input type="password" name="adminPwd" placeholder="Senha" id="adminPwd">
+                    <button id="adminBtn">Ingresar</button>
+                </form>
+                <!-- <a href="/admin/servicos">Ver Serviços</a> -->
             </div>
         </section>
         
