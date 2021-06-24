@@ -22,9 +22,6 @@ var menu2 = document.getElementById("menu2")
 var menu3 = document.getElementById("menu3")
 var menu4 = document.getElementById("menu4")
 
-
-
-
 /* APARECE - DESAPARECE METODO DE PAGO CARTAO O BOLETO */
 
 const pagoCartao = document.getElementById("dadosCartao")
@@ -46,7 +43,23 @@ botaoBoleto.addEventListener("click",(e)=>{
 /* ADICIONA VALOR DE CADA CURSO A TELA */
 
 function run() {
-  document.getElementById("srt").value = document.getElementById("cursointeres").value;
+  var srt = document.getElementById("srt")
+  var cursointeres = document.getElementById("cursointeres")
+  srt.value = cursointeres.value;
+  
+  var validade = document.getElementById("validade")
+  var date = new Date()
+  var day = date.getDate()
+  var month = date.getMonth()
+  var year = date.getFullYear()+1
+  validade.innerHTML = day + " / " + month + " / " + year
+
+  var interes = document.getElementById("interes")  
+  var interes1 = document.getElementById("interes1")  
+  var target = document.getElementById("cursointeres").value
+  var point = parseFloat(target)
+  interes.innerHTML = "$"+point;
+  interes1.innerHTML = "$"+((point*1.1) / 2).toFixed(2) +" cada uma.";
 }
 
 Next1.disabled=true;
@@ -76,18 +89,11 @@ Pass.addEventListener("keyup",(e)=>{
   }
 })
 
-
-
-
-
-
-
 Next1.onclick = function() {
   Form1.style.left= "-750px"
   Form2.style.left= "50px"
   menu1.classList.remove("active")
   menu2.classList.add("active")
-
 }
 
 Back1.onclick = function() {

@@ -461,6 +461,37 @@ h2 {
     margin:0;
 }
 
+
+#validade {
+    border:none;
+    font-size: 15px;
+    font-family: sans-serif;
+    outline:none;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    display:inline;
+    padding:0;
+    margin:0;
+    background-color: none;
+    background:none;
+}
+
+#interes,
+#interes1 {
+    border:none;
+    outline:none;
+    height: 20px;
+    line-height: 20px;
+    font-size:13px;
+    font-family: sans-serif;
+    display:inline;
+    padding:0;
+    margin:0;
+    background-color: none;
+    background:none;
+}
+
 /*FORMULARIO LOGIN ADMIN*/
 #adminLogin,
 #adminPwd {

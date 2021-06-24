@@ -115,12 +115,7 @@
                     <div class="st4 tab" id="Form4">
                         
                         <div class="plan">
-                            <div class="container-plan">
-                                <!-- <div class="description">                             -->
-                                    <!-- <p>Tipo de Plano: COMBO FULL</p>                            
-                                    <p>Validade: 1 ano</p>                              
-                                    <p>Expira em 29/04/2022</p>  -->
-                                <!-- </div> -->
+                            <div class="container-plan">                             
 
                                  <div class="valor">
                                     <label for="cursointeres" class="cursoInteres">Curso de interesse:</label>
@@ -128,12 +123,12 @@
                                         <option selected disabled>Selecione</option>
                                         <option value="159,00">Curso Individual</option>
                                         <option value="859,00">COMBO Novo e Velho Mundo</option>
-                                        <option value="1.250,00">COMBO FULL</option>                                                                
+                                        <option value="1250,00">COMBO FULL</option>                                                                
                                     </select>
 
                                     <p>Validade: 1 ano</p>                              
-                                    <p>Expira em 29/04/2022</p>
-                                    <!-- <h3>R$ 1.250,00</h3> -->
+                                    <p>Expira em: <span id="validade"></span></p>
+                              
                                     <h5>À vista R$ <input type="number" disabled="disabled" id="srt"></h5>
                                 </div>   <!--valor-->                                  
                             </div> <!--container plan-->
@@ -162,11 +157,9 @@
                         </div>
 
                         <div class="dadosB" id="dadosBoleto">                                                                                              
-                            <input type="radio" name="radios" id="pagounico"><label for="pagounico"> Pagamento à vista: R$ 966,00 no ato da matrícula</label><br>
-                            <input type="radio" name="radios" id="pagounico"><label for="pagounico"> Pagamento à vista: R$ 966,00 no ato da matrícula</label>
-                            <!-- <input type="radio" name="radios" id="parcelado"><label for="parcelado"> Pagamento parcelado: 2 parcelas de R$ 323,61 com vencimento(s) em 30 e 60 dias após a data término das inscrições</label>                             -->
+                            <input type="radio" name="radios" id="pagounico"><label for="pagounico"> Boleto a vista: <span id="interes"></span></label><br>
+                            <input type="radio" name="radios" id="pagounico"><label for="pagounico"> Pagamento em 2 parcelas: <span id="interes1"></span></label><br>                                                
                         </div>
-
 
                         <div class="btn-box">                                
                             <button class="btn-step-10 letras" type="button" id="Back3">Anterior</button>
