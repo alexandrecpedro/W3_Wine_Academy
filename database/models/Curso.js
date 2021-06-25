@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
         nome_curso: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(200),
             allowNull: false
         },
         carga_horaria: {

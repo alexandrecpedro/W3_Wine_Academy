@@ -7,11 +7,11 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
         nome: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(200),
             allowNull: false
         },
-        sobrenome: {
-            type: DataTypes.STRING(45),
+        apelido: {
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         email: {
@@ -43,34 +43,6 @@ module.exports = (sequelize, DataTypes) => {
         genero: {
             type: DataTypes.ENUM('M', 'F', 'Não-Binário', 'Não Informado'),
             allowNull: true
-        },
-        cep: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
-        endereco: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
-        numero: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
-        complemento: {
-            type: DataTypes.STRING(45),
-            allowNull: true
-        },
-        bairro: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
-        municipio: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
-        estado: {
-            type: DataTypes.STRING(2),
-            allowNull: false
         },
         telefone: {
             type: DataTypes.STRING(14),

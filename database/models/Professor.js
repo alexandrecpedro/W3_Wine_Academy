@@ -6,15 +6,15 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
         nome: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(200),
             allowNull: false
         },
-        sobrenome: {
-            type: DataTypes.STRING(45),
+        apelido: {
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         email: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         senha: {

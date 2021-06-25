@@ -5,13 +5,9 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        nome_planos: {
+        nome_plano: {
             type: DataTypes.STRING(45),
             allowNull: false
-        },
-        aluno_id: {
-            type: DataTypes.INTEGER,
-            foreignKey: true
         }
     }, {
         tableName: 'plano',
