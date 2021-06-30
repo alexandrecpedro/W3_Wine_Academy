@@ -1,6 +1,8 @@
 const fs = require("fs")
 const path = require("path")
 const { uuid } = require("uuidv4")
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 
 const cursosPath = path.join("cursos.json")
 let cursos = fs.readFileSync(cursosPath, { encoding:"utf-8" })
