@@ -45,8 +45,8 @@ const usuariosController = {
         return res.redirect("/login")
     },
     cursos: (req,res) => {
-         return res.render("curso-videos", {title:"W3 - Bem-vindo, Usuário", cursos})
-     }
+        return res.render("curso-videos", {title:"W3 - Bem-vindo, Usuário", cursos})
+    }
 
 }
 

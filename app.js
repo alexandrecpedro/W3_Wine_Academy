@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require("express-session")
+const sequelize = require('./database/config/db');
 
 const methodOverride = require("method-override")
 
@@ -11,6 +12,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require("./routes/login");
 var adminRouter = require("./routes/admin");
+const alunoRouter = require('./routes/alunos');
 
 var app = express();
 
@@ -34,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/login', loginRouter);
 app.use("/admin", adminRouter)
+app.use('/w3/alunos', alunoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -50,5 +53,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+sequelize.sync({ force: false }).then(() => {
+  console.log("Estamos conectado a base de dados");
+}).catch(error => {
+  console.log("Erro!", error);
+})
 
 module.exports = app;
