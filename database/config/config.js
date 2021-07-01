@@ -22,7 +22,7 @@ module.exports = {
   // }
   database: {
     username:"root",
-    password:"xxx",
+    password:"portugal",
     database:"W3ACADEMIA",
     host:"localhost"
   }

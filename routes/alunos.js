@@ -4,9 +4,10 @@ const path = require("path") //chama cuando pido upload de arquivo
 const Aluno = require('../database/models/Aluno');
 const alunosController = require('../controllers/alunosController');
 
-router.get("/", alunosController.index);
+// http://localhost:3000/w3/alunos
+router.get('/', alunosController.index);
 router.post('/', alunosController.create);
-router.get("/:id", alunosController.id);
+router.get('/:id', alunosController.id);
 
 // router.get("/servicos",adminController.servicos)
 // router.get("/servicos/cadastro",adminController.cadastro)
