@@ -5,15 +5,16 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Curso = require('../database/models/Curso');
 
-// const cursosPath = path.join("cursos.json")
-// let cursos = fs.readFileSync(cursosPath, { encoding:"utf-8" })
-// cursos = JSON.parse(cursos)
+const cursosPath = path.join("cursos.json")
+let cursos = fs.readFileSync(cursosPath, { encoding:"utf-8" })
+cursos = JSON.parse(cursos)
 
 const adminController = {
     index:(req,res)=>{
         return res.render("admin",{title:"W3 - ACADEMIA"})
     },
     servicos:(req,res)=>{
+        // let curso = await Curso.findAll()
         return res.render("servicos",{title:"W3 - ACADEMIA",cursos})
     },
     cadastro:(req,res)=>{
@@ -64,7 +65,7 @@ const adminController = {
         // let cursoEncontrado = cursos.find(curso => curso.id == id)
         return res.render('cadastroExcluir', { title: 'Excluir Serviço', curso: cursoEncontrado });
     },
-    remover: (req, res) => {
+    remover: async (req, res) => {
         let {id} = req.params;
         let cursoEncontrado = await Curso.destroy({where: {id_curso: id}})
         // let cursoIndex = cursos.findIndex((curso) => curso.id == id);

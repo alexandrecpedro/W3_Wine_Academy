@@ -21,5 +21,19 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'aluno_plano_curso',
         timestamps: false
     });
+    AlunoPlanoCurso.associate = (models) => {
+        AlunoPlanoCurso.hasMany(models.Aluno, {
+            foreignKey: 'aluno_id',
+            as: 'aluno_planocurso'
+        })
+        AlunoPlanoCurso.hasMany(models.Curso, {
+            foreignKey: 'curso_id',
+            as: 'curso_planoaluno'
+        })
+        AlunoPlanoCurso.hasMany(models.Plano, {
+            foreignKey: 'plano_id',
+            as: 'plano_cursoaluno'
+        })
+    }
     return AlunoPlanoCurso
 }

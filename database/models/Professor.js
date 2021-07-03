@@ -33,5 +33,17 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'professor',
         timestamps: false
     });
+    Professor.associate = (models) => {
+        Professor.belongsTo(models.Endereco, {
+            foreignKey: 'professor_id',
+            as: 'end_professor'
+        })
+        Professor.belongsToMany(models.Curso, {
+            foreignKey: 'curso_id',
+            otherKey: 'professor_id',
+            through: models.CursoHasProfessor,
+            as: 'cursohasprofessor'
+        })
+    }
     return Professor
 }

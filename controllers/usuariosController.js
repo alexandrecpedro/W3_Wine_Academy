@@ -4,6 +4,8 @@ const path = require("path")
 const { uuid } = require("uuidv4")
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
+const Aluno = require('../database/models/Aluno');
+const Curso = require('../database/models/Curso');
 
 const cursosPath = path.join("cursos.json")
 let cursos = fs.readFileSync(cursosPath, { encoding:"utf-8" })
@@ -17,9 +19,11 @@ const usuariosController = {
     login: (req,res) => {
         return res.render("login", {title:"W3 - Login"})
     },
-    autenticacao: (req,res) => {
+    autenticacao: async (req,res) => {
         const {email, password} = req.body
+        // let alunoEncontrado = await Aluno.findOne({where: {email: email} })
         const usuarioEncontrado = usuarios.find((usuario => usuario.email == email))
+        // if(alunoEncontrado && bcrypt.compareSync(password, alunoEncontrado.senha)){
         if(usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.password)){
             /**usuario atenticoado */
             /**cria sessao e guarda info de usuario */
@@ -29,22 +33,24 @@ const usuariosController = {
             
         } else {
             /**usuario nao atenticado */
-            console.log("no encontrado")
+            console.log("não encontrado")
             res.redirect("/login")
         }
     },    
     cadastro: (req,res) => {
         return res.render("cadastro-st", {title:"W3 - Bem-vindo, Usuário"})
     },
-    salvar: (req,res) => {
+    salvar: async (req,res) => {
         const {nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password} = req.body
         const senhaCrypt = bcrypt.hashSync(password,10);
-        usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
-        let dadosJson = JSON.stringify(usuarios)        
-        fs.writeFileSync(usuariosPath, dadosJson)
+        let aluno = await Aluno.create({nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
+        // usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
+        // let dadosJson = JSON.stringify(usuarios)        
+        // fs.writeFileSync(usuariosPath, dadosJson)
         return res.redirect("/login")
     },
     cursos: (req,res) => {
+        // let curso = await Curso.findAll()
         return res.render("curso-videos", {title:"W3 - Bem-vindo, Usuário", cursos})
     }
 

@@ -15,7 +15,7 @@
         <!--encabezado-->
 
         <a class="novo-curso" href="/admin/servicos/cadastro">Adicionar novo curso</a><span> ||  </span>
-        <a class="novo-curso" href="/login/usuario-cadastrado/curso-videos">Ir a lista de cursos</a>
+        <a class="novo-curso" href="/login/curso-videos">Ir a lista de cursos</a>
 
         <section>
             
@@ -45,16 +45,14 @@
                         <td><%= curso.ilustracao %></td>
                         <td class="text-center">
                             <div class="botones-centrado">
-                            <a href="/admin/servicos/editar/<%= curso.id %>" class="btn btn-gray"><i class="fas fa-edit pen-edit"></i></a>
-                            <a href="/admin/servicos/excluir/<%= curso.id %>" class="btn btn-red"><i class="fas fa-trash-alt trash"></i></a>
-                        </div>
+                                <a href="/admin/servicos/editar/<%= curso.id %>" class="btn btn-gray"><i class="fas fa-edit pen-edit"></i></a>
+                                <a href="/admin/servicos/excluir/<%= curso.id %>" class="btn btn-red"><i class="fas fa-trash-alt trash"></i></a>
+                            </div>
                         </td>
                     </tr>
                     <% } %>
                 </tbody>
             </table>
             <%}%>
-        </section>
-
-        
-        <%- include("./partials/footer")%>
+        </section>    
+<%- include("./partials/footer")%>
