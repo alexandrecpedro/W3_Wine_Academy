@@ -9,21 +9,3 @@ participantes.addEventListener('click', e =>{
     current.textContent = current.textContent.includes('Mostrar mais') ? "Mostrar menos..." : "Mostrar mais";
 
 })
-
-
-/*
-const participantes =  document.querySelector('.read-more-container');
-const content = document.getElementById("content")
-const show = document.getElementById("mostrar")
-
-show.onclick = function(){
-    if (content.className == "open"){
-        content.className ="";
-        show.innerHTML = "Mostrar mas"
-    } else {
-        content.className = "open";
-        show.innerHTML ="Mostrar menos"
-    }
-}
-*/
-

@@ -72,7 +72,7 @@ const emailCadastro = document.getElementById("emailCadastro")
 ConfPass.addEventListener("keyup",(e)=>{
   if(Pass.value!==ConfPass.value || emailCadastro.value==""){
     Next1.disabled=true;
-    errmsg.innerHTML="As senhas debem coincidir"
+    errmsg.innerHTML="As senhas devem coincidir"
   } else {
     errmsg.innerHTML=""
     Next1.disabled=false;
@@ -82,7 +82,7 @@ ConfPass.addEventListener("keyup",(e)=>{
 Pass.addEventListener("keyup",(e)=>{
   if(Pass.value!==ConfPass.value || emailCadastro.value==""){
     Next1.disabled=true;
-    errmsg.innerHTML="As senhas debem coincidir"
+    errmsg.innerHTML="As senhas devem coincidir"
   } else {
     errmsg.innerHTML=""
     Next1.disabled=false;
