@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const AreaEstudo = sequelize.define('AreaEstudo', {
-        id_area_estudo: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true

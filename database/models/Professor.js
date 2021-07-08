@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Professor = sequelize.define('Professor', {
-        id_professor: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }
     }, {
-        tableName: 'professor',
+        tableName: 'professores',
         timestamps: false
     });
     Professor.associate = (models) => {

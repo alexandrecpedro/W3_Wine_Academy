@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const ModalidadePago = sequelize.define('ModalidadePago', {
-        id_modalidade_pago: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true

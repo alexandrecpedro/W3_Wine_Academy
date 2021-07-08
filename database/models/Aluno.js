@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     // const Usuario = sequelize.define('nome do modelo')
     const Aluno = sequelize.define('Aluno', {
-        id_aluno: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -51,13 +51,9 @@ module.exports = (sequelize, DataTypes) => {
         celular: {
             type: DataTypes.STRING(45),
             allowNull: true
-        },
-        modalidade_pago_id: {
-            type: DataTypes.INTEGER,
-            foreignKey: true
         }
     }, {
-        tableName: 'aluno',
+        tableName: 'alunos',
         timestamps: false
     });
     Aluno.associate = (models) => {

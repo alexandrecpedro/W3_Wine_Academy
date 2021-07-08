@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Plano = sequelize.define('Plano', {
-        id_plano: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }
     }, {
-        tableName: 'plano',
+        tableName: 'planos',
         timestamps: false
     });
     Plano.associate = (models) => {

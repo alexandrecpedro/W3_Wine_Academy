@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Curso = sequelize.define('Curso', {
-        id_curso: {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: true
         }
     }, {
-        tableName: 'curso',
+        tableName: 'cursos',
         timestamps: false
     });
     Curso.associate = (models) => {

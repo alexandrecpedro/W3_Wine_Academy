@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: true
         }
     }, {
-        tableName: 'curso_has_professor',
+        tableName: 'cursos_has_professores',
         timestamps: false
     });
     return CursoHasProfessor
