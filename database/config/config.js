@@ -1,7 +1,7 @@
 module.exports = {
   database: {
     username:"root",
-    password:"portugal",
+    password:"Alex.pedro081930",
     database:"W3ACADEMIA",
     host:"localhost"
   }
