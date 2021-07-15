@@ -29,11 +29,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-        municipio: {
+        cidade: {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-        estado: {
+        uf: {
             type: DataTypes.STRING(2),
             allowNull: false
         },
@@ -50,15 +50,17 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: true
         }
     }, {
-        tableName: 'endereco',
-        timestamps: false
+        tableName: 'enderecos',
+        timestamps: true
     });
     Endereco.associate = (models) => {
-        Endereco.hasMany(models.Aluno, {
+        // N:1
+        Endereco.belongsTo(models.Aluno, {
             foreignKey: 'aluno_id',
             as: 'aluno_end'
         })
-        Endereco.hasMany(models.Professor, {
+        // N:1
+        Endereco.belongsTo(models.Professor, {
             foreignKey: 'professor_id',
             as: 'professor_end'
         })

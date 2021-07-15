@@ -11,12 +11,13 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         tableName: 'area_estudo',
-        timestamps: false
+        timestamps: true
     });
     AreaEstudo.associate = (models) => {
+        // 1:N
         AreaEstudo.hasMany(models.Curso, {
             foreignKey: 'area_estudo_id',
-            as: 'curso_area-estudo'
+            as: 'cursos'
         })
     }
     return AreaEstudo

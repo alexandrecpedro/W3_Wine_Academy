@@ -19,28 +19,34 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         tableName: 'cursos',
-        timestamps: false
+        timestamps: true
     });
     Curso.associate = (models) => {
+        // N:M
         Curso.belongsToMany(models.Professor, {
+            as: 'professores',
+            through: 'cursos_has_professores',
             foreignKey: 'curso_id',
             otherKey: 'professor_id',
-            through: models.CursoHasProfessor,
-            as: 'professorhascurso'
+            timestamps: true
         })
+        // N:M
         Curso.belongsToMany(models.Plano, {
-            foreignKey: 'plano_id',
-            otherKey: 'curso_id',
-            through: models.PlanoHasCurso,
-            as: 'planohascurso'
-        })
-        Curso.belongsTo(models.AlunoPlanoCurso, {
+            as: 'planos',
+            through: 'planos_has_cursos',
             foreignKey: 'curso_id',
-            as: 'planoaluno_curso'
+            otherKey: 'plano_id',
+            timestamps: true
         })
-        Curso.hasMany(models.AreaEstudo, {
+        // 1:N
+        Curso.hasMany(models.AlunoPlanoCurso, {
+            foreignKey: 'curso_id',
+            as: 'alunoplanocursos'
+        })
+        // N:1
+        Curso.belongsTo(models.AreaEstudo, {
             foreignKey: 'area_estudo_id',
-            as: 'area-estudo_curso'
+            as: 'area_estudo'
         })
     }
     return Curso

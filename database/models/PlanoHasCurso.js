@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         tableName: 'planos_has_cursos',
-        timestamps: false
+        timestamps: true
     });
     return PlanoHasCurso
 }

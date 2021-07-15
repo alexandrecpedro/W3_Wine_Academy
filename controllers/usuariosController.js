@@ -5,6 +5,7 @@ const { uuid } = require("uuidv4")
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const Aluno = require('../database/models/Aluno');
+const Endereco = require('../database/models/Endereco');
 const Curso = require('../database/models/Curso');
 
 const cursosPath = path.join("cursos.json")
@@ -41,9 +42,13 @@ const usuariosController = {
         return res.render("cadastro-st", {title:"W3 - Bem-vindo, Usuário"})
     },
     salvar: async (req,res) => {
-        const {nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password} = req.body
+        const {nome, apelido, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, celular, email, password} = req.body
+        
         const senhaCrypt = bcrypt.hashSync(password,10);
-        let aluno = await Aluno.create({nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
+
+        let aluno = await Aluno.create({nome, apelido, email, password: senhaCrypt, data_nasc, cpf: identidade, nacionalidade: orgao, edocivil, genero, telefone, celular})
+
+        let aluno_end = await Endereco.create({apelido, cep, endereco, numero, complemento:logradouro, bairro, cidade, uf, ativo})
         // usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
         // let dadosJson = JSON.stringify(usuarios)        
         // fs.writeFileSync(usuariosPath, dadosJson)

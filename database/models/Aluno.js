@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-        senha: {
+        password: {
             type: DataTypes.STRING(200),
             allowNull: false
         },
-        data_nascimento: {
+        data_nasc: {
             // DATEONLY = Date without time
             type: DataTypes.DATEONLY,
             allowNull: false
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45),
             allowNull: false
         },
-        estado_civil: {
+        edocivil: {
             type: DataTypes.ENUM('Solteiro(a)', 'Casado(a) ou União Estável', 'Divorciado(a) ou separado(a) judicialmente', 'Viúvo(a)', 'Não informado'),
             allowNull: false
         },
@@ -54,20 +54,23 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         tableName: 'alunos',
-        timestamps: false
+        timestamps: true
     });
     Aluno.associate = (models) => {
-        Aluno.belongsTo(models.FormaPago, {
+        // 1:N
+        Aluno.hasMany(models.FormaPago, {
             foreignKey: 'aluno_id',
-            as: 'forma_pago'
+            as: 'forma_pagos'
         })
-        Aluno.belongsTo(models.Endereco, {
+        // 1:N
+        Aluno.hasMany(models.Endereco, {
             foreignKey: 'aluno_id',
-            as: 'end_aluno'
+            as: 'enderecos'
         })
-        Aluno.belongsTo(models.AlunoPlanoCurso, {
+        // 1:N
+        Aluno.hasMany(models.AlunoPlanoCurso, {
             foreignKey: 'aluno_id',
-            as: 'planocurso_aluno'
+            as: 'alunoplanocursos'
         })
     }
     return Aluno

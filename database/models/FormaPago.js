@@ -15,16 +15,18 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         tableName: 'forma_pago',
-        timestamps: false
+        timestamps: true
     });
     FormaPago.associate = (models) => {
-        FormaPago.hasMany(models.Aluno, {
+        // N:1
+        FormaPago.belongsTo(models.Aluno, {
             foreignKey: 'aluno_id',
-            as: 'alunos'
+            as: 'aluno'
         })
-        FormaPago.hasMany(models.ModalidadePago, {
+        // N:1
+        FormaPago.belongsTo(models.ModalidadePago, {
             foreignKey: 'modalidade_pago_id',
-            as: 'modal_pago'
+            as: 'modalidade_pago'
         })
     }
     return FormaPago

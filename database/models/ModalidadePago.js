@@ -11,12 +11,13 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         tableName: 'modalidade_pago',
-        timestamps: false
+        timestamps: true
     });
     ModalidadePago.associate = (models) => {
-        ModalidadePago.belongsTo(models.FormaPago, {
+        // 1:N
+        ModalidadePago.hasMany(models.FormaPago, {
             foreignKey: 'modalidade_pago_id',
-            as: 'forma_pago'
+            as: 'forma_pagos'
         })
     }
     return ModalidadePago
