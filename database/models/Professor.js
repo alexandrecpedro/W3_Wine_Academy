@@ -9,19 +9,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(200),
             allowNull: false
         },
-        apelido: {
-            type: DataTypes.STRING(50),
+        sobrenome: {
+            type: DataTypes.STRING(200),
             allowNull: false
         },
         email: {
             type: DataTypes.STRING(50),
             allowNull: false
         },
-        senha: {
+        password: {
             type: DataTypes.STRING(200),
             allowNull: false
         },
-        cargo: {
+        puesto: {
             type: DataTypes.STRING(50),
             allowNull: true
         },

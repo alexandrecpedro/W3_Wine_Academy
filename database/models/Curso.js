@@ -5,13 +5,25 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        nome_curso: {
+        nome: {
+            type: DataTypes.STRING(200),
+            allowNull: false
+        },
+        descricao: {
             type: DataTypes.STRING(200),
             allowNull: false
         },
         carga_horaria: {
             type: DataTypes.STRING(45),
             allowNull: false
+        },
+        link: {
+            type: DataTypes.STRING(200),
+            allowNull: false
+        },
+        ilustracao: {
+            type: DataTypes.BLOB,
+            allowNull: true
         },
         area_estudo_id: {
             type: DataTypes.INTEGER,

@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(200),
             allowNull: false
         },
-        apelido: {
-            type: DataTypes.STRING(50),
+        sobrenome: {
+            type: DataTypes.STRING(200),
             allowNull: false
         },
         email: {

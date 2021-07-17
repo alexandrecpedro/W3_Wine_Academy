@@ -5,10 +5,6 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        apelido: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
         cep: {
             type: DataTypes.STRING(45),
             allowNull: false

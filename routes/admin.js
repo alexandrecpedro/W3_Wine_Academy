@@ -31,4 +31,4 @@ router.delete('/servicos/excluir/:id', adminController.remover);
 
 
 
-module.exports = router
+module.exports = router;
