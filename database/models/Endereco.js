@@ -39,11 +39,13 @@ module.exports = (sequelize, DataTypes) => {
         },
         aluno_id: {
             type: DataTypes.INTEGER,
-            foreignKey: true
+            foreignKey: true,
+            allowNull: true
         },
         professor_id: {
             type: DataTypes.INTEGER,
-            foreignKey: true
+            foreignKey: true,
+            allowNull: true
         }
     }, {
         tableName: 'enderecos',
