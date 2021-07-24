@@ -22,9 +22,9 @@ const usuariosController = {
     },
     autenticacao: async (req,res) => {
         const {email, password} = req.body
-        // let alunoEncontrado = await Aluno.findOne({where: {email: email} })
+        // let usuarioEncontrado = await Aluno.findOne({where: {email: email} })
         const usuarioEncontrado = usuarios.find((usuario => usuario.email == email))
-        // if(alunoEncontrado && bcrypt.compareSync(password, alunoEncontrado.senha)){
+        // if(usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.senha)){
         if(usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.password)){
             /**usuario atenticoado */
             /**cria sessao e guarda info de usuario */
