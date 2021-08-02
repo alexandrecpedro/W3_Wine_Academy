@@ -1,0 +1,57 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">NOVO ALUNO!</h2>
+            <h4 class="subt-main-header videos">Lista de cursos</h4>
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <form action="/database/dashboard/aluno" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control">
+    
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" class="form-control">
+    
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control">
+                
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" class="form-control">
+
+                <label for="data_nasc">Data Nascimento</label>
+                <input type="text" name="data_nasc" id="data_nasc" class="form-control">
+                
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="form-control">
+
+                <label for="nacionalidade">Nacionalidade</label>
+                <input type="text" name="nacionalidade" id="nacionalidade" class="form-control">
+                
+                <label for="edocivil">Estado Civil</label>
+                <input type="text" name="edocivil" id="edocivil" class="form-control">
+                
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone id="telefone" class="form-control">
+                
+                <label for="celular">Celular</label>
+                <input type="text" name="celular" id="celular" class="form-control">
+        
+                
+                <button class="btn btnI btn-primary">Salvar</button>
+                <a href="/database/dashboard/aluno" class="btn btn-default">voltar</a>
+                
+
+            </form>
+        </section>    
+
+<%- include("./partials/footer")%>

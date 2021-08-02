@@ -1,0 +1,46 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">CADASTRO DE CURSOS</h2>            
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <a href="/database/dashboard/cursonovo" class="btn btn-primary">Novo Curso</a> 
+            <a href="/database/dashboard" class="btn btn-primary">Voltar a Dashboard</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Descricao</th>                       
+                        <th>Carga Horaria</th>
+                        <th>Link</th>                       
+                        <th>Area Estudo</th>                       
+                    </tr>
+                </thead>
+                <tbody>                    
+                        <% cursos.forEach(curso => { %>
+                        <tr>
+                            <td><%= curso.id %> </td>
+                            <td><%= curso.nome %> </td>
+                            <td><%= curso.descricao %> </td>
+                            <td><%= curso.carga_horaria %></td>
+                            <td><%= curso.link %> </td>                            
+                            <td><%= curso.area_estudo_id %> </td>                            
+                            
+                        </tr>
+                        <% }) %>                    
+                </tbody>
+            </table>            
+        </section>    
+
+<%- include("./partials/footer")%>

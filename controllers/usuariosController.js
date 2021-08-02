@@ -19,7 +19,7 @@ usuarios = JSON.parse(usuarios)
 const usuariosController = {
     login: (req,res) => {
         return res.render("login", {title:"W3 - Login"})
-    },
+    },    
     autenticacao: async (req,res) => {
         const {email, password} = req.body
         // let usuarioEncontrado = await Aluno.findOne({where: {email: email} })
@@ -30,28 +30,24 @@ const usuariosController = {
             /**cria sessao e guarda info de usuario */
             req.session.usuarioLogado = usuarioEncontrado            
             console.log(usuarioEncontrado)            
-            res.redirect("/login/curso-videos")
+            res.redirect("/aluno/playlist/curso-videos")
             
-        } else {
-            /**usuario nao atenticado */
+        } else {            
             console.log("não encontrado")
-            res.redirect("/login")
+            res.render("usuario404", {title:"W3 - Usuario no encontrado"})
         }
     },    
     cadastro: (req,res) => {
         return res.render("cadastro-st", {title:"W3 - Bem-vindo, Usuário"})
     },
     salvar: async (req,res) => {
-        const {nome, apelido, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, celular, email, password} = req.body
-        
+        const {nome, apelido, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, celular, email, password} = req.body        
         const senhaCrypt = bcrypt.hashSync(password,10);
-
-        let aluno = await Aluno.create({nome, apelido, email, password: senhaCrypt, data_nasc, cpf: identidade, nacionalidade: orgao, edocivil, genero, telefone, celular})
-
-        let aluno_end = await Endereco.create({apelido, cep, endereco, numero, complemento:logradouro, bairro, cidade, uf, ativo})
-        // usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
-        // let dadosJson = JSON.stringify(usuarios)        
-        // fs.writeFileSync(usuariosPath, dadosJson)
+        //let aluno = await Aluno.create({nome, apelido, email, password: senhaCrypt, data_nasc, cpf: identidade, nacionalidade: orgao, edocivil, genero, telefone, celular})
+        //let aluno_end = await Endereco.create({apelido, cep, endereco, numero, complemento:logradouro, bairro, cidade, uf, ativo})
+        usuarios.push({id:uuid(), nome, data_nasc, identidade,orgao,edocivil,genero,cep,endereco,numero,logradouro, bairro, cidade, uf, telefone, email, password: senhaCrypt})
+         let dadosJson = JSON.stringify(usuarios)        
+         fs.writeFileSync(usuariosPath, dadosJson)
         return res.redirect("/login")
     },
     cursos: (req,res) => {

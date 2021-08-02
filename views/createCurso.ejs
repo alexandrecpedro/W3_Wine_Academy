@@ -1,0 +1,40 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">NOVO CURSO!</h2>
+            <h4 class="subt-main-header videos">Lista de cursos</h4>
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <form action="/database/dashboard/curso" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control">
+    
+                <label for="descricao">Descricao</label>
+                <input type="text" name="descricao" id="descricao" class="form-control">
+    
+                <label for="carga_horaria">Carga Horaria</label>
+                <input type="text" name="carga_horaria" id="carga_horaria" class="form-control">
+                
+                <label for="link">Link</label>
+                <input type="text" name="link" id="link" class="form-control">
+
+                <label for="area_estudo_id">Area de Estudo</label>
+                <input type="text" name="area_estudo_id" id="area_estudo_id" class="form-control">                              
+                  
+                <button class="btn btn-primary mt-3">salvar</button>
+    
+                <a href="/database/dashboard/curso" class="btn btn-default mt-3">voltar</a>
+            </form>
+        </section>    
+
+<%- include("./partials/footer")%>

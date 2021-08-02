@@ -21,10 +21,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(200),
             allowNull: false
         },
-        ilustracao: {
-            type: DataTypes.BLOB,
-            allowNull: true
-        },
+        // ilustracao: {
+        //     type: DataTypes.BLOB,
+        //     allowNull: true
+        // },
         area_estudo_id: {
             type: DataTypes.INTEGER,
             foreignKey: true
@@ -43,23 +43,23 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: true
         })
         // N:M
-        Curso.belongsToMany(models.Plano, {
-            as: 'planos',
-            through: 'planos_has_cursos',
-            foreignKey: 'curso_id',
-            otherKey: 'plano_id',
-            timestamps: true
-        })
-        // 1:N
-        Curso.hasMany(models.AlunoPlanoCurso, {
-            foreignKey: 'curso_id',
-            as: 'alunoplanocursos'
-        })
-        // N:1
-        Curso.belongsTo(models.AreaEstudo, {
-            foreignKey: 'area_estudo_id',
-            as: 'area_estudo'
-        })
+        // Curso.belongsToMany(models.Plano, {
+        //     as: 'planos',
+        //     through: 'planos_has_cursos',
+        //     foreignKey: 'curso_id',
+        //     otherKey: 'plano_id',
+        //     timestamps: true
+        // })
+        // // 1:N
+        // Curso.hasMany(models.AlunoPlanoCurso, {
+        //     foreignKey: 'curso_id',
+        //     as: 'alunoplanocursos'
+        // })
+        // // N:1
+        // Curso.belongsTo(models.AreaEstudo, {
+        //     foreignKey: 'area_estudo_id',
+        //     as: 'area_estudo'
+        // })
     }
     return Curso
 }

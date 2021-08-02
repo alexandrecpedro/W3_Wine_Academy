@@ -10,8 +10,9 @@ const methodOverride = require("method-override")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var loginRouter = require("./routes/login");
+//var loginRouter = require("./routes/cadastro");
 var adminRouter = require("./routes/admin");
+var databaseRouter = require("./routes/db");
 
 var app = express();
 
@@ -32,14 +33,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 app.use('/', indexRouter);
-app.use('/', usersRouter);
-app.use('/login', loginRouter);
+app.use('/aluno', usersRouter);
+//app.use('/cadastro', loginRouter);
 app.use("/admin", adminRouter)
+app.use("/database", databaseRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+sequelize.sync({ force: false }).then(() => {
+  console.log("Estamos conectado a base de dados");
+}).catch(error => {
+  console.log("Erro!", error);
+})
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -52,10 +60,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-sequelize.sync({ force: false }).then(() => {
-  console.log("Estamos conectado a base de dados");
-}).catch(error => {
-  console.log("Erro!", error);
-})
 
 module.exports = app;

@@ -1,0 +1,10 @@
+sequelize.sync({ force: false }).then(() => {
+  console.log("Estamos conectado a base de dados");
+}).catch(error => {
+  console.log("Erro!", error);
+})
+
+
+user.js
+//router.get("/cadastro-st", loginController.step01)
+//router.post('/playlist/curso-videos', loginUsuario, usuariosController.cursos)

@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     // const Usuario = sequelize.define('nome do modelo')
-    const Aluno = sequelize.define('Aluno', {
+    const Aluno = sequelize.define(
+        'Aluno', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -56,22 +57,22 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'alunos',
         timestamps: true
     });
-    Aluno.associate = (models) => {
-        // 1:N
-        Aluno.hasMany(models.FormaPago, {
-            foreignKey: 'aluno_id',
-            as: 'forma_pagos'
-        })
-        // 1:N
-        Aluno.hasMany(models.Endereco, {
-            foreignKey: 'aluno_id',
-            as: 'enderecos'
-        })
-        // 1:N
-        Aluno.hasMany(models.AlunoPlanoCurso, {
-            foreignKey: 'aluno_id',
-            as: 'alunoplanocursos'
-        })
-    }
+    // Aluno.associate = (models) => {
+    //     // 1:N
+    //     Aluno.hasMany(models.FormaPago, {
+    //         foreignKey: 'aluno_id',
+    //         as: 'forma_pagos'
+    //     })
+    //     // 1:N
+    //     Aluno.hasMany(models.Endereco, {
+    //         foreignKey: 'aluno_id',
+    //         as: 'enderecos'
+    //     })
+    //     // 1:N
+    //     Aluno.hasMany(models.AlunoPlanoCurso, {
+    //         foreignKey: 'aluno_id',
+    //         as: 'alunoplanocursos'
+    //     })
+    // }
     return Aluno
 }

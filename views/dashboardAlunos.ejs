@@ -1,0 +1,56 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">CADASTRO DE ALUNOS</h2>
+            
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <a href="/database/dashboard/alunonovo" class="btn btn-primary">Novo Aluno</a>
+            <a href="/database/dashboard" class="btn btn-primary">Voltar a Dashboard</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>                       
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Data Nascimento</th>
+                        <th>CPF</th>
+                        <th>Nacionalidade</th>
+                        <th>Edo Civil</th>
+                        <th>Telefone</th>
+                        <th>Celular</th>
+                    </tr>
+                </thead>
+                <tbody>                    
+                        <% alunos.forEach(aluno => { %>
+                        <tr>
+                            <td><%= aluno.id %> </td>
+                            <td><%= aluno.nome %> </td>
+                            <td><%= aluno.sobrenome %> </td>
+                            <td><%= aluno.email %> </td>
+                            <td><%= aluno.password %> </td>
+                            <td><%= aluno.data_nasc %> </td>
+                            <td><%= aluno.cpf %> </td>
+                            <td><%= aluno.nacionalidade %> </td>
+                            <td><%= aluno.edo_civil %> </td>
+                            <td><%= aluno.telefone %> </td>
+                            <td><%= aluno.celular %> </td>                            
+                        </tr>
+                        <% }) %>                    
+                </tbody>
+            </table>            
+        </section>    
+
+<%- include("./partials/footer")%>

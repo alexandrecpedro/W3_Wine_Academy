@@ -1,0 +1,43 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">NOVO PROFESSOR!</h2>
+            <h4 class="subt-main-header videos">Lista de cursos</h4>
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <form action="/database/dashboard/professor" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control">
+    
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" class="form-control">
+    
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control">
+                
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" class="form-control">
+
+                <label for="puesto">Puesto</label>
+                <input type="text" name="puesto" id="puesto" class="form-control">
+                
+                <label for="valor">Valor Hora</label>
+                <input type="text" name="valor_hora" id="valor_hora" class="form-control">
+                        
+                <button class="btn btn-primary mt-3">salvar</button>
+    
+                <a href="/database/dashboard/professor" class="btn btn-default mt-3">voltar</a>
+            </form>
+        </section>    
+
+<%- include("./partials/footer")%>
