@@ -6,8 +6,8 @@ const {ModalidadePago} = require('../database/models');
 
 const modalidadeController = {       
     index: async (req, res) => {        
-        const professores = await ModalidadePago.findAll();
-        return res.json(professores);
+        const modalidades = await ModalidadePago.findAll();
+        return res.render("dashboardModalidade",{title:"Modalidade"});
     },
     create: async (req, res) => {
         let {

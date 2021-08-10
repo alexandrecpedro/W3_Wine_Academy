@@ -40,7 +40,17 @@ router.get("/dashboard/curso", dashboardController.curso)
 router.get("/dashboard/cursonovo", dashboardController.cursoNovo)
 router.post("/dashboard/curso", dashboardController.cursoCreate)
 
+router.get("/dashboard/modalidade-pago", dashboardController.modalidade)
+router.get("/dashboard/modalidade-nova", dashboardController.modalidadeNovo)
+router.post("/dashboard/modalidade-pago", dashboardController.modalidadeCreate)
 
+router.get("/dashboard/area", dashboardController.area)
+router.get("/dashboard/areanova", dashboardController.areaNova)
+router.post("/dashboard/area", dashboardController.areaCreate)
+
+router.get("/dashboard/plano", dashboardController.plano)
+router.get("/dashboard/planonovo", dashboardController.planoNovo)
+router.post("/dashboard/plano", dashboardController.planoCreate)
 
 
 module.exports = router;

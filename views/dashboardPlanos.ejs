@@ -1,0 +1,38 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">PLANOS SELECCIONADOS</h2>
+            
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <a href="/database/dashboard/planonovo" class="btn btn-primary">Novo Plano</a>
+            <a href="/database/dashboard" class="btn btn-primary">Voltar a Dashboard</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tipo de plano</th>                        
+                    </tr>
+                </thead>
+                <tbody>                    
+                        <% planos.forEach(plano => { %>
+                        <tr>
+                            <td><%= plano.id %> </td>
+                            <td><%= plano.nome_plano %> </td>                            
+                        </tr>
+                        <% }) %>                    
+                </tbody>
+            </table>            
+        </section>    
+
+<%- include("./partials/footer")%>

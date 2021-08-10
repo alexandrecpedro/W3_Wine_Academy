@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'planos',
         timestamps: true
     });
+    /*
     Plano.associate = (models) => {
         // N:M
         Plano.belongsToMany(models.Curso, {
@@ -28,5 +29,6 @@ module.exports = (sequelize, DataTypes) => {
             as: 'cursoaluno_planos'
         })
     }
+    */
     return Plano
 }

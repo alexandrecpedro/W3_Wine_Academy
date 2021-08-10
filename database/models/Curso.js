@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'cursos',
         timestamps: true
     });
+/*
     Curso.associate = (models) => {
         // N:M
         Curso.belongsToMany(models.Professor, {
@@ -41,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'curso_id',
             otherKey: 'professor_id',
             timestamps: true
+            
         })
         // N:M
         // Curso.belongsToMany(models.Plano, {
@@ -61,5 +63,6 @@ module.exports = (sequelize, DataTypes) => {
         //     as: 'area_estudo'
         // })
     }
+    */
     return Curso
 }

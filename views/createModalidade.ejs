@@ -1,0 +1,30 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">NOVA MODALIDADE!</h2>
+            <h4 class="subt-main-header videos">Formas de Pagamento</h4>
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <form action="/database/dashboard/modalidade-pago" method="POST">
+                <label for="modalidade">Modalidade</label>
+                <input type="text" name="modalidade" id="modalidade" class="form-control">
+                
+                
+                <button class="btn btnI btn-primary">Salvar</button>
+                <a href="/database/dashboard/modalidade-pago" class="btn btn-default">voltar</a>
+                
+
+            </form>
+        </section>    
+
+<%- include("./partials/footer")%>

@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, DataTypes) => {
     const AlunoPlanoCurso = sequelize.define('AlunoPlanoCurso', {
         id: {
@@ -21,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'aluno_plano_curso',
         timestamps: true
     });
+    /*
     AlunoPlanoCurso.associate = (models) => {
         // N:1
         AlunoPlanoCurso.belongsTo(models.Aluno, {
@@ -38,5 +40,6 @@ module.exports = (sequelize, DataTypes) => {
             as: 'plano'
         })
     }
+    */
     return AlunoPlanoCurso
 }

@@ -16,6 +16,8 @@ const usuariosPath = path.join("usuarios.json")
 let usuarios = fs.readFileSync(usuariosPath, { encoding:"utf-8" })
 usuarios = JSON.parse(usuarios)
 
+
+
 const usuariosController = {
     login: (req,res) => {
         return res.render("login", {title:"W3 - Login"})
@@ -28,9 +30,10 @@ const usuariosController = {
         if(usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.password)){
             /**usuario atenticoado */
             /**cria sessao e guarda info de usuario */
-            req.session.usuarioLogado = usuarioEncontrado            
-            console.log(usuarioEncontrado)            
-            res.redirect("/aluno/playlist/curso-videos")
+            req.session.usuarioLogado = usuarioEncontrado                        
+            const bemvindo = usuarioEncontrado.email
+            console.log(bemvindo)
+            return res.redirect("/aluno/playlist/curso-videos")
             
         } else {            
             console.log("não encontrado")

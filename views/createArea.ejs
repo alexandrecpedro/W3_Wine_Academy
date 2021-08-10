@@ -1,0 +1,30 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">NOVA AREA!</h2>
+            <h4 class="subt-main-header videos">Areas de Estudo</h4>
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <form action="/database/dashboard/area" method="POST">
+                <label for="area">Area de Estudo</label>
+                <input type="text" name="area" id="area" class="form-control">
+           
+                
+                <button class="btn btn-primary">Salvar</button>
+                <a href="/database/dashboard/area" class="btn btn-default">voltar</a>
+                
+
+            </form>
+        </section>    
+
+<%- include("./partials/footer")%>

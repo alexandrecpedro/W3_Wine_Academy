@@ -1,0 +1,30 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">OPCOES DE PLANOS</h2>
+            <h4 class="subt-main-header videos">PLANOS SELECCIONADOS</h4>
+        </section>
+        <!--encabezado-->
+
+        <section>
+            <form action="/database/dashboard/plano" method="POST">
+                <label for="plano">Planos</label>
+                <input type="text" name="plano" id="plano" class="form-control">
+           
+                
+                <button class="btn btn-primary">Salvar</button>
+                <a href="/database/dashboard/plano" class="btn btn-default">voltar</a>
+                
+
+            </form>
+        </section>    
+
+<%- include("./partials/footer")%>
