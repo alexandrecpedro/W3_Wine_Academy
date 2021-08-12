@@ -1,3 +1,23 @@
+
+const contactForm=document.querySelector(".formulario")
+const nome=document.getElementById("nome")
+const cidade=document.getElementById("cidade")
+const email=document.getElementById("email")
+const tel=document.getElementById("telefone")
+const mensaje=document.getElementById("mensaje")
+
+contactForm.addEventListener("submit",(e)=>{
+
+    
+    let formData={
+      nome:nome.value,
+      cidade:cidade.value,
+      email:email.value,
+      tel:tel.value,
+      mensaje:mensaje.value
+    }                                    
+})
+
 document.onkeydown = function (t) {
   if(t.which == 9 || t.which == 13){
    return false;

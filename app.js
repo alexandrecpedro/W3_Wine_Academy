@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require("express-session")
 const sequelize = require('./database/config/db');
-
+require("dotenv").config()
+const nodemailer = require("nodemailer")
 const methodOverride = require("method-override")
 
 var indexRouter = require('./routes/index');
@@ -37,6 +38,34 @@ app.use('/aluno', usersRouter);
 //app.use('/cadastro', loginRouter);
 app.use("/admin", adminRouter)
 app.use("/database", databaseRouter)
+
+//nodemailer
+
+/*
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL, 
+        pass: process.env.PASSWORD
+    }
+});
+
+let mailOptions = {
+    from: process.env.EMAIL, 
+    to: "martinembon@hotmail.com",
+    subject: 'Test',
+    text: 'Vamos!!'
+};
+
+transporter.sendMail(mailOptions, (err, data) => {
+    if (err) {
+        console.log('Error al enviar',err);
+    } else {
+    console.log('Email enviado!!!');
+}
+});
+
+*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
