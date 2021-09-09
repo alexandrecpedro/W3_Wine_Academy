@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const Sequelize = require('sequelize')
-const Op = Sequelize.Op
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 const {Aluno} = require('../database/models');
 
 const alunoController = {       

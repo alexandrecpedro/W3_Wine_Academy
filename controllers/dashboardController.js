@@ -164,42 +164,27 @@ const dashboardController = {
         return res.render('createArea', { title: "W3 - Dashboard Areas" });
     },
     areaCreate: async (req, res) => {
-        let {
-            area
-        } = req.body;
-
-        const areas = await AreaEstudo.create({
-            area
-        });
-
+        let { area } = req.body;
+        const areas = await AreaEstudo.create({ area });
         return res.redirect('/database/dashboard/area');
     },
-//Plano
-plano: async (req, res) => {
-    const planos = await Plano.findAll({
+    //Plano
+    plano: async (req, res) => {
+        const planos = await Plano.findAll({
         limit: 5,
         order: [
             ['createdAt', 'DESC']
         ]
     });
-
     return res.render('dashboardPlanos', { title: "W3 - Dashboard Planos", planos});
-
-},
-planoNovo: (req, res) => {
-    return res.render('createPlano', { title: "W3 - Dashboard Planos" });
-},
-planoCreate: async (req, res) => {
-    let {
-        plano
-    } = req.body;
-
-    const planos = await Plano.create({
-        plano
-    });
-
-    return res.redirect('/database/dashboard/plano');
-},
-
+    },
+    planoNovo: (req, res) => {
+        return res.render('createPlano', { title: "W3 - Dashboard Planos" });
+    },
+    planoCreate: async (req, res) => {
+        let { plano } = req.body;
+        const planos = await Plano.create({ plano });
+        return res.redirect('/database/dashboard/plano');
+    }
 }
-module.exports = dashboardController
+module.exports = dashboardController;

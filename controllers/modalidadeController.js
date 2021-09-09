@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const Sequelize = require('sequelize')
-const Op = Sequelize.Op
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 const {ModalidadePago} = require('../database/models');
 
 const modalidadeController = {       
@@ -10,15 +10,9 @@ const modalidadeController = {
         return res.render("dashboardModalidade",{title:"Modalidade"});
     },
     create: async (req, res) => {
-        let {
-            modalidade         
-        } = req.body;
-
-        const modalidades = await ModalidadePago.create({
-           modalidade
-        });
-
-        return res.send("modalidade cadastrado");
+        let { modalidade } = req.body;
+        const modalidades = await ModalidadePago.create({ modalidade });
+        return res.send("modalidade cadastrada");
     }
     // create: (req, res) => {
     //     Aluno.create({
