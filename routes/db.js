@@ -1,12 +1,29 @@
 var express = require('express');
+const path = require('path');
 const alunoController = require('../controllers/alunoController');
 const professorController = require("../controllers/professorController")
 const cursoController = require("../controllers/cursoController")
 const areaController = require("../controllers/areaController")
 const modalidadeController = require("../controllers/modalidadeController")
 const dashboardController = require("../controllers/dashboardController")
+const multer = require('multer');
 var router = express.Router();
 
+const storage = multer.diskStorage({
+    /** destino do upload */
+    destination: (req, file, cb) => {
+        /** guarda arquivos na pasta /uploads */
+        cb(null, path.join('uploads'));
+    },
+    /** nome do upload */
+    filename: (req, file, cb) => {
+        /** salva arquivo com nome do campo + data e hora + extensão */
+        cb(null, file.fieldname + Date.now() + path.extname(file.originalname));
+    }
+});
+
+/** usando configuração como storage do multer */
+const upload = multer({ storage: storage });
 
 // http://localhost:3000/alunos
 router.get('/alunos', alunoController.index);
@@ -38,7 +55,8 @@ router.post("/dashboard/professor", dashboardController.professorCreate)
 
 router.get("/dashboard/curso", dashboardController.curso)
 router.get("/dashboard/cursonovo", dashboardController.cursoNovo)
-router.post("/dashboard/curso", dashboardController.cursoCreate)
+router.post("/dashboard/curso", upload.single("ilustracao"), dashboardController.cursoCreate)
+router.delete('/dashboard/curso/excluir/:id', dashboardController.cursoDelete);
 
 router.get("/dashboard/modalidade-pago", dashboardController.modalidade)
 router.get("/dashboard/modalidade-nova", dashboardController.modalidadeNovo)

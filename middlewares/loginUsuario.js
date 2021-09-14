@@ -6,7 +6,7 @@ const auth = (request, response, next) => {
         next()
     } else {
         // Se não estiver logado, redireciona para /login
-        return response.render("usuario404")
+        return response.render("usuario404", {title: '404'})
     }
 }
 

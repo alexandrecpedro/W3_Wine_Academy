@@ -21,10 +21,12 @@
                     <tr>
                         <th>ID</th>
                         <th>Nome</th>
+                        <th>Ilustração</th>
                         <th>Descrição</th>                       
                         <th>Carga Horária</th>
                         <th>Link</th>                       
                         <th>Área de Estudo</th>                       
+                        <th>Ação</th>                       
                     </tr>
                 </thead>
                 <tbody>                    
@@ -32,10 +34,18 @@
                         <tr>
                             <td><%= curso.id %> </td>
                             <td><%= curso.nome %> </td>
+                            <td><%= curso.ilustracao %> </td>
                             <td><%= curso.descricao %> </td>
                             <td><%= curso.carga_horaria %></td>
                             <td><%= curso.link %> </td>                            
                             <td><%= curso.area_estudo_id %> </td>                            
+                            <td>
+                                <form class="form-cadastro" name="<%= curso.nome %><%= curso.id %>" action="/database/dashboard/curso/excluir/<%= curso.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                    <button type="submit">
+                                        <span><i class="fas fa-times"></i></span>
+                                    </button>
+                                </form>
+                            </td>                            
                             
                         </tr>
                         <% }) %>                    

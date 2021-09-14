@@ -39,7 +39,8 @@ const adminController = {
             descricao,
             carga_horaria,
             link,
-            area_estudo_id
+            area_estudo_id,
+            ilustracao
         } = req.body;
 
         const curso = await Curso.create({
@@ -47,7 +48,8 @@ const adminController = {
             descricao,
             carga_horaria,
             link,
-            area_estudo_id
+            area_estudo_id,
+            ilustracao
         });
 
         // return res.send("curso cadastado");

@@ -18,7 +18,7 @@ const areaController = {
           area
         });
 
-        return res.send("area cadastado");
+        return res.send("area cadastrada");
     }
 
     // create: (req, res) => {

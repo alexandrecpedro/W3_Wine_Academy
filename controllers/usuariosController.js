@@ -4,9 +4,8 @@ const path = require("path");
 const { uuid } = require("uuidv4");
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
-const {Aluno} = require('../database/models');
+const {Aluno, Curso} = require('../database/models');
 const Endereco = require('../database/models/Endereco');
-const Curso = require('../database/models/Curso');
 
 const cursosPath = path.join("cursos.json")
 let cursos = fs.readFileSync(cursosPath, {
@@ -28,16 +27,16 @@ const usuariosController = {
     },
     autenticacao: async (req, res) => {
         const { email, password } = req.body;
+        console.log(req.body);
         let usuarioEncontrado = await Aluno.findOne({where: {email: email} });
         // const usuarioEncontrado = usuarios.find((usuario => usuario.email == email))
         // if(usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.password)){
-        if(usuarioEncontrado){
-        // if (usuarioEncontrado && bcrypt.compareSync(password, usuarioEncontrado.password)) {
+        if (usuarioEncontrado && password == usuarioEncontrado.password) {
             /**usuario atenticoado */
             /**cria sessao e guarda info de usuario */
-            // req.session.usuarioLogado = usuarioEncontrado;
-            // const bemvindo = usuarioEncontrado.email;
-            // console.log(bemvindo);
+            req.session.usuarioLogado = usuarioEncontrado;
+            const bemvindo = usuarioEncontrado.email;
+            console.log(bemvindo);
             return res.redirect("/aluno/playlist/curso-videos")
         } else {
             console.log("não encontrado")
@@ -92,8 +91,8 @@ const usuariosController = {
 
         return res.redirect('/login');
     },
-    cursos: (req, res) => {
-        // let curso = await Curso.findAll()
+    cursos: async (req, res) => {
+        let cursos = await Curso.findAll();
         return res.render("curso-videos", {
             title: "W3 - Bem-vindo, Usuário",
             cursos

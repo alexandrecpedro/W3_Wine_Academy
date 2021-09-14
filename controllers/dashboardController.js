@@ -108,17 +108,23 @@ const dashboardController = {
             descricao,
             carga_horaria,
             link,
-            area_estudo_id
+            area_estudo_id,
         } = req.body;
+        let ilustracao = req.file.filename;
 
         const curso = await Curso.create({
             nome,
             descricao,
             carga_horaria,
             link,
-            area_estudo_id
+            area_estudo_id,
+            ilustracao
         });
-
+        return res.redirect('/database/dashboard/curso');
+    },
+    cursoDelete: async (req, res) => {
+        let {id} = req.params;
+        let cursoEncontrado = await Curso.destroy({where: {id}})
         return res.redirect('/database/dashboard/curso');
     },
     //mod

@@ -21,10 +21,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(200),
             allowNull: false
         },
-        // ilustracao: {
-        //     type: DataTypes.BLOB,
-        //     allowNull: true
-        // },
+        ilustracao: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
         area_estudo_id: {
             type: DataTypes.INTEGER,
             foreignKey: true

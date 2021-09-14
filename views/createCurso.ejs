@@ -15,20 +15,23 @@
         <!--encabezado-->
 
         <section>
-            <form action="/database/dashboard/curso" method="POST">
+            <form action="/database/dashboard/curso" method="POST" enctype="multipart/form-data">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control">
+                
+                <label for="ilustracao">Ilustração</label>
+                <input type="file" name="ilustracao" id="ilustracao" class="form-control">
     
-                <label for="descricao">Descricao</label>
+                <label for="descricao">Descrição</label>
                 <input type="text" name="descricao" id="descricao" class="form-control">
     
-                <label for="carga_horaria">Carga Horaria</label>
+                <label for="carga_horaria">Carga Horária</label>
                 <input type="text" name="carga_horaria" id="carga_horaria" class="form-control">
                 
                 <label for="link">Link</label>
                 <input type="text" name="link" id="link" class="form-control">
 
-                <label for="area_estudo_id">Area de Estudo</label>
+                <label for="area_estudo_id">Área de Estudo</label>
                 <input type="text" name="area_estudo_id" id="area_estudo_id" class="form-control">                              
                   
                 <button class="btn btn-primary mt-3">salvar</button>
