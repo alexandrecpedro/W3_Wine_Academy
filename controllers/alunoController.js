@@ -21,7 +21,6 @@ const alunoController = {
             telefone,
             celular
         } = req.body;
-
         const aluno = await Aluno.create({
             nome,
             sobrenome,
@@ -35,30 +34,8 @@ const alunoController = {
             telefone,
             celular
         });
-
         return res.redirect('/dashboardAluno');
-    },
-    // create: (req, res) => {
-    //     Aluno.create({
-    //         nome: req.body.nome
-    //     }).then(aluno => {
-    //         res.json(aluno);
-    //     })
-    // },
-    // id: (req, res) => {
-    //     Aluno.findByPk(req.params.id).then(aluno=> {
-    //         res.json(aluno);
-    //     })
-    // }
-    // step02: (req,res) =>{
-    //     return res.render("cadastro-st-2", {title:"W3 - Bemvindo Usuario"})
-    // },
-    // step03: (req,res) =>{
-    //     return res.render("cadastro-st-3", {title:"W3 - Bemvindo Usuario"})
-    // },
-    // step04: (req,res) =>{
-    //     return res.render("cadastro-st-4", {title:"W3 - Bemvindo Usuario"})
-    // }
+    }
 }
 
-module.exports=alunoController
+module.exports = alunoController;

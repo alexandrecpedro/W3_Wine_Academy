@@ -1,5 +1,5 @@
 const planos = [
-    {        
+    {
         plano: "INICIANTE",
         preco:190,
         vista:159,
@@ -29,7 +29,6 @@ const planos = [
         beneficio4:"Conteúdo disponível por 120 dias",
         beneficio5:"Certificado W3 Academy"     
     }
-
 ]
 
-module.exports = planos
+module.exports = planos;

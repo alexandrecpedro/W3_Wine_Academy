@@ -1,21 +1,19 @@
 const planos = require("../public/services/planos");
-
-require("dotenv").config()
+require("dotenv").config();
 const nodemailer = require("nodemailer");
 
 const institucionalController = {
     index: (req,res) => {
-        return res.render("index", {title:"W3 - Home"})
+        return res.render("index", {title:"W3 - Home"});
     },
     cursos: (req,res) => {
-        return res.render("cursos", {title:"W3 - Cursos"})
+        return res.render("cursos", {title:"W3 - Cursos"});
     },
     planos: (req,res) => {        
-        return res.render("planos", {planos, title:"W3 - Nossos Planos"})
+        return res.render("planos", {planos, title:"W3 - Nossos Planos"});
     },
-
     planosform: (req,res) => {                
-        console.log(req.body)
+        console.log(req.body);
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -36,13 +34,13 @@ const institucionalController = {
             console.log('Email enviado!!!');
             }
         });
-        return res.redirect("/planos")
-        },
+        return res.redirect("/planos");
+    },
     sobre: (req,res) => {
-        return res.render("sobre", {title:"W3 - Sobre nós"})
+        return res.render("sobre", {title:"W3 - Sobre nós"});
     },
     login: (req,res) => {
-        return res.render("login", {title:"W3 - Login"})
+        return res.render("login", {title:"W3 - Login"});
     }
 }
 

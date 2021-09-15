@@ -1,1 +1,0 @@
-//const {usuarioEncontrado} = require("/Users/Desarrollo/Desktop/projeto-integrador-1/controllers/adminController")

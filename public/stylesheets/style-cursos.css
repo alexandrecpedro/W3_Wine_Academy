@@ -1401,7 +1401,6 @@ footer {
     font-size: 60px;
     vertical-align: middle;
 }
-
 .redes {
     text-align: center;
     font-size: 22px;
@@ -1412,46 +1411,38 @@ footer {
     text-transform: uppercase;
     margin-bottom: 3rem;
 }
-
 .redes .icone-redes {
     margin: auto;
     border-radius: 50%;
 }
-
 .redes .icone-redes i {
     margin-top: 1rem;
     border-radius: 50%;
     margin-left: 1rem;
     font-size: 36px;
 }
-
 .redes .icone-redes i:hover {
     color: yellow;
 }
-
 .footer-amplo {
     margin-bottom: 5rem;
     display: flex;
 }
-
 .coluna-datos {
     display: flex;
     margin-left: 1rem;
 }
-
 .coluna-um {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     flex: 1;
 }
-
 .coluna-datos i {
     font-size: 17px;
     color: rgb(172, 172, 1);
     align-self: center;
 }
-
 .coluna-datos a {
     text-decoration: none;
     color: black;
@@ -1462,7 +1453,6 @@ footer {
     align-self: center;
     text-align: justify;
 }
-
 .coluna-dos {
     text-align: center;
     display: flex;
@@ -1470,7 +1460,6 @@ footer {
     flex-direction: column;
     flex: 1;
 }
-
 .coluna-dos a {
     text-decoration: none;
     color: black;
@@ -1480,27 +1469,22 @@ footer {
     display: block;
     width: 80%;
 }
-
 .coluna-dos a:hover {
     color: grey;
     font-weight: bold;
 }
-
 .coluna-tres {
     flex: 1;
     height: 12rem;
 }
-
 .coluna-tres .mapa {
     margin-right: 1rem;
 }
-
 .coluna-tres .mapa iframe {
     width: 100%;
     height: 12rem;
     max-height: 100%;
 }
-
 .final {
     text-align: center;
     background-color: rgb(182, 182, 4);
@@ -1511,113 +1495,90 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 @media screen and (max-width:1000px) {
     .contato-direto {
         display: flex;
         flex-direction: column;
         padding-top: 0;
     }
-
     .contato-direto .datos {
         margin-bottom: 1rem;
     }
-
     .contato-direto .datos h2,
     .contato-direto .datos h3 {
         text-align: center;
     }
-
     .contato-direto .datos .icone-1:before,
     .contato-direto .datos .icone-2:before,
     .contato-direto .datos .icone-3:before {
         display: none;
     }
-
     .contato-direto .datos h3::after {
         visibility: visible;
     }
-
     .sombra {
         margin: 0;
     }
 }
-
 @media screen and (max-width:1000px) {
     .coluna-um {
         display: none;
     }
-
     .coluna-dos {
         display: none;
     }
-
     .coluna-tres .mapa {
         width: 100%;
         margin: auto;
     }
 }
-
-/* CURSO VIDEO */
-
 .videos {
     width: 100%;
 }
-
 .video {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 32px;
 }
-
 .video img {
     max-width: 100%;
     border-radius: 5px;
 }
-
 .curso-video {
     position: relative;
 }
-
 .thumb {
     width: 300px;
     height: 200px;
     background-color: khaki;
     background-size: cover;
     border-radius: 5px;
-    /* background-image: url("/uploads/<%curso.ilustracao%>"); */
 }
-
 .thumb img {
     max-width: 100%;
     border-radius: 5px;
 }
-
 .link-video {
     text-decoration: underline;
     text-decoration-color: #95062E;
     display: block;
     width: 100%;
 }
-
 .curso-video {
     width: 30%;
     margin-right: 2rem;
 }
-
 .nombre-curso h3 {
     font-size: 30px;
     color: #95062E;
     margin-bottom: 16px;
     font-family: sans-serif;
 }
-
 .nombre-curso .vista {
     font-size: 20px;
     color: black;
     font-family: sans-serif;
 }
-
 .nombre-curso .professor {
     font-size: 20px;
     color: black;
@@ -1625,67 +1586,55 @@ footer {
     font-weight: bold;
     margin-bottom: 16px;
 }
-
 .nombre-curso .cargo {
     font-size: 20px;
     color: black;
     font-family: sans-serif;
     font-weight: lighter;
 }
-
 @media screen and (max-width:1079px) {
     .video {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
     }
-
     .curso-video,
     .thumb {
         margin: auto;
     }
-
     .nombre-curso {
         text-align: center;
     }
-
     .nombre-curso h3 {
         font-size: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
-
     .nombre-curso .vista {
         font-size: 13px;
         color: black;
     }
-
     .nombre-curso .professor {
         font-size: 16px;
         margin-bottom: 10px;
     }
-
     .nombre-curso .cargo {
         font-size: 16px;
     }
-
     .curso-video {
         width: 50%;
     }
 }
-
 @media screen and (max-width:700px) {
     .navmenu {
         display: flex;
         flex-direction: column;
     }
-
     .logo {
         margin: auto;
         margin-bottom: .5rem;
         width: 40%;
     }
-
     .navmenu ul {
         display: flex;
         justify-content: space-evenly;
@@ -1693,24 +1642,19 @@ footer {
         flex-wrap: wrap;
         gap: .5rem;
     }
-
     .navcontrast,
     .navfontsize {
         display: none;
     }
-
     .btn-em-linha {
         display: inline;
     }
-
     .btn-em-linha a {
         color: white;
     }
-
     .btn-em-linha-2 {
         display: none;
     }
-
     .caco {
         margin-top: 40px;
     }
