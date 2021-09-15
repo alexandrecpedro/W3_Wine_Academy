@@ -51,9 +51,12 @@ const dashboardController = {
             celular
         });
         return res.redirect('/database/dashboard/aluno');
-
     },
-
+    alunoDelete: async (req, res) => {
+        let {id} = req.params;
+        let alunoEncontrado = await Aluno.destroy({where: {id}})
+        return res.redirect('/database/dashboard/aluno');
+    },
     professor: async (req, res) => {
         const professores = await Professor.findAll({
             limit: 5,

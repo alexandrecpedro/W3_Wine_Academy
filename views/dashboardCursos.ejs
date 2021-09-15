@@ -40,13 +40,12 @@
                             <td><%= curso.link %> </td>                            
                             <td><%= curso.area_estudo_id %> </td>                            
                             <td>
-                                <form class="form-cadastro" name="<%= curso.nome %><%= curso.id %>" action="/database/dashboard/curso/excluir/<%= curso.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-                                    <button type="submit">
+                                <form class="form-cadastro1" name="<%= curso.nome %><%= curso.id %>" action="/database/dashboard/curso/excluir/<%= curso.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                    <button type="submit" class="btn-dashboard">
                                         <span><i class="fas fa-times"></i></span>
                                     </button>
                                 </form>
-                            </td>                            
-                            
+                            </td>
                         </tr>
                         <% }) %>                    
                 </tbody>

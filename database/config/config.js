@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Dianabkupervaser5",
+    "password": "portugal",
     "database": "w3academia",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -9,7 +9,7 @@ module.exports = {
   },
   database: {
     username: "root",
-    password: "Dianabkupervaser5",
+    password: "portugal",
     database: "w3academia",
     host: "localhost",
     dialect: "mysql",

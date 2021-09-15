@@ -31,6 +31,7 @@
                         <th>Edo Civil</th>
                         <th>Telefone</th>
                         <th>Celular</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>                    
@@ -46,7 +47,14 @@
                             <td><%= aluno.nacionalidade %> </td>
                             <td><%= aluno.edocivil %> </td>
                             <td><%= aluno.telefone %> </td>
-                            <td><%= aluno.celular %> </td>                            
+                            <td><%= aluno.celular %> </td>   
+                            <td>
+                                <form class="form-cadastro1" name="<%= aluno.nome %><%= aluno.id %>" action="/database/dashboard/aluno/excluir/<%= aluno.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                    <button type="submit" class="btn-dashboard">
+                                        <span><i class="fas fa-times"></i></span>
+                                    </button>
+                                </form>
+                            </td>                         
                         </tr>
                         <% }) %>                    
                 </tbody>

@@ -1718,16 +1718,31 @@ footer {
 
 /*PLANOS CONTACTO IMAGEN*/
 
-.imagen-contact{
+.imagen-contact {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-#imagenctc{
-    width:100%;
+#imagenctc {
+    width: 100%;
     border-radius: 10px;
-    height:250px;
+    height: 250px;
     object-fit: cover;
+}
+
+.btn-dashboard {
+    background: transparent;
+    width: 5px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.btn-dashboard>i {
+    font-size: 5px;
+    width: 5px;
+    height: 5px;
 }

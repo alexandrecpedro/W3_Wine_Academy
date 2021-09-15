@@ -50,6 +50,7 @@ router.get("/dashboard/", dashboardController.index)
 router.get("/dashboard/aluno", dashboardController.aluno)
 router.get("/dashboard/alunonovo", dashboardController.alunoNovo)
 router.post("/dashboard/aluno", dashboardController.alunoCreate)
+router.delete('/dashboard/aluno/excluir/:id', dashboardController.alunoDelete)
 
 
 router.get("/dashboard/professor", dashboardController.professor)
@@ -60,7 +61,7 @@ router.post("/dashboard/professor", dashboardController.professorCreate)
 router.get("/dashboard/curso", dashboardController.curso)
 router.get("/dashboard/cursonovo", dashboardController.cursoNovo)
 router.post("/dashboard/curso", upload.single("ilustracao"), dashboardController.cursoCreate)
-router.delete('/dashboard/curso/excluir/:id', dashboardController.cursoDelete);
+router.delete('/dashboard/curso/excluir/:id', dashboardController.cursoDelete)
 
 router.get("/dashboard/modalidade-pago", dashboardController.modalidade)
 router.get("/dashboard/modalidade-nova", dashboardController.modalidadeNovo)
