@@ -1,6 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const axios = require("axios")
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require("express-session")
@@ -8,12 +9,16 @@ const sequelize = require('./database/config/db');
 require("dotenv").config()
 const nodemailer = require("nodemailer")
 const methodOverride = require("method-override")
+const mongoose = require("mongoose")
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //var loginRouter = require("./routes/cadastro");
 var adminRouter = require("./routes/admin");
 var databaseRouter = require("./routes/db");
+
+
+
 
 var app = express();
 
@@ -38,6 +43,9 @@ app.use('/aluno', usersRouter);
 //app.use('/cadastro', loginRouter);
 app.use("/admin", adminRouter)
 app.use("/database", databaseRouter)
+
+//mongoose
+
 
 //nodemailer
 

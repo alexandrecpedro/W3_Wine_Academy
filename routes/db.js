@@ -1,3 +1,4 @@
+const axios = require("axios")
 var express = require('express');
 const path = require('path');
 const alunoController = require('../controllers/alunoController');
@@ -28,6 +29,9 @@ const upload = multer({ storage: storage });
 // http://localhost:3000/alunos
 router.get('/alunos', alunoController.index);
 router.post('/alunos',alunoController.create)
+
+
+
 
 router.get('/professor', professorController.index);
 router.post('/professor', professorController.create);

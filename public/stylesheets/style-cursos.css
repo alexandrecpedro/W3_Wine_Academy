@@ -1715,3 +1715,19 @@ footer {
         margin-top: 40px;
     }
 }
+
+/*PLANOS CONTACTO IMAGEN*/
+
+.imagen-contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#imagenctc{
+    width:100%;
+    border-radius: 10px;
+    height:250px;
+    object-fit: cover;
+}

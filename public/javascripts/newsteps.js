@@ -6,16 +6,16 @@ const email=document.getElementById("email")
 const tel=document.getElementById("telefone")
 const mensaje=document.getElementById("mensaje")
 
-contactForm.addEventListener("submit",(e)=>{
-
-    
+contactForm.addEventListener("submit",(e)=>{    
     let formData={
       nome:nome.value,
       cidade:cidade.value,
       email:email.value,
       tel:tel.value,
       mensaje:mensaje.value
-    }                                    
+    }
+    
+
 })
 
 document.onkeydown = function (t) {

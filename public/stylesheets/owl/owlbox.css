@@ -1,0 +1,19 @@
+.owl-config{
+    margin:auto;    
+    display:flex;
+    margin-top:1rem;
+    
+}
+/* .logoc{
+    align-self: center;
+    display: flex;
+} */
+.box-carrousel{
+    width: 100%;    
+    height: 80px;
+    object-fit: scale-down;
+    display:flex;
+    align-self: center;
+    align-items: center;    
+}
+
