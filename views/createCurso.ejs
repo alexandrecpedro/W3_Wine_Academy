@@ -10,12 +10,12 @@
         <section class="encabezado">
             <i class="fas fa-book"></i>
             <h2 class="main-header">NOVO CURSO!</h2>
-            <h4 class="subt-main-header videos">Lista de cursos</h4>
+            <h4 class="subt-main-header videos"></h4>
         </section>
         <!--encabezado-->
 
         <section>
-            <form action="/database/dashboard/curso" method="POST" enctype="multipart/form-data">
+            <form action="/database/dashboard/curso" method="POST" enctype="multipart/form-data" class="formulario-professor">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control">
                 
@@ -36,7 +36,7 @@
                   
                 <button class="btn btn-primary mt-3">salvar</button>
     
-                <a href="/database/dashboard/curso" class="btn btn-default mt-3">voltar</a>
+                <a href="/database/dashboard/curso" class="btn btn-default mt-3 formulario-voltar">voltar</a>
             </form>
         </section>    
 

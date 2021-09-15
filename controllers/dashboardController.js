@@ -52,6 +52,17 @@ const dashboardController = {
         });
         return res.redirect('/database/dashboard/aluno');
     },
+    alunoEditar: async (req,res)=>{
+        let {id} = req.params;
+        let alunoEncontrado = await Aluno.findByPk(id)
+        return res.render("dashboardAlunoEditar", {title:"W3 - ACADEMIA",aluno:alunoEncontrado})
+    },
+    alunoAtualizar: async (req,res)=>{
+        let {id} = req.params;
+        let {nome, sobrenome, email, password, data_nasc, cpf, nacionalidade, edocivil, telefone, celular} = req.body;
+        let alunoEncontrado = await Aluno.update({nome, sobrenome, email, password, data_nasc, cpf, nacionalidade, edocivil, telefone, celular}, {where:{id}})
+        return res.redirect('/database/dashboard/aluno')
+    },
     alunoDelete: async (req, res) => {
         let {id} = req.params;
         let alunoEncontrado = await Aluno.destroy({where: {id}})
@@ -91,7 +102,22 @@ const dashboardController = {
 
         return res.redirect('/database/dashboard/professor');
     },
-
+    professorEditar: async (req,res)=>{
+        let {id} = req.params;
+        let professorEncontrado = await Professor.findByPk(id)
+        return res.render("dashboardProfessorEditar", {title:"W3 - ACADEMIA",professor:professorEncontrado})
+    },
+    professorAtualizar: async (req,res)=>{
+        let {id} = req.params;
+        let {nome, sobrenome, email, password, puesto, valor_hora} = req.body;
+        let professorEncontrado = await Professor.update({nome, sobrenome, email, password, puesto, valor_hora}, {where:{id}})
+        return res.redirect('/database/dashboard/professor')
+    },
+    professorDelete: async (req, res) => {
+        let {id} = req.params;
+        let professorEncontrado = await Professor.destroy({where: {id}})
+        return res.redirect('/database/dashboard/professor');
+    },
     curso: async (req, res) => {
         const cursos = await Curso.findAll({
             limit: 5,
@@ -125,6 +151,33 @@ const dashboardController = {
         });
         return res.redirect('/database/dashboard/curso');
     },
+    cursoEditar: async (req,res)=>{
+        let {id} = req.params;
+        let cursoEncontrado = await Curso.findByPk(id)
+        // let cursoEncontrado = cursos.find(curso => curso.id == id)
+        return res.render("dashboardCursoEditar", {title:"W3 - ACADEMIA",curso:cursoEncontrado})
+    },
+    cursoAtualizar: async (req,res)=>{
+        let {id} = req.params;
+        let {nome, descricao, carga_horaria, link, ilustracao, area_estudo_id} = req.body;
+        let cursoEncontrado = await Curso.update({nome, descricao, carga_horaria, link, ilustracao, area_estudo_id}, {where:{id}})
+        /* let cursoEncontrado = cursos.find(curso => curso.id == id)
+        cursoEncontrado.nome = nome;
+        cursoEncontrado.professor = professor;
+        cursoEncontrado.puesto = puesto;
+        cursoEncontrado.descricao = descricao;
+        cursoEncontrado.link = link; */
+        /*verifica si tem imagem nova*/ 
+        if(req.file){
+            cursoEncontrado = Curso.update({ilustracao: req.file.filename}, {where: {id}})
+            // cursoEncontrado.ilustracao=req.file.filename;
+        }
+        // /*convrtir array para json */
+         /* let dadosJson = JSON.stringify(cursos) */
+        // /*salva json atualizado no arquivo */
+         /* fs.writeFileSync(cursosPath,dadosJson) */
+        return res.redirect('/database/dashboard/curso')
+    },
     cursoDelete: async (req, res) => {
         let {id} = req.params;
         let cursoEncontrado = await Curso.destroy({where: {id}})
@@ -135,7 +188,7 @@ const dashboardController = {
         const modalidades = await ModalidadePago.findAll({
             limit: 5,
             order: [
-                ['createdAt', 'DESC']
+                ['createdAt', 'ASC']
             ]
         });
 
@@ -162,7 +215,7 @@ const dashboardController = {
         const areas = await AreaEstudo.findAll({
             limit: 5,
             order: [
-                ['createdAt', 'DESC']
+                ['createdAt', 'ASC']
             ]
         });
 

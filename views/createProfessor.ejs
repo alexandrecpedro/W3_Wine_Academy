@@ -10,12 +10,12 @@
         <section class="encabezado">
             <i class="fas fa-book"></i>
             <h2 class="main-header">NOVO PROFESSOR!</h2>
-            <h4 class="subt-main-header videos">Lista de cursos</h4>
+            <h4 class="subt-main-header videos"></h4>
         </section>
         <!--encabezado-->
 
         <section>
-            <form action="/database/dashboard/professor" method="POST">
+            <form action="/database/dashboard/professor" method="POST" class="formulario-professor">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control">
     
@@ -28,15 +28,15 @@
                 <label for="password">Password</label>
                 <input type="text" name="password" id="password" class="form-control">
 
-                <label for="puesto">Puesto</label>
+                <label for="puesto">Cargo</label>
                 <input type="text" name="puesto" id="puesto" class="form-control">
                 
-                <label for="valor">Valor Hora</label>
+                <label for="valor_hora">Valor Hora</label>
                 <input type="text" name="valor_hora" id="valor_hora" class="form-control">
                         
                 <button class="btn btn-primary mt-3">salvar</button>
     
-                <a href="/database/dashboard/professor" class="btn btn-default mt-3">voltar</a>
+                <a href="/database/dashboard/professor" class="btn btn-default mt-3 formulario-voltar">voltar</a>
             </form>
         </section>    
 

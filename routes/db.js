@@ -30,9 +30,6 @@ const upload = multer({ storage: storage });
 router.get('/alunos', alunoController.index);
 router.post('/alunos',alunoController.create)
 
-
-
-
 router.get('/professor', professorController.index);
 router.post('/professor', professorController.create);
 
@@ -50,17 +47,24 @@ router.get("/dashboard/", dashboardController.index)
 router.get("/dashboard/aluno", dashboardController.aluno)
 router.get("/dashboard/alunonovo", dashboardController.alunoNovo)
 router.post("/dashboard/aluno", dashboardController.alunoCreate)
+router.get("/dashboard/aluno/editar/:id",dashboardController.alunoEditar)
+router.put("/dashboard/aluno/editar/:id", dashboardController.alunoAtualizar)
 router.delete('/dashboard/aluno/excluir/:id', dashboardController.alunoDelete)
 
 
 router.get("/dashboard/professor", dashboardController.professor)
 router.get("/dashboard/professornovo", dashboardController.professorNovo)
 router.post("/dashboard/professor", dashboardController.professorCreate)
+router.get("/dashboard/professor/editar/:id",dashboardController.professorEditar)
+router.put("/dashboard/professor/editar/:id", dashboardController.professorAtualizar)
+router.delete('/dashboard/professor/excluir/:id', dashboardController.professorDelete)
 
 
 router.get("/dashboard/curso", dashboardController.curso)
 router.get("/dashboard/cursonovo", dashboardController.cursoNovo)
 router.post("/dashboard/curso", upload.single("ilustracao"), dashboardController.cursoCreate)
+router.get("/dashboard/curso/editar/:id",dashboardController.cursoEditar)
+router.put("/dashboard/curso/editar/:id", upload.single("ilustracao"), dashboardController.cursoAtualizar)
 router.delete('/dashboard/curso/excluir/:id', dashboardController.cursoDelete)
 
 router.get("/dashboard/modalidade-pago", dashboardController.modalidade)

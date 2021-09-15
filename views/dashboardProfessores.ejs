@@ -26,6 +26,8 @@
                         <th>Senha</th>
                         <th>Cargo</th>
                         <th>Valor Hora</th>                
+                        <th>Editar</th>                
+                        <th>Deletar</th>                
                     </tr>
                 </thead>
                 <tbody>                    
@@ -37,7 +39,17 @@
                             <td><%= professor.email %> </td>
                             <td><%= professor.password %> </td>
                             <td><%= professor.puesto %> </td>
-                            <td><%= professor.valor_hora %> </td>                            
+                            <td><%= professor.valor_hora %> </td>  
+                            <td>
+                                <a href="/database/dashboard/professor/editar/<%= professor.id %>" class="btn btn-gray btn-editar"><i class="fas fa-edit pen-edit"></i></a>
+                            </td>
+                            <td>
+                                <form class="form-cadastro1" name="<%= professor.nome %><%= professor.id %>" action="/database/dashboard/professor/excluir/<%= professor.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                    <button type="submit" class="btn-dashboard">
+                                        <span><i class="fas fa-times"></i></span>
+                                    </button>
+                                </form>
+                            </td>                          
                         </tr>
                         <% }) %>                    
                 </tbody>

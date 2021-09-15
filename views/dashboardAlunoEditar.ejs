@@ -1,0 +1,55 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">CADASTRO DE ALUNOS</h2>
+            <h4 class="subt-main-header videos">Editar aluno</h4>
+        </section>
+        <!--encabezado-->
+        <a class="link-cadastro" href="/database/dashboard">Voltar a Dashboard</a>
+        
+        <form class="form-cadastro" action="/database/dashboard/aluno/editar/<%= aluno.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+            <fieldset>
+              
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" value="<%= aluno.nome %>" required>
+
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" value="<%= aluno.sobrenome %>" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="<%= aluno.email %>" required>
+
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" value="<%= aluno.password %>" required>
+
+                <label for="data_nasc">Data Nascimento</label>
+                <input type="date" name="data_nasc" id="data_nasc" value="<%= aluno.data_nasc %>" required>
+
+                <label for="cpf">Identidade</label>
+                <input type="text" name="cpf" id="cpf" value="<%= aluno.cpf %>" required>
+
+                <label for="nacionalidade">Nacionalidade</label>
+                <input type="text" name="nacionalidade" id="nacionalidade" value="<%= aluno.nacionalidade %>" required>
+                
+                <label for="edocivil">Estado Civil</label>
+                <input type="text" name="edocivil" id="edocivil" value="<%= aluno.edocivil %>" required>
+                
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" id="telefone" value="<%= aluno.telefone %>" required>
+                
+                <label for="celular">Celular</label>
+                <input type="text" name="celular" id="celular" value="<%= aluno.celular %>">
+
+                <button type="submit" class="enviar btn btn-primary">Atualizar</button>
+            </fieldset>
+        </form>
+
+        <%- include("./partials/footer")%>

@@ -17,6 +17,10 @@
         <section>
             <a href="/database/dashboard/alunonovo" class="btn btn-primary">Novo Aluno</a>
             <a href="/database/dashboard" class="btn btn-primary">Voltar a Dashboard</a>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Busca por nome..." onkeypress="return event.keyCode != 13;">
+                <a href="#" class="search-btn"></a>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -31,7 +35,8 @@
                         <th>Edo Civil</th>
                         <th>Telefone</th>
                         <th>Celular</th>
-                        <th>Ação</th>
+                        <th>Editar</th>
+                        <th>Deletar</th>
                     </tr>
                 </thead>
                 <tbody>                    
@@ -47,7 +52,10 @@
                             <td><%= aluno.nacionalidade %> </td>
                             <td><%= aluno.edocivil %> </td>
                             <td><%= aluno.telefone %> </td>
-                            <td><%= aluno.celular %> </td>   
+                            <td><%= aluno.celular %> </td> 
+                            <td>
+                                <a href="/database/dashboard/aluno/editar/<%= aluno.id %>" class="btn btn-gray btn-editar"><i class="fas fa-edit pen-edit"></i></a>
+                            </td>  
                             <td>
                                 <form class="form-cadastro1" name="<%= aluno.nome %><%= aluno.id %>" action="/database/dashboard/aluno/excluir/<%= aluno.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
                                     <button type="submit" class="btn-dashboard">

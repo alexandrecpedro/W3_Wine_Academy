@@ -1734,15 +1734,100 @@ footer {
 
 .btn-dashboard {
     background: transparent;
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     display: flex;
     justify-content: center;
     margin: auto;
 }
 
-.btn-dashboard>i {
-    font-size: 5px;
-    width: 5px;
-    height: 5px;
+.btn-dashboard i {
+    font-size: 16px;
+    /* width: 5px;
+    height: 5px; */
+    margin-left: 10px;
+}
+
+.btn-editar {
+    margin: auto;
+    width: 10px;
+}
+
+.btn-editar i {
+    text-align: center;
+}
+
+.duracao_videos {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.formulario-professor {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid gray;
+    width: 500px;
+    padding: 10px;
+}
+
+.formulario-professor input {
+    width: 400px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.formulario-professor label {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.formulario-voltar {
+    margin-top: 0.5rem;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+#search{
+    width:70%;
+    padding:10px;
+    display: block;
+    margin:10px auto;
+    border-radius: 10px;
+    background: none;
+    outline:none;
+    border: 3px solid #95062E;
+
+} 
+
+#search::placeholder{
+    font-size: 16px;
+}
+
+.search-box{
+    position:relative;
+    width:90%;
+    margin:0 auto;
+}
+
+.search-box i{
+    position: absolute;
+    top:0;
+    right:15%;    
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
 }

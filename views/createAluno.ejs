@@ -10,12 +10,12 @@
         <section class="encabezado">
             <i class="fas fa-book"></i>
             <h2 class="main-header">NOVO ALUNO!</h2>
-            <h4 class="subt-main-header videos">Lista de cursos</h4>
+            <h4 class="subt-main-header videos"></h4>
         </section>
         <!--encabezado-->
 
         <section>
-            <form action="/database/dashboard/aluno" method="POST">
+            <form action="/database/dashboard/aluno" method="POST" class="formulario-professor">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control">
     
@@ -48,7 +48,7 @@
         
                 
                 <button class="btn btnI btn-primary">Salvar</button>
-                <a href="/database/dashboard/aluno" class="btn btn-default">voltar</a>
+                <a href="/database/dashboard/aluno" class="btn btn-default formulario-voltar">voltar</a>
                 
 
             </form>

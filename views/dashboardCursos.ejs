@@ -26,7 +26,8 @@
                         <th>Carga Horária</th>
                         <th>Link</th>                       
                         <th>Área de Estudo</th>                       
-                        <th>Ação</th>                       
+                        <th>Editar</th>                       
+                        <th>Deletar</th>                       
                     </tr>
                 </thead>
                 <tbody>                    
@@ -39,6 +40,9 @@
                             <td><%= curso.carga_horaria %></td>
                             <td><%= curso.link %> </td>                            
                             <td><%= curso.area_estudo_id %> </td>                            
+                            <td>
+                                <a href="/database/dashboard/curso/editar/<%= curso.id %>" class="btn btn-gray btn-editar"><i class="fas fa-edit pen-edit"></i></a>
+                            </td>
                             <td>
                                 <form class="form-cadastro1" name="<%= curso.nome %><%= curso.id %>" action="/database/dashboard/curso/excluir/<%= curso.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
                                     <button type="submit" class="btn-dashboard">

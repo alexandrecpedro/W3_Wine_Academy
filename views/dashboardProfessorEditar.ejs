@@ -1,0 +1,43 @@
+<%- include("./partials/header")%>
+<%- include("./partials/nav")%>
+
+    <!--comeco pagina cursos-->
+    <div class="container-site">
+
+        <div class="caco"></div>
+
+
+        <section class="encabezado">
+            <i class="fas fa-book"></i>
+            <h2 class="main-header">CADASTRO DE PROFESSORES</h2>
+            <h4 class="subt-main-header videos">Editar professor</h4>
+        </section>
+        <!--encabezado-->
+        <a class="link-cadastro" href="/database/dashboard">Voltar a Dashboard</a>
+        
+        <form class="form-cadastro" action="/database/dashboard/professor/editar/<%= professor.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+            <fieldset>
+              
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" value="<%= professor.nome %>" required>
+
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" value="<%= professor.sobrenome %>" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="<%= professor.email %>" required>
+
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" value="<%= professor.password %>" required>
+
+                <label for="puesto">Cargo</label>
+                <input type="text" name="puesto" id="puesto" value="<%= professor.puesto %>" required>
+
+                <label for="valor_hora">Valor Hora</label>
+                <input type="text" name="valor_hora" id="valor_hora" value="<%= professor.valor_hora %>" required>
+
+                <button type="submit" class="enviar btn btn-primary">Atualizar</button>
+            </fieldset>
+        </form>
+
+        <%- include("./partials/footer")%>

@@ -13,27 +13,21 @@
             <h4 class="subt-main-header videos">Editar curso</h4>
         </section>
         <!--encabezado-->
-        <a class="link-cadastro" href="/admin/servicos">Voltar a Servicos</a>
+        <a class="link-cadastro" href="/database/dashboard">Voltar a Dashboard</a>
         
-        <form class="form-cadastro" action="/admin/servicos/editar/<%= curso.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="form-cadastro" action="/database/dashboard/curso/editar/<%= curso.id %>/?_method=PUT" method="POST" enctype="multipart/form-data">
             <fieldset>
               
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<%= curso.nome %>" required>
 
-                <label for="professor">Professor</label>
-                <input type="text" name="professor" id="professor" value="<%= curso.professor %>" required>
-
-                <label for="puesto">Cargo</label>
-                <input type="text" name="puesto" id="puesto" value="<%= curso.puesto %>" required>
-
                 <label for="descricao">Descrição</label>
                 <textarea name="descricao" id="descricao"><%=curso.descricao %> </textarea>
 
-                <!-- <label for="preco">Preço</label>
-                <input type="number" name="preco" id="preco"> -->
+                <label for="carga_horaria">Carga Horária</label>
+                <input type="text" name="carga_horaria" id="carga_horaria" value="<%= curso.carga_horaria %>" required>
 
-                <label for="link">Link a curso</label>
+                <label for="link">Link do curso</label>
                 <input type="url" name="link" id="link" value="<%= curso.link %>" required>
 
                 <label for="ilustracao">Ilustração</label>
@@ -42,6 +36,9 @@
                 <% } %>
 
                 <input type="file" name="ilustracao" id="ilustracao">
+
+                <label for="area_estudo_id">Área Estudo</label>
+                <input type="text" name="area_estudo_id" id="area_estudo_id" value="<%= curso.area_estudo_id %>" required>
 
                 <button type="submit" class="enviar btn btn-primary">Atualizar</button>
             </fieldset>

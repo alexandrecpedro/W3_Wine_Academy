@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         descricao: {
-            type: DataTypes.STRING(200),
+            type: DataTypes.STRING(500),
             allowNull: false
         },
         carga_horaria: {
