@@ -31,6 +31,16 @@
     "uuidv4": "^6.2.8"
   },
   "main": "app.js",
-  "devDependencies": {}
-  
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinEmbon/w3AcademiaProjetoFinal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinEmbon/w3AcademiaProjetoFinal.git/issues"
+  },
+  "homepage": "https://github.com/MartinEmbon/w3AcademiaProjetoFinal.git#readme",
+  "description": ""
 }
