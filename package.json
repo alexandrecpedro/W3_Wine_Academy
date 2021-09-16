@@ -31,16 +31,6 @@
     "uuidv4": "^6.2.8"
   },
   "main": "app.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexandrecpedro/projeto-integrador-1.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexandrecpedro/projeto-integrador-1/issues"
-  },
-  "homepage": "https://github.com/alexandrecpedro/projeto-integrador-1#readme",
-  "description": ""
+  "devDependencies": {}
+  
 }
