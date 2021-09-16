@@ -29,5 +29,18 @@
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0",
     "uuidv4": "^6.2.8"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinEmbon/w3AcademiaProjetoFinal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinEmbon/w3AcademiaProjetoFinal.git/issues"
+  },
+  "homepage": "https://github.com/MartinEmbon/w3AcademiaProjetoFinal.git#readme",
+  "description": ""
 }
