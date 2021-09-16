@@ -42,6 +42,7 @@ router.post('/area', areaController.create);
 router.get('/modalidade-pago', modalidadeController.index);
 router.post('/modalidade-pago', modalidadeController.create);
 
+// http://localhost:3000/database/dashboard
 router.get("/dashboard/", dashboardController.index)
 
 router.get("/dashboard/aluno", dashboardController.aluno)

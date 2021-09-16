@@ -19,7 +19,7 @@ const institucionalController = {
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.EMAIL, 
+                user: process.EMAIL, 
                 pass: process.env.PASSWORD
             }
         });
